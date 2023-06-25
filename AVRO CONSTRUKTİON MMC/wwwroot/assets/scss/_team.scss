@@ -1,0 +1,137 @@
+/* Our Team Area css
+============================================================================================ */
+
+.our_team_area {
+  background: #f4f3f7;
+  &.team_dark {
+    background: #172b56;
+    .two_column_title {
+      h2 {
+        color: #fff;
+      }
+      p {
+        color: #fff;
+      }
+    }
+    .team_inner {
+      .team_item {
+        .team_text {
+          h4 {
+            color: #fff;
+            &:before {
+              height: 1px;
+            }
+          }
+          p {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+.team_inner {
+  margin-bottom: -40px;
+}
+.team_item {
+  margin-bottom: 40px;
+  overflow: hidden;
+  .team_img {
+    position: relative;
+    margin-bottom: 22px;
+    overflow: hidden;
+    z-index: 2;
+    &:before {
+      content: "";
+      background: rgba(253, 117, 35, 0.89);
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      transition: all 300ms ease;
+    }
+    img {
+      transform: scale(1);
+      transition: all 300ms ease;
+    }
+    ul {
+      list-style: none;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      z-index: 2;
+      opacity: 0;
+      @include transition;
+      li {
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0px;
+        }
+        a {
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          border: 1px solid #fff;
+          text-align: center;
+          border-radius: 50%;
+          color: #fff;
+          line-height: 28px;
+          @include transition;
+        }
+        &:hover {
+          a {
+            background: $blue;
+            color: #fff;
+            border-color: $blue;
+          }
+        }
+      }
+    }
+  }
+  .team_text {
+    h4 {
+      font: 500 18px/24px $pop;
+      color: $dip;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 6px;
+      &:before {
+        content: "";
+        width: 41px;
+        height: 2px;
+        background: #45ae7d;
+        position: absolute;
+        right: -60px;
+        bottom: 7px;
+      }
+    }
+    p {
+      font: 400 16px $lora;
+      font-style: italic;
+      margin-bottom: 0px;
+    }
+  }
+  &:hover {
+    .team_img {
+      img {
+        transform: scale(1.1);
+      }
+      &:before {
+        opacity: 1;
+      }
+      ul {
+        opacity: 1;
+        bottom: 30px;
+      }
+    }
+  }
+}
+/* End Our Team Area css
+============================================================================================ */

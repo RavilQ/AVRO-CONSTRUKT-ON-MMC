@@ -1,0 +1,134 @@
+/* Home Four Slider Area css
+============================================================================================ */
+.perfection_slider_area {
+  background: #172b56;
+  padding-bottom: 85px;
+  position: relative;
+  &:before {
+    content: "";
+    background: url("../images/home-slider/home4-slider-bg.png") no-repeat
+      scroll center center;
+    background-size: cover;
+    height: 363px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+  }
+}
+.text_slider {
+  .item {
+    color: #fff;
+    h2 {
+      font: 700 65px/80px $pop;
+      margin-top: 150px;
+      margin-bottom: 25px;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(30px);
+      span {
+        font-style: italic;
+        font-family: $play;
+      }
+    }
+    p {
+      font: 300 20px/32px $open;
+      color: #fff;
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    &.slick-active {
+      h2 {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: all 1s ease;
+        transition-delay: 300ms;
+      }
+      p {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: all 1s ease;
+        transition-delay: 500ms;
+      }
+    }
+  }
+}
+.image_slider {
+  margin-right: -300px;
+}
+.slider_nav {
+  margin-top: 45px;
+  span {
+    height: 66px;
+    width: 66px;
+    background: $baseColor;
+    text-align: center;
+    display: inline-block;
+    line-height: 63px;
+    cursor: pointer;
+    &.right_arrow {
+      margin-left: 28px;
+    }
+  }
+}
+/* End Home Four Slider Area css
+============================================================================================ */
+
+/* Home Slider Area css
+============================================================================================ */
+.main_slider_area {
+  position: relative;
+  .stroke_text {
+    position: absolute;
+    right: -70px;
+    bottom: -21px;
+    z-index: 30;
+    font: 800 200px/100px $pop;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    text-transform: uppercase;
+    opacity: 0.3;
+  }
+  &.slider_five {
+    .stroke_text {
+      bottom: 10px;
+    }
+  }
+  .first_text {
+    color: #fff;
+    font-weight: 700;
+    font-family: $pop;
+    span {
+      font-family: $play;
+      font-style: italic;
+      position: relative;
+      display: inline-block;
+      &:before {
+        content: "";
+        height: 2px;
+        background: #fff;
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        bottom: 4px;
+      }
+    }
+  }
+  .secand_text {
+    color: #fff;
+    font-family: $open;
+  }
+  .main_btn {
+    line-height: 52px;
+    padding: 0px 41px;
+    transition: all 300ms linear !important;
+    &:hover {
+      background: $baseColor;
+      color: #fff;
+    }
+  }
+}
+/* End Home Slider Area css
+============================================================================================ */

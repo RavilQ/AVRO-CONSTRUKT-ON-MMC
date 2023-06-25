@@ -1,0 +1,88 @@
+/* Video Area css
+============================================================================================ */
+.video_area {
+  background: url(../images/video-bg.jpg) no-repeat scroll center center;
+  padding-top: 125px;
+  padding-bottom: 115px;
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  &.pad_btm {
+    padding-bottom: 195px;
+  }
+  &:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .video_text {
+    h4 {
+      color: #fff;
+      font: normal 22px $lora;
+      font-style: italic;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 15px;
+      &:before {
+        content: "";
+        width: 45px;
+        height: 2px;
+        background: $baseColor;
+        position: absolute;
+        right: -60px;
+        bottom: 5px;
+      }
+    }
+    h3 {
+      color: #fff;
+      font: 600 55px/60px $pop;
+      margin-bottom: 20px;
+      span {
+        font-weight: bold;
+        font-style: italic;
+        font-family: $play;
+        position: relative;
+        &:before {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: #fff;
+          position: absolute;
+          left: 0px;
+          bottom: 1px;
+        }
+      }
+    }
+    .media {
+      .d-flex {
+        padding-right: 20px;
+        align-self: center;
+        i {
+          color: #fff;
+          font-size: 62px;
+          line-height: 70px;
+          &:before {
+            font-size: 62px;
+          }
+        }
+      }
+      .media-body {
+        align-self: center;
+        h5 {
+          color: #fff;
+          font: normal 20px/26px $lora;
+          font-style: italic;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+/* End Video Area css
+============================================================================================ */

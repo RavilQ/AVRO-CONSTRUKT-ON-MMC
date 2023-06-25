@@ -1,0 +1,141 @@
+/* Comming Soon Area css
+============================================================================================ */
+.comming_soon_area {
+  background: url(../images/coming-soon-bg.jpg) no-repeat scroll center center;
+  background-size: cover;
+  min-height: 963px;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  // &:before{
+  //     content: "";
+  //     background: rgba(0, 0, 0, .55);
+  //     position: absolute;
+  //     left: 0px;
+  //     top: 0px;
+  //     width: 100%;
+  //     height: 100%;
+  //     z-index: -1;
+  // }
+  .comming_soon_inner {
+    display: flex;
+    min-height: 100vh;
+    .comming_soon_text {
+      flex: 1;
+      align-self: center;
+      vertical-align: middle;
+      text-align: center;
+      max-width: 950px;
+      margin: auto;
+      .media {
+        max-width: 650px;
+        margin: 0px auto 60px;
+        .d-flex {
+          padding-right: 35px;
+        }
+        .media-body {
+          text-align: left;
+          align-self: flex-end;
+          padding-bottom: 30px;
+        }
+      }
+      h3 {
+        font-size: 90px;
+        color: #fff;
+        line-height: 80px;
+        font-family: $pop;
+        margin-bottom: 0px;
+        font-weight: 600;
+      }
+      p {
+        font-size: 32px;
+        line-height: 48px;
+        font-family: $pop;
+        font-weight: 600;
+        color: #fff;
+        padding-top: 56px;
+        padding-bottom: 25px;
+        a {
+          color: $baseColor;
+          font-family: $play;
+          font-style: italic;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+      .countdown {
+        .countdown-container {
+          height: 170px;
+          width: 170px;
+          border-radius: 50%;
+          background: transparent;
+          position: relative;
+          border: 1px solid #fff;
+          margin-right: 20px;
+          .countdown-heading {
+            color: #fff;
+            font-size: 20px;
+            font-family: $pop;
+            font-weight: 600;
+            text-transform: uppercase;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            left: 0px;
+            top: 70%;
+            transform: translateY(-50%);
+          }
+          .countdown-value {
+            padding: 0px;
+            background: transparent;
+            box-shadow: none;
+            text-shadow: none;
+            color: #fff;
+            font-size: 60px;
+            font-family: $pop;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 130px;
+            margin-bottom: 0px;
+          }
+          &:last-child {
+            margin-right: 0px;
+          }
+        }
+      }
+      .fun_subscrib_inner {
+        padding: 0px 0px;
+        max-width: 770px;
+        margin: auto;
+        &:before {
+          display: none;
+        }
+        .input-group {
+          input {
+            height: 76px;
+            padding: 0px 30px;
+            border-radius: 0px;
+            font: 500 18px/76px $pop;
+            color: $dip;
+            outline: none;
+            box-shadow: none;
+            border: none;
+            @include placeholder {
+              font: 500 18px/76px $pop;
+              color: $dip;
+            }
+          }
+        }
+        .submit_btn {
+          height: 76px;
+          border-radius: 0px;
+          font: 600 20px $pop;
+          padding: 0px 37px;
+        }
+      }
+    }
+  }
+}
+
+/* End Comming Soon Area css
+============================================================================================ */

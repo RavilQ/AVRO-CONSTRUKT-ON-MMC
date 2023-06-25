@@ -1,49 +1,348 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - AVRO_CONSTRUKTİON_MMC</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/AVRO_CONSTRUKTİON_MMC.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AVRO_CONSTRUKTİON_MMC</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" href="~/assets/images/favicon.png" type="image/png" />
+  <title>BuildeTrack</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="~/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="~/assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="~/assets/vendors/linearicons/style.css" />
+  <link rel="stylesheet" href="~/assets/vendors/stroke-icon/style.css" />
+  <link rel="stylesheet" href="~/assets/vendors/flat-icon/flaticon.css" />
+
+  <!-- Extra Plugin CSS -->
+  <link href="~/assets/vendors/image-dropdown/dd.css" rel="stylesheet" />
+  <link href="~/assets/vendors/image-dropdown/flags.css" rel="stylesheet" />
+  <link href="~/assets/vendors/image-dropdown/skin2.css" rel="stylesheet" />
+  <link href="~/assets/vendors/popup/magnific-popup.css" rel="stylesheet" />
+  <link href="~/assets/vendors/owl-carousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Rev slider css -->
+  <link href="~/assets/vendors/revolution/css/settings.css" rel="stylesheet" />
+  <link href="~/assets/vendors/revolution/css/layers.css" rel="stylesheet" />
+  <link href="~/assets/vendors/revolution/css/navigation.css" rel="stylesheet" />
+
+  <!-- main css -->
+  <link rel="stylesheet" href="~/assets/css/style.css" />
+  <link rel="stylesheet" href="~/assets/css/responsive.css" />
+</head>
+
+<body>
+  <div class="body_wrapper">
+    <!--================Header Area =================-->
+    <header class="header_area">
+      <div class="top_bar">
         <div class="container">
-            &copy; 2023 - AVRO_CONSTRUKTİON_MMC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+          <div class="d-flex justify-content-between">
+            <div class="left">
+              <h5>
+                <a href="tel:01676790690">Construction Company</a> Losangle
+                City
+              </h5>
+            </div>
+            <div class="right">
+              <ul class="nav">
+                <li>Talk with Expert :<a href="#">1800 456 7890</a></li>
+                <li class="flag_drop">
+                  <div class="selector">
+                    <select class="language_drop" name="countries" id="countries" style="width: 300px;">
+                      <option value="yt" data-image="~/assets/images/country-aus.png" data-imagecss="flag yt"
+                        data-title="English">English</option>
+                      <option value="yu" data-image="~/assets/images/country-bang.png" data-imagecss="flag yu"
+                        data-title="Bangladesh">Bangla</option>
+                      <option value="yt" data-image="~/assets/images/country-aus.png" data-imagecss="flag yt"
+                        data-title="English">English</option>
+                      <option value="yu" data-image="~/assets/images/country-bang.png" data-imagecss="flag yu"
+                        data-title="Bangladesh">Bangla</option>
+                    </select>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="main_menu">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><img src="~/assets/images/logo.png"
+                srcset="~/assets/images/logo2x.png 2x" alt="" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="dropdown submenu active">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" role="button" aria-haspopup="true"
+                    aria-expanded="false">Home
+                  </a>
+                  <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
+                  <ul class="dropdown-menu">
+                    <li><a href="index.html">Home Page 1</a></li>
+                    <li><a href="index-2.html">Home Page 2</a></li>
+                    <li><a href="index-3.html">Home Page 3</a></li>
+                    <li><a href="index-4.html">Home Page 4</a></li>
+                    <li><a href="index-5.html">Home Page 5</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown submenu">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="about-us.html" role="button"
+                    aria-haspopup="true" aria-expanded="false">About Us</a>
+                  <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
+                  <ul class="dropdown-menu">
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="company-history.html">Company History</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown submenu">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="services.html" role="button"
+                    aria-haspopup="true" aria-expanded="false">Services
+                  </a>
+                  <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
+                  <ul class="dropdown-menu">
+                    <li><a href="services.html">Services 1</a></li>
+                    <li><a href="service-2.html">Services 2</a></li>
+                    <li><a href="maintenance.html">Single Service</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown submenu">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="projects-1.html" role="button"
+                    aria-haspopup="true" aria-expanded="false">Projects
+                  </a>
+                  <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
+                  <ul class="dropdown-menu">
+                    <li><a href="projects-1.html">Project 1</a></li>
+                    <li><a href="projects-2.html">Project 2</a></li>
+                    <li><a href="project-details.html">Project Details</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown submenu">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false">Pages
+                  </a>
+                  <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
+                  <ul class="dropdown-menu">
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="services.html">Service</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="404.html">404 Error</a></li>
+                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown submenu">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="blog.html" role="button" aria-haspopup="true"
+                    aria-expanded="false">Blog</a>
+                  <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
+                  <ul class="dropdown-menu">
+                    <li><a href="blog.html">Blog with sidebar</a></li>
+                    <li>
+                      <a href="blog-2-columns.html">Blog 2 Column</a>
+                    </li>
+                    <li><a href="single-blog.html">Blog Details</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="reserve_btn">
+                  <a class="popup-with-zoom-anim" href="#test-search"><i class="icon icon-Search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!--================End Header Area =================-->
+
+    @RenderBody()
+    <!--================Contact Details Area =================-->
+    <section class="contact_details_area">
+      <div class="container">
+        <div class="row client_details_inner">
+          <div class="col-lg-4 col-md-6">
+            <div class="media">
+              <div class="d-flex">
+                <img src="~/assets/images/icon/marker.png" alt="" />
+              </div>
+              <div class="media-body">
+                <p>54B, Tailstoi Town 5238 MT,<br /> La city, IA 522364</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="media">
+              <div class="d-flex">
+                <img src="~/assets/images/icon/inbox.png" alt="" />
+              </div>
+              <div class="media-body">
+                <p>
+                  Email us :
+                  <a href="mailto:contact@buildtruck.com">contact@buildtruck.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="media">
+              <div class="d-flex">
+                <img src="~/assets/images/icon/phone.png" alt="" />
+              </div>
+              <div class="media-body">
+                <p>
+                  Call us on :
+                  <a class="number" href="tel:+1800457890">+ 1800 456 7890</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End Contact Details Area =================-->
+
+    <!--================Footer Area =================-->
+    <footer class="footer_area">
+      <div class="container">
+        <div class="footer_widgets row">
+          <div class="col-lg-3 col-sm-6">
+            <aside class="f_widget ab_widget">
+              <img src="~/assets/images/f-logo.png" srcset="~/assets/images/f-logo-2x.png 2x" alt="" />
+              <p>
+                Capitalize on low hanging fruit to identify a ballpark value
+                added activity to beta test. Override the digital divide
+                additional clickthroughs.
+              </p>
+              <a href="#">Read more ...</a>
+            </aside>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <aside class="f_widget link_widget">
+              <div class="f_title">
+                <h3>Useful Links</h3>
+              </div>
+              <ul class="nav flex-column">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Request Call Back</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </aside>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <aside class="f_widget link_widget service_widget">
+              <div class="f_title">
+                <h3>Services</h3>
+              </div>
+              <ul class="nav flex-column">
+                <li><a href="#">Building Construction</a></li>
+                <li><a href="#">Architecture Design</a></li>
+                <li><a href="#">Building Renovation</a></li>
+                <li><a href="#">Flooring & Roofing</a></li>
+                <li><a href="#">Interior Design</a></li>
+              </ul>
+            </aside>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <aside class="f_widget news_widget">
+              <div class="f_title">
+                <h3>Newsletter</h3>
+              </div>
+              <div class="news_wd_inner">
+                <p>Get latest updates and offers.</p>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Enter your email address"
+                    aria-label="Enter your email address" aria-describedby="button-addon2" />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                      <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <ul class="nav social_icon">
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+        <div class="footer_copyright d-flex justify-content-between">
+          <div class="left">
+            <p>
+              © Copyright buildtrack
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              . All right reserved.
+            </p>
+          </div>
+          <div class="right">
+            <p>Created by <a href="#">DesignArc</a></p>
+          </div>
+        </div>
+      </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    <!--================End Footer Area =================-->
+  </div>
+
+
+  <!--================Search Box Area =================-->
+  <div class="search_area zoom-anim-dialog mfp-hide" id="test-search">
+    <div class="search_box_inner">
+      <h3>Search</h3>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Enter search keywords">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button"><i class="icon icon-Search"></i></button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <!--================End Search Box Area =================-->
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="~/assets/js/jquery-3.4.1.min.js"></script>
+  <script src="~/assets/js/popper.min.js"></script>
+  <script src="~/assets/js/bootstrap.min.js"></script>
+
+  @RenderSection("Scripts", false)
+  <!-- Rev slider js -->
+  <script src="~/assets/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script src="~/assets/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+  <script src="~/assets/vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script src="~/assets/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script src="~/assets/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script src="~/assets/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script src="~/assets/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <!-- Extra Plugin js -->
+  <script src="~/assets/vendors/image-dropdown/jquery.dd.min.js"></script>
+  <script src="~/assets/vendors/popup/jquery.magnific-popup.min.js"></script>
+  <script src="~/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="~/assets/vendors/parallaxie/parallaxie.js"></script>
+
+  <script src="~/assets/js/theme.js"></script>
 </body>
+
 </html>

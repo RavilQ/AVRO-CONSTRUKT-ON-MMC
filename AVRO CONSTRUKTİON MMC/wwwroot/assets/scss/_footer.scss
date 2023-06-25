@@ -1,0 +1,218 @@
+/* Footer Area css
+============================================================================================ */
+.contact_details_area {
+  background: #162036;
+  border-bottom: 1px solid #283144;
+  .client_details_inner {
+    .col-lg-4 {
+      &:first-child {
+        .media {
+          padding-left: 40px;
+        }
+      }
+      &:nth-child(2) {
+        position: relative;
+        .media {
+          padding-left: 5px;
+        }
+        &:before {
+          content: "";
+          height: 100%;
+          width: 1px;
+          position: absolute;
+          left: -27px;
+          top: 0px;
+          background: #283144;
+        }
+        &:after {
+          content: "";
+          height: 100%;
+          width: 1px;
+          position: absolute;
+          right: 27px;
+          top: 0px;
+          background: #283144;
+        }
+      }
+      &:last-child {
+        .media {
+          padding-left: 20px;
+        }
+      }
+    }
+    .media {
+      padding: 21px 0px;
+      .d-flex {
+        padding-right: 22px;
+        img {
+          margin-top: 3px;
+        }
+      }
+      .media-body {
+        p {
+          font: 400 16px $pop;
+          color: #fff;
+          margin-bottom: 0px;
+          a {
+            display: block;
+            color: #fff;
+            &.number {
+              font-weight: 600;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer_area {
+  background: url("../images/footer-bg.jpg") no-repeat scroll center center;
+  background-size: cover;
+  padding-top: 65px;
+}
+.footer_widgets {
+  padding-bottom: 40px;
+}
+.footer_copyright {
+  border-top: 1px solid #2e374a;
+}
+.f_title {
+  margin-bottom: 26px;
+  h3 {
+    color: #fff;
+    margin-bottom: 0px;
+    font: 600 20px $pop;
+  }
+}
+.ab_widget {
+  img {
+    margin-bottom: 24px;
+  }
+  p {
+    font: 400 15px/26px $open;
+    color: #a0a5b1;
+    margin-bottom: 12px;
+  }
+  a {
+    color: #a0a5b1;
+    font: 400 15px/26px $open;
+    @include transition;
+    &:hover {
+      color: $baseColor;
+    }
+  }
+}
+.link_widget {
+  margin-left: 35px;
+  margin-right: -35px;
+  .nav {
+    li {
+      margin-bottom: 12px;
+      a {
+        font: 400 14px $pop;
+        color: #a0a5b1;
+        @include transition;
+      }
+      &:hover {
+        a {
+          color: $baseColor;
+        }
+      }
+    }
+  }
+  &.service_widget {
+    margin-right: 0px;
+    margin-left: 50px;
+  }
+}
+.news_widget {
+  .news_wd_inner {
+    p {
+      font: 400 14px $pop;
+      color: #a0a5b1;
+      margin-bottom: 15px;
+    }
+    .input-group {
+      input {
+        background: transparent;
+        height: 46px;
+        border-color: #474d59;
+        border-radius: 3px;
+        outline: none;
+        box-shadow: none;
+        font: 400 14px/32px $pop;
+        color: #a0a5b1;
+        @include placeholder {
+          font: 400 14px/32px $pop;
+          color: #a0a5b1;
+        }
+      }
+      .input-group-append {
+        button {
+          border-color: $baseColor;
+          background: $baseColor;
+          color: #fff;
+          font-size: 20px;
+          padding-left: 15px;
+          padding-right: 17px;
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .social_icon {
+    margin-top: 30px;
+  }
+}
+.social_icon {
+  li {
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0px;
+    }
+    a {
+      display: inline-block;
+      height: 36px;
+      width: 36px;
+      border: 1px solid #a0a5b1;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 34px;
+      color: #a0a5b1;
+      font-size: 16.92px;
+      @include transition;
+    }
+    &:hover {
+      a {
+        color: $baseColor;
+        border-color: $baseColor;
+      }
+    }
+  }
+}
+.footer_copyright {
+  padding: 29px 0px;
+  .left {
+    p {
+      margin-bottom: 0px;
+      font: 400 14px $pop;
+      color: #a0a5b1;
+    }
+  }
+  .right {
+    p {
+      margin-bottom: 0px;
+      font: 400 14px $pop;
+      color: #a0a5b1;
+      a {
+        font: 400 14px $pop;
+        color: #a0a5b1;
+      }
+    }
+  }
+}
+/* End Footer Area css
+============================================================================================ */
