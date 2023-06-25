@@ -1,0 +1,106 @@
+/* Dark Main Button Area css
+============================================================================================ */
+.dark_btn {
+  background: $dark;
+  color: #fff;
+  font: 400 15px/52px $pop;
+  display: inline-block;
+  padding: 0px 40px;
+  border-radius: 26px;
+  @include transition;
+  &:hover {
+    color: $baseColor;
+  }
+  &.white {
+    background: #fff;
+    color: $dip;
+    font: 400 17px/54px $pop;
+    padding: 0px 37.5px;
+    @include transition;
+    &:hover {
+      color: $baseColor;
+    }
+  }
+}
+.main_btn {
+  background: $blue;
+  color: #fff;
+  font: 400 16px/48px $open;
+  display: inline-block;
+  padding: 0px 37px;
+  border-radius: 26px;
+  @include transition;
+  &:hover {
+    color: #fff;
+    background: $baseColor;
+  }
+  &.orange {
+    background: $baseColor;
+    box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.22);
+    &:hover {
+      background: $blue;
+    }
+  }
+  &.white {
+    background: #fff;
+    color: $dip;
+  }
+}
+.read_btn {
+  color: $baseColor;
+  font: 400 15px $open;
+  i {
+    color: $pfont;
+    font-weight: bold;
+    padding-left: 6px;
+    position: relative;
+    top: 1px;
+    font-size: 12px;
+    @include transition;
+  }
+  &:hover {
+    color: $baseColor;
+    i {
+      padding-left: 0px;
+      color: $baseColor;
+    }
+  }
+}
+
+.orange_btn {
+  background: $baseColor;
+  color: #fff;
+  border-radius: 3px;
+  height: 67px;
+  padding: 0px 40px;
+  font: 500 20px/67px $pop;
+  @include transition;
+  &:hover {
+    background: #fff;
+    color: $baseColor;
+  }
+}
+.submit_btn {
+  background: $blue;
+  color: #fff;
+  font: 500 15px/46px $pop;
+  display: inline-block;
+  padding: 0px 32px;
+  border-radius: 26px;
+  @include transition;
+  outline: none !important;
+  box-shadow: none !important;
+  &:hover {
+    color: #fff;
+    color: $baseColor;
+  }
+  &.orange {
+    background: $baseColor;
+    &:hover {
+      background: $blue;
+      color: #fff;
+    }
+  }
+}
+/* End Dark Main Button Area css
+============================================================================================ */

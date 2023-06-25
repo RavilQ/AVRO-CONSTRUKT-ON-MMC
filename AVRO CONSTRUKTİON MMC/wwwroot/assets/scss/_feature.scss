@@ -1,0 +1,816 @@
+/* Tagline Area css
+============================================================================================ */
+.tagline_area {
+  background: $baseColor;
+  padding: 37px 0px;
+  position: relative;
+  z-index: 35;
+  .left {
+    p {
+      font: 400 37px $pop;
+      color: #fff;
+      margin-bottom: 0px;
+      a {
+        font-style: italic;
+        color: #fff;
+        font-weight: 400;
+        position: relative;
+        font-family: $play;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0px;
+          bottom: 6px;
+          height: 1px;
+          width: 100%;
+          background: #fff;
+        }
+      }
+    }
+  }
+  .right {
+    .dark_btn {
+      margin-top: 2px;
+    }
+  }
+}
+/* End Tagline Area css
+============================================================================================ */
+
+/* Experience Area css
+============================================================================================ */
+.experience_area {
+  .experience_inner {
+    .experience_image {
+      display: flex;
+      img {
+        & + img {
+          margin-left: 6px;
+        }
+      }
+      position: relative;
+      .year_text {
+        position: absolute;
+        right: 0px;
+        bottom: -10px;
+        background: $baseColor;
+        color: #fff;
+        text-align: center;
+        padding: 20px 13px 22px 13px;
+        h4 {
+          font: 800 50px/50px $pop;
+          margin-bottom: 4px;
+        }
+        p {
+          margin-bottom: 0px;
+          text-transform: uppercase;
+          font: 600 15px/27px $pop;
+        }
+      }
+    }
+    .experience_text {
+      padding-left: 30px;
+      h5 {
+        font: normal 20px $lora;
+        font-style: italic;
+        color: $blue;
+        margin-bottom: 7px;
+      }
+      h3 {
+        font: 300 35px/45px $pop;
+        color: $blue;
+        margin-bottom: 45px;
+        position: relative;
+        &:before {
+          content: "";
+          width: 85px;
+          height: 2px;
+          background: $baseColor;
+          position: absolute;
+          left: 0px;
+          bottom: -24px;
+        }
+      }
+      p {
+        font: 400 16px/26px $open;
+        margin-bottom: 25px;
+      }
+      .main_btn {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+/* End Experience Area css
+============================================================================================ */
+
+/* Featured Area css
+============================================================================================ */
+.featured_area {
+  background: #172646;
+  .featured_inner {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+.featured_item {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  z-index: 2;
+  a {
+    display: block;
+    position: relative;
+    &:before {
+      content: "";
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      transition: all 300ms ease-in-out;
+    }
+  }
+  img {
+    transform: scale(1);
+    transition: all 300ms ease-in-out;
+  }
+  h4 {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    bottom: 15px;
+    color: #fff;
+    font: 400 16px $pop;
+    z-index: 1;
+    margin-bottom: 0px;
+  }
+  &:hover {
+    a {
+      &:before {
+        opacity: 1;
+      }
+    }
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+/* End Featured Area css
+============================================================================================ */
+
+/* Why Choose Area css
+============================================================================================ */
+.why_choose_area {
+  background: #f4f3f7;
+  position: relative;
+  &:before {
+    content: "";
+    background: url("../images/shadow-1.png") no-repeat;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 648px;
+    height: 560px;
+  }
+  .main_title {
+    h2 {
+      font: 600 32px/32px $pop;
+      margin-bottom: 0px;
+    }
+  }
+}
+.choose_list {
+  .media {
+    margin-bottom: 38px;
+    .d-flex {
+      padding-right: 35px;
+      img {
+        margin-top: 3px;
+      }
+    }
+    .media-body {
+      h4 {
+        color: $blue;
+        font: 600 20px $pop;
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 0px;
+        font: 400 16px/26px $open;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+.who_list {
+  .who_image {
+    margin-right: -35px;
+    img {
+      & + img {
+        margin-top: 20px;
+      }
+    }
+  }
+  .who_text {
+    padding-left: 45px;
+    h4 {
+      font: 600 20px/26px $pop;
+      color: $blue;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+/* End Why Choose Area css
+============================================================================================ */
+
+/* Expericene Slider Area css
+============================================================================================ */
+.expericene_slider {
+  .exp_center_text {
+    margin-bottom: 55px;
+    h6 {
+      font: 400 22px $lora;
+      font-style: italic;
+      color: $pfont;
+    }
+    h4 {
+      font: 300 35px $pop;
+      color: $dip;
+      margin-bottom: 12px;
+      span {
+        color: $baseColor;
+        font: normal 35px $play;
+        font-style: italic;
+        text-decoration: underline;
+      }
+    }
+    p {
+      margin-bottom: 0px;
+    }
+  }
+  &.exp_slider_two {
+    .exp_center_text {
+      h4 {
+        font: 600 35px $pop;
+        color: #06175b;
+        span {
+          color: #06175b;
+          font-weight: bold;
+        }
+      }
+    }
+    .exp_slider_inner {
+      .exp_slider {
+        .exp_slider_nav {
+          text-align: center;
+          .owl-prev {
+            position: relative;
+            &:before {
+              content: "";
+              width: 40px;
+              height: 1px;
+              background: rgba(92, 106, 136, 0.67);
+              position: absolute;
+              left: -50px;
+              top: 50%;
+            }
+          }
+          .owl-next {
+            position: relative;
+            &:before {
+              content: "";
+              width: 40px;
+              height: 1px;
+              background: rgba(92, 106, 136, 0.67);
+              position: absolute;
+              right: -50px;
+              top: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.dark_experience {
+    background: #112146;
+    position: relative;
+    &:before {
+      content: "";
+      background: url("../images/experience/exp-techture.jpg") no-repeat scroll
+        center center;
+      height: 546px;
+      width: 358px;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      opacity: 0.8;
+    }
+    .exp_center_text {
+      h4 {
+        color: #fff;
+      }
+      p {
+        color: #fff;
+      }
+    }
+    .exp_slider_inner {
+      .exp_slider {
+        .exp_item {
+          background: #fff;
+        }
+        .exp_slider_nav {
+          text-align: center;
+          button {
+            background: transparent;
+            border-color: #fff;
+            color: #fff;
+            &:hover {
+              background: $baseColor;
+              color: #fff;
+              border-color: $baseColor;
+            }
+          }
+          .owl-prev {
+            position: relative;
+            &:before {
+              content: "";
+              width: 40px;
+              height: 1px;
+              background: rgba(92, 106, 136, 0.67);
+              position: absolute;
+              left: -50px;
+              top: 50%;
+            }
+          }
+          .owl-next {
+            position: relative;
+            &:before {
+              content: "";
+              width: 40px;
+              height: 1px;
+              background: rgba(92, 106, 136, 0.67);
+              position: absolute;
+              right: -50px;
+              top: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.exp_slider_inner {
+  margin: -15px -15px;
+}
+.exp_slider {
+  .item {
+    padding: 15px 15px;
+    .exp_item {
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.16);
+      border-bottom: 2px solid $baseColor;
+      padding: 35px 35px 40px 35px;
+      img {
+        margin-bottom: 25px;
+        width: auto;
+      }
+      h4 {
+        font: 600 20px $pop;
+        color: $blue;
+      }
+    }
+  }
+  .exp_slider_nav {
+    margin-bottom: 15px;
+    button {
+      height: 42px;
+      width: 42px;
+      border: 2px solid #5b6987;
+      border-radius: 50%;
+      text-align: center;
+      color: $blue;
+      font-size: 18px;
+      line-height: 36px;
+      margin-top: 35px;
+      margin-left: 15px;
+      @include transition;
+      background: transparent;
+      &.owl-next {
+        margin-left: 20px;
+      }
+      &:hover {
+        border-color: $baseColor;
+        background: $baseColor;
+        color: #fff;
+      }
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+/* End Expericene Slider Area css
+============================================================================================ */
+
+/* Building Area css
+============================================================================================ */
+.building_area {
+  .left {
+    background: url("../images/building-shadow.jpg") no-repeat scroll center
+      center;
+    background-size: cover;
+    margin-right: -15px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    .building_text {
+      max-width: 600px;
+      padding-right: 70px;
+      align-self: center;
+      h4 {
+        color: #fff;
+        font: 600 42px/56px $pop;
+        max-width: 370px;
+        margin-bottom: 22px;
+        span {
+          color: $baseColor;
+        }
+      }
+      p {
+        font: 400 16px/28px $open;
+        color: #fff;
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .right {
+    margin-left: 15px;
+    img {
+      margin-top: -100px;
+    }
+  }
+}
+/* End Building Area css
+============================================================================================ */
+
+/* Best Construction Area css
+============================================================================================ */
+.best_construction_area {
+  background: linear-gradient(
+      rgba(245, 246, 252, 0.75),
+      rgba(245, 246, 252, 0.75)
+    ),
+    url("../images/construction/construction-techture.png");
+  .best_construction_inner {
+    .best_con_img {
+      img {
+        border-radius: 4px;
+        box-shadow: 0px 15px 57px 0px rgba(0, 0, 0, 0.3);
+        margin-left: 92px;
+        margin-bottom: -36px;
+        z-index: 3;
+        & + img {
+          margin-left: -234px;
+          box-shadow: 0px 15px 57px 0px rgba(0, 0, 0, 0.3);
+          margin-bottom: 0px;
+          z-index: 1;
+        }
+        &:first-child {
+          position: relative;
+        }
+      }
+    }
+    .best_ct_text {
+      margin-left: -30px;
+      h3 {
+        font: bold 38px/52px $pop;
+        color: #172460;
+        margin-bottom: 20px;
+      }
+      h5 {
+        font: 300 22px/30px $open;
+        color: $dip;
+        padding-right: 20px;
+        margin-bottom: 28px;
+      }
+      p {
+        font: 400 16px/28px $open;
+        margin-bottom: 32px;
+        & + p {
+          margin-bottom: 20px;
+        }
+      }
+      a {
+        font: 500 16px $pop;
+        color: #f73333;
+        text-decoration: underline;
+        display: inline-block;
+      }
+    }
+  }
+}
+/* End Best Construction Area css
+============================================================================================ */
+
+/* Latest Projects Area css
+============================================================================================ */
+.latest_projects_area {
+  background: #172b56;
+  overflow: hidden;
+  padding-top: 160px;
+  position: relative;
+  z-index: 2;
+  &:before {
+    content: "";
+    background: url("../images/projects/latest-project-techture.jpg") no-repeat
+      scroll center;
+    width: 696px;
+    height: 590px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    opacity: 0.85;
+  }
+  .left {
+    width: calc(50% - 145px);
+    float: left;
+    .our_l_text {
+      max-width: 440px;
+      float: right;
+      position: relative;
+      text-align: left;
+      width: 100%;
+      h3 {
+        color: #fff;
+        font: 600 35px/40px $pop;
+        max-width: 216px;
+        margin-bottom: 15px;
+      }
+      p {
+        font: 400 16px/26px $open;
+        color: #fff;
+        max-width: 365px;
+        margin-bottom: 75px;
+      }
+      button {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        height: 42px;
+        width: 42px;
+        border: 1px solid #a7afb6;
+        border-radius: 50%;
+        text-align: center;
+        color: #172b56;
+        background: transparent;
+        color: #a7afb6;
+        font-size: 18px;
+        line-height: 38px;
+        margin-top: 35px;
+        margin-left: 0px;
+        @include transition;
+        &.owl-next {
+          margin-left: 60px;
+        }
+        &:hover {
+          background: $baseColor;
+          color: #fff;
+          border-color: $baseColor;
+        }
+      }
+    }
+  }
+  .right {
+    width: calc(50% + 145px);
+    float: right;
+    .projects_slider {
+      .item {
+        img {
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  .container {
+    overflow: hidden;
+  }
+  &.latest_project_two {
+    padding-bottom: 0px;
+    &:before {
+      display: none;
+    }
+    .projects_slider {
+      margin-bottom: -62px;
+      position: relative;
+      z-index: 4;
+    }
+  }
+}
+.single_btn_text {
+  overflow: hidden;
+  margin-top: 140px !important;
+  h5 {
+    color: #fff;
+    font: 500 36px/49px $pop;
+    padding-right: 95px;
+    margin-bottom: 0px;
+  }
+  .orange_btn {
+    margin-top: 8px;
+  }
+}
+/* End Latest Projects Area css
+============================================================================================ */
+
+/* Trusted Area css
+============================================================================================ */
+.trusted_area {
+  padding-top: 135px;
+  padding-bottom: 50px;
+  background: url("../images/trusted-bg.png") no-repeat scroll center center;
+  background-size: cover;
+  min-height: 650px;
+  .trusted_inner {
+    .trusted_text {
+      h3 {
+        font: 700 45px/49px $pop;
+        color: #172460;
+      }
+      h4 {
+        font: 700 40px/49px $pop;
+        color: #172460;
+        margin-bottom: 15px;
+      }
+      p {
+        padding-right: 60px;
+        margin-bottom: 45px;
+      }
+    }
+  }
+}
+.trusted_item {
+  text-align: center;
+  img {
+    margin-bottom: 20px;
+  }
+  h4 {
+    font: 600 45px $pop;
+    color: #172460;
+    margin-bottom: 0px;
+  }
+  p {
+    margin: 0px -10px;
+  }
+}
+/* End Trusted Area css
+============================================================================================ */
+
+/* Our History Area css
+============================================================================================ */
+.our_history_area {
+  background-image: linear-gradient(
+    90deg,
+    rgb(237, 241, 244) 16%,
+    rgb(255, 255, 255) 100%
+  );
+  .our_history_inner {
+    margin-top: -53px;
+    position: relative;
+    box-shadow: 0px 3px 103px 0px rgba(0, 0, 0, 0.2);
+    z-index: 30;
+    .history_left {
+      background: $baseColor;
+      height: 100%;
+      padding-left: 50px;
+      padding-right: 30px;
+      padding-top: 95px;
+      padding-bottom: 85px;
+      h5 {
+        color: #fff;
+        font: 600 32px/35px $pop;
+        margin-bottom: 20px;
+      }
+      p {
+        color: #fff;
+        margin-bottom: 35px;
+        font-size: 18px;
+        line-height: 30px;
+      }
+      .main_btn {
+        &:hover {
+          color: $baseColor;
+          background: $blue;
+        }
+      }
+    }
+    .history_right_text {
+      margin-left: -30px;
+      padding-left: 55px;
+      padding-top: 75px;
+      padding-right: 50px;
+      height: 100%;
+      background: #fff;
+      clip-path: polygon(
+        0% 0%,
+        95% 0%,
+        100% 10%,
+        100% 100%,
+        0% 100%,
+        0% 0%,
+        0% 0%,
+        0% 0%
+      );
+      h6 {
+        font: normal 20px $play;
+        font-style: italic;
+        color: #8c8c8c;
+      }
+      h4 {
+        color: $blue;
+        font: 700 35px/45px $pop;
+        margin-bottom: 25px;
+      }
+      p {
+        font: 400 16px/28px $open;
+        color: $dip;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .our_service_area {
+    background: transparent;
+    position: relative;
+    &:before {
+      content: "";
+      background: url("../images/service-techture.jpg") no-repeat scroll center
+        center;
+      width: 362px;
+      height: 456px;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      opacity: 0.4;
+    }
+  }
+  &.service_bg {
+    .service_inner {
+      .serive_item {
+        background: #fff;
+      }
+    }
+  }
+}
+/* End Our History Area css
+============================================================================================ */
+
+/* Feature Projects Slider Area css
+============================================================================================ */
+.f_projects_slider_area {
+  background: url("../images/projects/feature-projects-bg.jpg") no-repeat scroll
+    center center;
+  padding-bottom: 130px;
+  background-size: cover;
+  .f_project_slider {
+    .f_projects_nav {
+      position: absolute;
+      top: -112px;
+      right: 0px;
+      button {
+        border: 1px solid #a7afb6;
+        border-radius: 50%;
+        text-align: center;
+        background: transparent;
+        color: #a7afb6;
+        font-size: 18px;
+        line-height: 38px;
+        height: 42px;
+        width: 42px;
+        @include transition;
+        &:hover {
+          background: $baseColor;
+          border-color: $baseColor;
+          color: #fff;
+        }
+        &.owl-next {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+/* End Feature Projects Slider Area css
+============================================================================================ */

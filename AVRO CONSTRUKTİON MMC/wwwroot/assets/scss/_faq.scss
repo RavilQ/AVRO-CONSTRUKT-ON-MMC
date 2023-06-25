@@ -1,0 +1,162 @@
+/* Faq Area css
+============================================================================================ */
+.faq_area {
+  .main_title {
+    h2 {
+      margin-bottom: 10px;
+    }
+    p {
+      font: normal 20px $lora;
+      font-style: italic;
+    }
+  }
+  .input-group {
+    position: relative;
+    display: block;
+    margin-bottom: 65px;
+    input {
+      background: transparent;
+      border: 1px solid #cecece;
+      border-radius: 3px !important;
+      height: 60px;
+      outline: none;
+      box-shadow: none;
+      width: 100%;
+      padding: 0px 30px 0px 25px;
+      font-size: 16px;
+      font-family: $pop;
+      line-height: 60px;
+      color: rgba(0, 0, 0, 0.5);
+      @include placeholder {
+        font-size: 16px;
+        font-family: $open;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    .input-group-append {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      .btn {
+        border: none;
+        padding: 0px;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}
+.faq_area {
+  .question_inner {
+    margin-top: -20px;
+    margin-bottom: -20px;
+    .accordion {
+      &.left_side {
+        padding-right: 45px;
+      }
+      .card {
+        border: none;
+        border-radius: 0px;
+        .card-header {
+          border: none;
+          background: transparent;
+          padding: 20px 0px;
+          button {
+            padding: 0px 0px 0px 26px;
+            text-decoration: none;
+            color: $blue;
+            font-size: 20px;
+            font-family: $pop;
+            font-weight: 500;
+            font-style: normal;
+            text-align: left;
+            position: relative;
+            i {
+              position: absolute;
+              left: 0px;
+              display: none;
+              font-style: normal;
+              color: $dip;
+              & + i {
+                display: inline-block;
+              }
+            }
+            &.collapsed {
+              i {
+                display: inline-block;
+                & + i {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+        .card-body {
+          padding: 5px 0px 5px 26px;
+        }
+      }
+    }
+  }
+}
+
+/* End Faq Area css
+============================================================================================ */
+
+/* Question Form Area css
+============================================================================================ */
+.answer_question_area {
+  background: url(../images/faq-bg.jpg) no-repeat scroll center center;
+  background-size: cover;
+  .single_title {
+    margin-bottom: 45px;
+    color: #fff;
+    h2 {
+      font: 600 32px $pop;
+      margin-bottom: 0px;
+    }
+  }
+  .call_back_form {
+    .form-group {
+      input {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+        padding: 0px;
+        color: rgba(255, 255, 255, 1);
+        height: 68px;
+        border-radius: 0px;
+        font: 400 17px/68px $pop;
+        @include placeholder {
+          color: rgba(255, 255, 255, 1);
+          font: 400 17px $pop;
+        }
+      }
+      textarea {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+        padding: 0px;
+        color: rgba(255, 255, 255, 1);
+        height: 175px;
+        font: 400 17px $pop;
+        border-radius: 0px;
+        @include placeholder {
+          color: rgba(255, 255, 255, 1);
+          font: 400 17px $pop;
+        }
+      }
+      .submit_btn {
+        padding: 0px 48px;
+        width: auto;
+        height: 52px;
+        line-height: 52px;
+        margin-top: 20px;
+      }
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+/* End Question Form Area css
+============================================================================================ */

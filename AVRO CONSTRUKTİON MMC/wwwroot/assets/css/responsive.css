@@ -1,0 +1,1532 @@
+@media (max-width: 1660px) {
+  .best_construction_area .best_construction_inner .best_con_img img + img {
+    margin-left: 0px;
+  }
+  .best_construction_area .best_construction_inner .best_con_img img {
+    max-width: 100%;
+  }
+  .best_construction_area .best_construction_inner .best_ct_text {
+    margin-left: 0px;
+  }
+  .main_slider_area .stroke_text {
+    font: 800 150px/100px "Poppins", sans-serif;
+    right: -60px;
+    bottom: -30px;
+  }
+}
+@media (max-width: 1440px) {
+}
+@media (max-width: 1380px) {
+  .menu_three .main_menu .navbar .nav.navbar-nav.navbar-right li.number a {
+    font: 600 15px/80px "Poppins", sans-serif;
+    padding-right: 18px;
+  }
+  .menu_three .main_menu .navbar .nav.navbar-nav > li > a {
+    padding: 0px 5px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 1340px) {
+  .breadcrumb_area h1 {
+    font: 800 120px/100px "Poppins", sans-serif;
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 1250px) {
+}
+@media (max-width: 1199px) {
+  .main_menu .navbar .nav.navbar-nav li {
+    margin-right: 25px;
+  }
+  .main_menu .navbar .nav.navbar-nav {
+    padding-left: 25px;
+  }
+  .main_menu .navbar .nav.navbar-nav.navbar-right::before {
+    left: 13px;
+  }
+  .menu_two .main_menu .navbar .nav.navbar-nav.navbar-right li.number::before {
+    left: -10px;
+  }
+  .menu_two .main_menu .navbar .nav.navbar-nav.navbar-right li.number {
+    margin-left: 0px;
+  }
+  .menu_two .main_menu {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .menu_two .main_menu .navbar .nav.navbar-nav li {
+    margin-right: 15px;
+  }
+  .menu_two .main_menu .navbar .nav.navbar-nav.navbar-right li.number a {
+    font: 300 18px/90px "Poppins", sans-serif;
+  }
+  .menu_two .main_menu .navbar .nav.navbar-nav.navbar-right {
+    padding-left: 0px;
+  }
+  .menu_three .main_menu .navbar .navbar-brand {
+    padding: 0px 15px;
+  }
+  .menu_three .main_menu .navbar .navbar-collapse .logo {
+    width: 220px;
+  }
+  .menu_three .main_menu .navbar .navbar-collapse .logo img {
+    width: 100%;
+  }
+  .menu_three .main_menu .navbar .nav.navbar-nav.navbar-right li.sideb_menu {
+    width: 80px;
+  }
+  .header_five .main_menu::before {
+    left: -232px;
+  }
+  .main_slider_area .stroke_text {
+    font: 800 100px/100px "Poppins", sans-serif;
+    right: -30px;
+    bottom: -40px;
+  }
+  .perfection_slider_area .image_slider img {
+    width: 100%;
+  }
+  .image_slider {
+    margin-right: 0px;
+  }
+  .text_slider .item h2 {
+    font: 700 40px/50px "Poppins", sans-serif;
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+  .text_slider .item p {
+    font: 300 16px/28px "Open Sans", sans-serif;
+  }
+
+  .tagline_area .right .dark_btn {
+    white-space: nowrap;
+  }
+  .tagline_area .left p {
+    font: 400 28px "Poppins", sans-serif;
+    margin-top: 3px;
+  }
+  .experience_area .experience_inner .experience_image {
+    margin-right: -30px;
+  }
+  .experience_area .experience_inner .col-lg-5 {
+    align-self: center;
+  }
+  .featured_area .featured_inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .who_list {
+    display: block;
+  }
+  .who_list .col-lg-5,
+  .who_list .col-lg-7 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .who_list .who_text {
+    padding-left: 0px;
+  }
+  .who_list .who_image {
+    margin-right: 0px;
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .who_list .who_image img + img {
+    margin-top: 0px;
+    margin-left: 5px;
+  }
+  .building_area .col-lg-6 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .building_area .right img {
+    margin-top: 0px;
+  }
+  .building_area .left {
+    margin-right: 0px;
+    padding: 100px 0px;
+    display: block;
+  }
+  .building_area .left .building_text {
+    max-width: 600px;
+    align-self: center;
+    margin: auto;
+    padding-right: 15px;
+    margin-left: 0px;
+    padding-left: 15px;
+  }
+  .building_area .right img {
+    width: 100%;
+  }
+  .building_area .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .building_area .right {
+    margin-left: 0px;
+  }
+  .best_construction_area .best_construction_inner .best_con_img img {
+    margin-left: 0px;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-bottom: 30px;
+  }
+  .best_construction_area .best_construction_inner .best_con_img {
+    margin-top: 10px;
+  }
+  .latest_projects_area .left {
+    width: 100%;
+    float: none;
+  }
+  .latest_projects_area .right {
+    width: 100%;
+    float: none;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .latest_projects_area .left .our_l_text {
+    max-width: 100%;
+    float: none;
+    text-align: left;
+  }
+  .latest_projects_area .left .our_l_text h3 {
+    max-width: 100%;
+    text-align: center;
+  }
+  .latest_projects_area {
+    padding-top: 100px;
+  }
+  .latest_projects_area .left .our_l_text p {
+    max-width: 700px;
+    margin: 0px auto 75px;
+    text-align: center;
+  }
+  .latest_projects_area .left .our_l_text button {
+    top: 114%;
+    margin-top: 0px;
+  }
+  .latest_projects_area .left .our_l_text button.owl-prev {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -30px;
+  }
+  .latest_projects_area .left .our_l_text button.owl-next {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+    margin-left: 30px;
+  }
+  .single_btn_text {
+    margin-top: 100px !important;
+  }
+  .single_btn_text h5 {
+    margin-bottom: 20px;
+  }
+  .our_history_area .our_history_inner .history_left {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 80px;
+  }
+  .thirty_years_area .left .thirty_inner {
+    padding-left: 15px;
+  }
+  .f_projects_slider_area .f_project_slider .f_projects_nav {
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: 0px;
+    position: relative;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .f_projects_slider_area .f_project_slider .f_projects_nav button.owl-prev {
+    margin-right: 10px;
+  }
+  .f_projects_slider_area .f_project_slider .f_projects_nav button.owl-next {
+    margin-left: 10px;
+  }
+  .company_skill_inner .col-lg-5 {
+    align-self: center;
+  }
+  .about_why_choose_area .why_choose_text_inner {
+    padding-left: 15px;
+  }
+  .about_why_choose_area .why_choose_text_inner .media:nth-child(4) {
+    margin-bottom: 0px;
+  }
+  .download_wd a {
+    font: 600 16px/30px "Poppins", sans-serif;
+  }
+  .list_wd .nav li a {
+    font: 600 15px/55px "Poppins", sans-serif;
+    padding: 0px 18px;
+  }
+  .download_wd a img {
+    padding-right: 12px;
+  }
+  .get_wd .nav li a {
+    font: 600 16px "Poppins", sans-serif;
+  }
+  .benefit_service .benefit_text_inner .nav li a {
+    padding-left: 20px;
+    font-size: 15px;
+  }
+  .benefit_service .benefit_text_inner {
+    padding-right: 0px;
+  }
+  .project_details_text_inner .col-lg-6 {
+    align-self: center;
+  }
+  .service_two_item .service_text h4 {
+    font: 600 16px/36px "Poppins", sans-serif;
+  }
+}
+@media (max-width: 991px) {
+  /* Menu Effect Css */
+  .navbar-light .navbar-toggler {
+    cursor: pointer;
+    position: relative;
+    height: 20px;
+    width: 30px;
+    top: 0px;
+    border: none;
+    padding: 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .main_menu .navbar .nav.navbar-nav.navbar-right::before {
+    display: none;
+  }
+  .navbar-light .navbar-toggler span {
+    height: 2px;
+    width: 30px;
+    display: block;
+    background: #ff7523;
+    cursor: pointer;
+    transition: background 0.3s linear;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+  }
+  .menu_two .main_menu .navbar .nav.navbar-nav.navbar-right li.number::before {
+    display: none;
+  }
+  .navbar-light .navbar-toggler[aria-expanded="true"] span {
+    background: transparent;
+  }
+  .navbar-light .navbar-toggler.collapsed span {
+    background: #ff7523;
+  }
+  .navbar-light .navbar-toggler span:before {
+    content: "";
+    height: 2px;
+    width: 30px;
+    display: block;
+    background: #ff7523;
+    left: 0px;
+    top: -10px;
+    position: absolute;
+    transition: top 0.3s 0.3s, -webkit-transform 0.3s 0s;
+  }
+  .navbar-light .navbar-toggler span:after {
+    content: "";
+    height: 2px;
+    width: 30px;
+    display: block;
+    background: #ff7523;
+    left: 0px;
+    bottom: -10px;
+    position: absolute;
+    transition: bottom 0.2s 0.3s, -webkit-transform 0.3s 0s;
+  }
+  .navbar-light .navbar-toggler[aria-expanded="true"] span:before {
+    transform: rotate(45deg);
+    top: 0px;
+    transition: top 0.3s 0s, transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+  }
+  .navbar-light .navbar-toggler[aria-expanded="true"] span:after {
+    transform: rotate(-45deg);
+    bottom: 0px;
+    transition: bottom 0.3s 0s, transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+  }
+  .dropdown .dropdown-menu {
+    -webkit-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0s;
+    -moz-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0s;
+    -ms-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0s;
+    -o-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0s;
+    transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0s;
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+  }
+  .dropdown.show .dropdown-menu {
+    -webkit-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0s;
+    -moz-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0s;
+    -ms-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0s;
+    -o-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0s;
+    transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0s;
+    max-height: 250px;
+    overflow-y: scroll;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu_two .navbar-light .navbar-toggler span {
+    background: #fff;
+  }
+  .menu_two .navbar-light .navbar-toggler span:before {
+    background: #fff;
+  }
+  .menu_two .navbar-light .navbar-toggler span:after {
+    background: #fff;
+  }
+  .menu_two .navbar-light .navbar-toggler[aria-expanded="true"] span {
+    background: transparent;
+  }
+  .menu_two.navbar_fixed .navbar-light .navbar-toggler span {
+    background: #ff7523;
+  }
+  .menu_two.navbar_fixed .navbar-light .navbar-toggler span:before {
+    background: #ff7523;
+  }
+  .menu_two.navbar_fixed .navbar-light .navbar-toggler span:after {
+    background: #ff7523;
+  }
+  .menu_two.navbar_fixed
+    .navbar-light
+    .navbar-toggler[aria-expanded="true"]
+    span {
+    background: transparent;
+  }
+  .header_area.menu_two.navbar_fixed .navbar-light .navbar-toggler {
+    top: -1px;
+  }
+  .header_area.navbar_fixed.menu_two
+    .main_menu
+    .navbar
+    .nav.navbar-nav
+    > li
+    > a {
+    line-height: 48px;
+  }
+  .header_area.navbar_fixed.menu_two
+    .main_menu
+    .navbar
+    .nav.navbar-nav.navbar-right
+    li
+    a {
+    line-height: 48px;
+  }
+  .header_area.navbar_fixed.menu_two
+    .main_menu
+    .navbar
+    .nav.navbar-nav.navbar-right
+    li.number
+    a {
+    line-height: 48px;
+  }
+
+  .menu_three .navbar-light .navbar-toggler span {
+    background: #fff;
+  }
+  .menu_three .navbar-light .navbar-toggler span:before {
+    background: #fff;
+  }
+  .menu_three .navbar-light .navbar-toggler span:after {
+    background: #fff;
+  }
+  .menu_three .navbar-light .navbar-toggler[aria-expanded="true"] span {
+    background: transparent;
+  }
+  /* End Menu Effect Css */
+  .main_menu .navbar .nav.navbar-nav li {
+    margin-right: 0px;
+  }
+  .main_menu .navbar .nav.navbar-nav {
+    padding-left: 0px;
+  }
+  .main_menu .navbar .nav.navbar-nav li a {
+    font: 500 16px/48px "Poppins", sans-serif;
+    border-bottom: 1px solid #efefef;
+    display: block;
+  }
+  .main_menu .navbar .nav.navbar-nav li a::before {
+    bottom: 0px;
+  }
+  .main_menu .navbar .nav.navbar-nav li .mobile_dropdown {
+    display: inline-block;
+  }
+  .main_menu .navbar .nav.navbar-nav.navbar-right li a {
+    line-height: 48px;
+  }
+  .main_menu .navbar .nav.navbar-nav li .mobile_dropdown {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    color: #242424;
+    line-height: 48px;
+    font-size: 24px;
+    display: inline-block;
+  }
+  .main_menu .navbar .nav.navbar-nav li.submenu .dropdown-menu {
+    border: none;
+  }
+  .main_menu .navbar .nav.navbar-nav li.submenu .dropdown-menu li:last-child a {
+    border-bottom: 1px solid #efefef;
+  }
+  .main_menu .navbar .nav.navbar-nav li.submenu .dropdown-menu li a {
+    padding: 0px 15px;
+  }
+  .main_menu .navbar .nav.navbar-nav li.submenu .dropdown-menu li:hover a {
+    padding-left: 30px;
+  }
+  .main_menu .navbar .nav.navbar-nav li.submenu .dropdown-menu li a::before {
+    left: 12px;
+  }
+  .menu_two .main_menu .navbar .navbar-collapse {
+    background: #fff;
+  }
+  .menu_two .main_menu .navbar .nav.navbar-nav li a {
+    color: #242424;
+    padding-left: 15px;
+  }
+  .menu_two .main_menu .navbar .nav.navbar-nav li {
+    margin-right: 0px;
+  }
+  .menu_two .main_menu .navbar .nav.navbar-nav li a::before {
+    left: 15px;
+  }
+  .menu_two .main_menu .navbar .nav.navbar-nav.navbar-right li a {
+    color: #242424;
+    line-height: 48px;
+  }
+  .menu_two .main_menu .navbar .nav.navbar-nav.navbar-right li.number a {
+    font: 300 18px/48px "Poppins", sans-serif;
+  }
+  .menu_three .main_menu {
+    padding-right: 0px;
+  }
+  .menu_three .main_menu .navbar .navbar-collapse .navbar-brand {
+    display: none;
+  }
+  .menu_three .main_menu .navbar .nav.navbar-nav > li {
+    margin: 0px;
+    width: 100%;
+  }
+  .menu_three .main_menu .navbar .nav.navbar-nav > li > a {
+    line-height: 48px;
+    text-align: left;
+    padding: 0px 15px;
+    font-size: 17px;
+    border-right: 0px;
+    border-bottom: 1px solid rgba(239, 239, 239, 0.5);
+  }
+  .menu_three .main_menu .navbar .nav.navbar-nav.navbar-right li.sideb_menu {
+    display: none;
+  }
+  .menu_three .main_menu .navbar .nav.navbar-nav li .mobile_dropdown {
+    color: #fff;
+  }
+  .menu_three .main_menu .navbar .navbar-collapse .logo {
+    display: none;
+  }
+  .menu_three .main_menu .navbar .nav.navbar-nav.navbar-right li.number a {
+    font: 600 17px/48px "Poppins", sans-serif;
+    padding-right: 15px;
+    display: block;
+  }
+  .header_five .main_menu::before {
+    display: none;
+  }
+  .header_five .main_menu .navbar .navbar-brand img {
+    display: none;
+  }
+  .header_five .main_menu .navbar .navbar-brand img + img {
+    display: inline-block;
+  }
+  .header_five .main_menu .navbar .navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .menu_tow .navbar-light .navbar-toggler {
+    top: -8px;
+  }
+
+  .header_area + row,
+  .header_area + div,
+  .header_area + section {
+    margin-top: 171px;
+  }
+  .header_area.menu_three + row,
+  .header_area.menu_three + div,
+  .header_area.menu_three + section {
+    margin-top: 80px;
+  }
+  .header_area.header_five + row,
+  .header_area.header_five + div,
+  .header_area.header_five + section {
+    margin-top: 171px;
+  }
+  .header_area.menu_four + row,
+  .header_areamenu_four + div,
+  .header_areamenu_four + section {
+    margin-top: 80px;
+  }
+  .header_area.menu_two + row,
+  .header_area.menu_two + div,
+  .header_area.menu_two + section {
+    margin-top: 0px;
+  }
+
+  .header_area.menu_two .navbar-light .navbar-toggler {
+    top: -7px;
+  }
+  .header_area.navbar_fixed .main_menu .navbar .nav.navbar-nav > li > a {
+    line-height: 48px;
+  }
+  .menu_three .navbar.navbar-light .navbar-toggler {
+    margin-right: 15px;
+  }
+
+  #main_slider2 .slider_img {
+    display: none;
+  }
+  .home_two_banner .left {
+    min-height: 600px;
+  }
+
+  .slider_nav {
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+
+  .tagline_area {
+    padding: 25px 0px;
+  }
+  .tagline_area .left p {
+    margin-top: 0px;
+  }
+  .tagline_area .right .dark_btn {
+    margin-top: 16px;
+  }
+  .experience_area .experience_inner .experience_text {
+    padding-left: 0px;
+    margin-top: 50px;
+  }
+  .experience_area .experience_inner .experience_image {
+    margin-right: 0px;
+    max-width: 456px;
+  }
+  .featured_area .featured_inner {
+    padding-left: 75px;
+    padding-right: 75px;
+    margin-bottom: -30px;
+  }
+  .featured_area .featured_inner .col-md-4 {
+    margin-bottom: 30px;
+  }
+  .why_choose_area .choose_list {
+    margin-bottom: 50px;
+  }
+  .who_list .who_image img {
+    width: 50%;
+  }
+  .two_column_title .col-lg-9 {
+    margin-top: 30px;
+  }
+  .team_item .team_img img {
+    width: 100%;
+  }
+  .home_latest_news .latest_news_list {
+    margin-top: 50px;
+  }
+  .contact_details_area .client_details_inner .col-lg-4:first-child .media {
+    padding-left: 0px;
+  }
+  .contact_details_area .client_details_inner .col-lg-4:last-child .media {
+    padding-left: 0px;
+  }
+  .contact_details_area .client_details_inner .col-lg-4:nth-child(2)::after {
+    display: none;
+  }
+  .link_widget.service_widget {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .link_widget {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .footer_widgets .col-sm-6 {
+    margin-bottom: 30px;
+  }
+  .footer_widgets {
+    margin-bottom: -30px;
+  }
+  .our_projects_inner .g_fillter .nav {
+    columns: 4;
+    display: block;
+    margin-bottom: 50px;
+  }
+  .best_construction_area .best_construction_inner .best_con_img {
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+  .trusted_area .trusted_inner .trusted_text {
+    margin-bottom: 50px;
+  }
+  .trusted_area {
+    min-height: 100%;
+    padding-top: 100px;
+    padding-bottom: 0px;
+  }
+  .request_call_back_area {
+    padding-bottom: 100px;
+  }
+  .get_in_touch_area .get_touch_text {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  .our_history_area .our_history_inner .history_right_text {
+    margin-left: 0px;
+    clip-path: polygon(
+      0% 0%,
+      95% 0%,
+      100% 0%,
+      100% 100%,
+      0% 100%,
+      0% 0%,
+      0% 0%,
+      0% 0%
+    );
+    padding-bottom: 60px;
+  }
+  .thirty_years_area .left {
+    float: none;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .thirty_years_area .right {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .thirty_years_area .right .thirty_img {
+    margin-top: 0px;
+  }
+  .thirty_years_area .left .thirty_inner {
+    max-width: 705px;
+    float: none;
+    margin: 0px auto 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .thirty_years_area .thirty_img img {
+    width: 100%;
+  }
+  .thirty_years_area .thirty_img {
+    max-width: 705px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .breadcrumb_area h1 {
+    font: 800 80px/80px "Poppins", sans-serif;
+    bottom: -36px;
+    right: -29px;
+  }
+  .company_skill_inner .company_skill_text {
+    margin-bottom: 40px;
+  }
+  .company_skill_inner .about_company_img img {
+    width: 100%;
+  }
+  .about_why_choose_area .left {
+    width: 100%;
+    float: none;
+  }
+  .about_why_choose_area .left .why_choose_text_inner {
+    max-width: 670px;
+    float: none;
+    margin: auto;
+    padding-right: 15px;
+    padding-bottom: 85px;
+  }
+  .about_why_choose_area .right {
+    width: 100%;
+    float: none;
+  }
+  .about_why_choose_area .right img {
+    width: 100%;
+  }
+  .single_service_inner {
+    padding-left: 0px;
+  }
+  .benefit_service.right .benefit_text_inner {
+    padding-left: 30px;
+    margin-top: -4px;
+  }
+  .benefit_service .benefit_text_inner .nav li a {
+    position: relative;
+    padding-left: 20px;
+    font: 400 15px "Open Sans", sans-serif;
+  }
+  .benefit_service .benefit_text_inner .nav li a i {
+    line-height: 13px;
+  }
+  .service_left_sidebar {
+    margin-top: 50px;
+  }
+  .main_blog_inner {
+    padding-right: 0px;
+  }
+  .right_sidebar_area {
+    margin-top: 40px;
+  }
+  .comming_soon_area {
+    padding: 100px 0px;
+  }
+  .comming_soon_area .comming_soon_inner .comming_soon_text .countdown {
+    max-width: 370px;
+    margin: auto;
+  }
+  .comming_soon_area
+    .comming_soon_inner
+    .comming_soon_text
+    .countdown
+    .countdown-container {
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+  .comming_soon_area .comming_soon_inner .comming_soon_text p {
+    font-size: 24px;
+    line-height: 38px;
+  }
+  .history_inner .media .media-body .img_list img + img {
+    padding-left: 0px;
+    margin-top: 15px;
+  }
+  .benefit_service .benefit_img {
+    margin-left: 0px;
+  }
+  .benefit_service .col-md-5 {
+    align-self: center;
+  }
+  .our_address {
+    padding-left: 0px;
+    margin-top: 40px;
+  }
+  .faq_area .question_inner .accordion.left_side {
+    padding-right: 0px;
+  }
+  .project_details_text_inner .col-lg-6 img {
+    margin-top: 30px;
+  }
+  .project_completion_inner .col-lg-6 img {
+    margin-top: 30px;
+  }
+  .projects_one .our_projects_inner .g_fillter .nav li {
+    margin-bottom: 15px;
+    margin-right: 15px;
+  }
+  .projects_item img {
+    width: 100%;
+  }
+  .testi_list_area .testi_item {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .top_bar .d-flex {
+    display: block !important;
+  }
+  .top_bar .d-flex .right::before {
+    display: none;
+  }
+  .top_bar .d-flex .right {
+    background: transparent;
+    padding-left: 0px;
+  }
+  .top_bar .d-flex .right .nav {
+    justify-content: center;
+  }
+  .top_bar .d-flex .left {
+    text-align: center;
+  }
+  .top_bar .d-flex .left h5 {
+    font: 400 15px/30px "Poppins", sans-serif;
+  }
+  .top_bar {
+    padding: 13px 0px 10px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .main_slider_area .stroke_text {
+    font: 800 60px/80px "Poppins", sans-serif;
+    right: -20px;
+    bottom: -35px;
+  }
+  .main_menu .navbar .navbar-collapse {
+    max-height: 343px;
+    overflow-y: scroll;
+  }
+  .tagline_area .d-flex {
+    display: block !important;
+    text-align: center;
+  }
+  .tagline_area .left p {
+    font: 400 28px/36px "Poppins", sans-serif;
+  }
+  .video_area .video_text h3 {
+    font: 600 45px/50px "Poppins", sans-serif;
+  }
+  .testi_slider {
+    padding-right: 0px;
+  }
+  .testi_slider .media .d-flex {
+    padding-right: 25px;
+  }
+  .testi_slider .media .media-body p {
+    font: 400 18px/32px "Open Sans", sans-serif;
+  }
+  .testimonials_area {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .home_two_banner .left {
+    min-height: 550px;
+  }
+  .home_two_banner .left {
+    float: none;
+    display: none;
+  }
+  .home_two_banner {
+    position: relative;
+  }
+  .home_two_banner:before {
+    content: "";
+    background: rgba(243, 123, 16, 0.75);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .home_two_banner .right {
+    display: none;
+  }
+  .latest_blog_2 {
+    margin-left: 0px;
+    max-width: 430px;
+    margin: 0px auto 30px;
+  }
+  .home_two_banner {
+    background: url("../images/banner/home2-banner.jpg") no-repeat scroll center
+      center;
+  }
+  .home_two_banner #main_slider2 {
+    position: relative;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  .latest_blog_1 {
+    margin-right: 0px;
+    max-width: 430px;
+    margin: 0px auto 30px;
+  }
+  .latest_blog_1 img {
+    width: 100%;
+  }
+  .home_latest_news .latest_news_list {
+    max-width: 430px;
+    margin: 30px auto 0px;
+  }
+  .contact_details_area .client_details_inner .col-lg-4:nth-child(2)::before {
+    display: none;
+  }
+  .contact_details_area .client_details_inner .media {
+    max-width: 270px;
+    margin: auto;
+  }
+  .our_projects_area .our_projects_inner .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .testimonials_area.testi_two .testi_slider {
+    padding-right: 0px;
+  }
+  .testimonials_area.testi_two .item .media .d-flex img {
+    box-shadow: none;
+  }
+  .testimonials_area.testi_two .item .media .d-flex {
+    padding-left: 0px;
+  }
+  .testimonials_area.testi_two .item .media .d-flex i {
+    padding-left: 0px;
+  }
+  .testimonials_area.testi_two .item .media {
+    padding-top: 0px;
+  }
+  .contact_details_area .client_details_inner .col-lg-4:nth-child(2) .media {
+    padding-left: 0px;
+  }
+  .single_btn_text h5 {
+    padding-right: 0px;
+  }
+  .latest_projects_area .left .our_l_text p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .benefit_service.right .benefit_text_inner {
+    padding-left: 0px;
+    margin-top: 40px;
+  }
+  .benefit_service.right .benefit_img {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .benefit_service.right .benefit_img img {
+    width: 100%;
+  }
+  .blog_item .blog_text .blog_time .float-right .nav li a {
+    font-size: 15px;
+  }
+  .blog_item .blog_text .blog_time .float-left a {
+    font-size: 15px;
+  }
+  .blog_item {
+    margin-bottom: 50px;
+  }
+  .comming_soon_text .media .d-flex img {
+    max-width: 100px;
+  }
+  .comming_soon_area .comming_soon_inner .comming_soon_text h3 {
+    font-size: 50px;
+  }
+  .comming_soon_area .comming_soon_inner .comming_soon_text .media .media-body {
+    padding-bottom: 0px;
+  }
+  .history_inner .media .d-flex {
+    margin-right: 25px;
+  }
+  .benefit_service .benefit_img img {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .benefit_service.right .benefit_img img {
+    margin-top: 0px;
+  }
+  .project_completion_area {
+    padding-bottom: 100px;
+  }
+  .our_projects_inner .g_fillter .nav {
+    columns: 4;
+  }
+  .service_two_item {
+    max-width: 370px;
+    margin: 0px auto 40px;
+  }
+  .testi_list_area .testi_item .media .d-flex {
+    padding-right: 15px;
+    position: relative;
+  }
+  .testi_list_area .testi_item {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media (max-width: 575px) {
+  .main_menu .navbar .navbar-collapse {
+    max-height: 245px;
+  }
+  .p_100 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .main_title h2 {
+    font: 600 26px/28px "Poppins", sans-serif;
+  }
+  .featured_item {
+    max-width: 270px;
+    margin: 0px auto 30px;
+  }
+  .featured_area .featured_inner .col-md-4 {
+    margin-bottom: 0px;
+  }
+  .why_choose_area .main_title h2 {
+    font: 600 26px/32px "Poppins", sans-serif;
+  }
+  .main_title {
+    margin-bottom: 40px;
+  }
+  .video_area {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .team_item {
+    max-width: 270px;
+    margin: 0px auto 30px;
+  }
+  .team_inner {
+    margin-bottom: -30px;
+  }
+  .testi_slider .media {
+    display: block;
+  }
+  .testi_slider .media .d-flex {
+    padding-right: 0px;
+  }
+  .testi_slider .media .d-flex {
+    margin-bottom: 65px;
+  }
+  .testi_slider .media .d-flex i {
+    bottom: -69px;
+  }
+  .testimonials_area {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .footer_copyright {
+    padding: 29px 0px;
+    display: block !important;
+    text-align: center;
+  }
+  .contact_details_area {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .building_area .left {
+    padding: 70px 0px;
+  }
+  .building_area .left .building_text h4 {
+    font: 600 32px/40px "Poppins", sans-serif;
+  }
+  .our_projects_inner .g_fillter .nav {
+    columns: 3;
+  }
+  .single_btn_text {
+    margin-top: 50px !important;
+  }
+  .latest_projects_area {
+    padding-top: 70px;
+  }
+  .pad_btm {
+    padding-bottom: 70px;
+  }
+  .single_btn_text h5 {
+    font: 500 28px/42px "Poppins", sans-serif;
+    padding-right: 0px;
+  }
+  .latest_projects_area .left .our_l_text button {
+    top: 110%;
+  }
+  .trusted_area {
+    padding-top: 70px;
+  }
+  .trusted_item {
+    margin-bottom: 30px;
+  }
+  .trusted_item p {
+    max-width: 200px;
+    margin: 0px auto 0px;
+  }
+  .trusted_area .trusted_inner .trusted_text h3 {
+    font: 700 28px/38px "Poppins", sans-serif;
+  }
+  .trusted_area .trusted_inner .trusted_text h4 {
+    font: 700 28px/38px "Poppins", sans-serif;
+  }
+  .trusted_area .trusted_inner .trusted_text p {
+    padding-right: 0px;
+  }
+  .request_call_back_area {
+    padding-bottom: 70px;
+    padding-top: 65px;
+  }
+  .testimonials_area.testi_two .item .media .d-flex img {
+    width: auto;
+  }
+  .pad_top {
+    padding-top: 70px;
+  }
+  .thirty_years_area {
+    padding-bottom: 70px;
+  }
+  .f_projects_slider_area .f_project_slider .f_projects_nav {
+    margin-top: 0px;
+  }
+  .video_area .video_text h3 {
+    font: 600 28px/38px "Poppins", sans-serif;
+  }
+  .error_area .error_inner .error_inner_text h3 {
+    font-size: 150px;
+  }
+  .error_area .error_inner .error_inner_text h4 {
+    font-size: 28px;
+  }
+  .error_area .error_inner .error_inner_text h5 {
+    font-size: 16px;
+  }
+  .error_area .error_inner .error_inner_text .main_btn {
+    line-height: 60px;
+    padding: 0px 44px;
+  }
+  .error_area {
+    min-height: 600px;
+  }
+  .company_skill_text h4 {
+    font: 600 28px/38px "Poppins", sans-serif;
+  }
+  .about_why_choose_area .left .why_choose_text_inner {
+    padding-bottom: 70px;
+    padding-bottom: 70px;
+  }
+  .testi_slider .media .d-flex img {
+    width: auto;
+  }
+  .single_service_item img {
+    margin-bottom: 30px;
+  }
+  .blog_item .blog_text .blog_time .float-left {
+    float: none !important;
+  }
+  .blog_item .blog_text .blog_time .float-right {
+    float: none !important;
+  }
+  .blog_item .blog_text .blog_time .float-right .nav li a {
+    line-height: 30px;
+  }
+  .blog_item .blog_text .blog_time .float-left a {
+    line-height: 30px;
+  }
+  .blog_item .blog_text .blog_time {
+    padding: 15px 0px;
+  }
+  .comming_soon_area .comming_soon_inner .comming_soon_text h3 {
+    font-size: 32px;
+    line-height: 62px;
+  }
+  .comming_soon_text .media .d-flex img {
+    max-width: 50px;
+  }
+  .comming_soon_area .comming_soon_inner .comming_soon_text .media .d-flex {
+    padding-right: 10px;
+  }
+  .comming_soon_area .comming_soon_inner .comming_soon_text .media {
+    max-width: 280px;
+    margin: 0px auto 60px;
+  }
+  .comming_soon_inner .input-group {
+    display: block;
+  }
+  .comming_soon_area
+    .comming_soon_inner
+    .comming_soon_text
+    .fun_subscrib_inner
+    .submit_btn {
+    margin-top: 20px;
+  }
+  .project_completion_area {
+    padding-bottom: 70px;
+  }
+  .gallery_inner .projects_item {
+    max-width: 300px;
+    margin: 0px auto 30px;
+  }
+  .s_comment_list .s_comment_list_inner .media {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .testi_list_area .testi_item .media {
+    display: block;
+  }
+  .testi_list_area .testi_item .media .d-flex {
+    padding-right: 0px;
+    margin-bottom: 60px;
+  }
+  .testi_list_area .testi_item .media .d-flex i {
+    bottom: -70px;
+  }
+  .testi_list_area {
+    padding: 70px 0px 70px 0px;
+  }
+  .breadcrumb_area {
+    padding: 69px 0px;
+  }
+  .breadcrumb_area h1 {
+    font: 800 42px/80px "Poppins", sans-serif;
+  }
+}
+@media (max-width: 480px) {
+  .main_slider_area .stroke_text {
+    font: 800 35px/45px "Poppins", sans-serif;
+    right: -10px;
+    bottom: -22px;
+  }
+  .main_menu .navbar .navbar-brand {
+    max-width: 180px;
+  }
+  .main_menu .navbar .navbar-brand img {
+    width: 100%;
+  }
+  .top_bar .d-flex .right .nav li a {
+    font: 500 16px/36px "Poppins", sans-serif;
+  }
+  .top_bar .d-flex .right .nav li {
+    margin-right: 0px;
+  }
+  .main_slider_area.slider_five .stroke_text {
+    bottom: -23px;
+  }
+  .our_history_area .our_history_inner {
+    margin-top: 0px;
+  }
+  .text_slider .item h2 {
+    font: 700 30px/40px "Poppins", sans-serif;
+  }
+  .text_slider .item p br {
+    display: none;
+  }
+  .tagline_area {
+    padding: 30px 0px;
+  }
+  .tagline_area .left p {
+    font: 400 22px/30px "Poppins", sans-serif;
+  }
+  .experience_area .experience_inner .experience_text h3 {
+    font: 300 26px/36px "Poppins", sans-serif;
+  }
+  .main_title h2::before {
+    display: none;
+  }
+  .video_area .video_text h3 {
+    font: 600 28px/38px "Poppins", sans-serif;
+  }
+  .expericene_slider .exp_center_text h6 {
+    font: 400 18px "Lora", serif;
+  }
+  .expericene_slider .exp_center_text h4 {
+    font: 300 26px "Poppins", sans-serif;
+  }
+  .expericene_slider .exp_center_text h4 span {
+    font: normal 26px "Playfair Display", serif;
+    font-style: italic;
+  }
+  .expericene_slider.exp_slider_two .exp_center_text h4 {
+    font: 600 26px/36px "Poppins", sans-serif;
+  }
+  .our_projects_area .our_projects_inner .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .projects_item {
+    max-width: 303px;
+    margin: 0px auto 30px;
+  }
+  .certified_construction .left {
+    padding: 70px 35px 70px 35px;
+  }
+  .certified_construction .right {
+    padding: 70px 35px 70px 35px;
+  }
+  .header_area + row,
+  .header_area + div,
+  .header_area + section {
+    margin-top: 207px;
+  }
+  .best_construction_area .best_construction_inner .best_ct_text h3 {
+    font: bold 26px/40px "Poppins", sans-serif;
+  }
+  .our_history_area .our_history_inner .history_right_text {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .our_history_area .our_history_inner .history_right_text h4 {
+    font: 700 26px/36px "Poppins", sans-serif;
+    margin-bottom: 20px;
+  }
+  .our_history_area .our_history_inner .history_left {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .thirty_title_text h4 {
+    font: 600 26px/36px "Poppins", sans-serif;
+  }
+  .thirty_title_text h4 a {
+    font: 600 26px/36px "Playfair Display", serif;
+  }
+  .video_area .video_text h3 span {
+    text-decoration: underline;
+  }
+  .video_area .video_text h3 span:before {
+    display: none;
+  }
+  .more_information_inner .accordion .card .card-header button {
+    padding: 11px 15px 11px 32px;
+  }
+  .more_information_inner .accordion .card .card-header button i {
+    left: 10px;
+  }
+  .more_information_inner .accordion .card .card-body {
+    padding-left: 33px;
+    padding-right: 15px;
+  }
+  .history_inner .media::before {
+    display: none;
+  }
+  .history_inner .media {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .history_inner .media .d-flex {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .history_inner .media .media-body .img_list img {
+    width: 100%;
+  }
+  .some_fact_inner .media .media-body h4 {
+    font: 600 18px "Poppins", sans-serif;
+  }
+  .project_completion_inner {
+    padding: 30px 10px 30px 10px;
+  }
+  .project_completion_inner .nav li a {
+    font: 400 16px "Lora", serif;
+    display: inline-block;
+  }
+  .project_completion_inner h4 {
+    font: 600 24px "Poppins", sans-serif;
+  }
+  .projects_item img {
+    width: 100%;
+  }
+  .s_comment_list .s_comment_list_inner .media {
+    display: block;
+  }
+  .s_comment_list .s_comment_list_inner .media .d-flex {
+    padding-right: 0px;
+    margin-bottom: 15px;
+  }
+  .s_comment_area .s_comment_inner {
+    padding: 30px 15px;
+  }
+  .top_bar .d-flex .right .nav {
+    display: block;
+    text-align: center;
+  }
+  .top_bar .d-flex .right .nav li .selector::before {
+    display: none;
+  }
+  .top_bar .d-flex .right .nav li .selector .ddcommon .ddTitleText {
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 11px;
+    padding-left: 0px;
+  }
+  .top_bar .d-flex .right .nav li .selector .ddcommon .ddTitleText .ddlabel {
+    float: none;
+  }
+  .top_bar .d-flex .right .nav li .selector .ddcommon {
+    text-align: left;
+  }
+  .top_bar .d-flex .right .nav li .selector .ddcommon .ddTitleText img {
+    padding-right: 8px !important;
+    width: auto;
+  }
+  .top_bar .d-flex .right .nav li .selector .ddcommon {
+    width: 80px !important;
+  }
+  .top_bar .d-flex .right .nav li .selector .ddcommon .ddChild {
+    left: -27px;
+  }
+}
+@media (max-width: 400px) {
+  .experience_area .experience_inner .experience_image .year_text h4 {
+    font: 800 30px/38px "Poppins", sans-serif;
+  }
+  .experience_area .experience_inner .experience_image .year_text p {
+    font: 600 12px/18px "Poppins", sans-serif;
+  }
+  .experience_area .experience_inner .experience_image .year_text {
+    padding: 10px 13px 15px 13px;
+  }
+  .serive_item {
+    padding: 28px 12px 28px 12px;
+  }
+  .serive_item .media .media-body {
+    padding-right: 10px;
+  }
+  .serive_item .media .media-body h4 {
+    font: 600 17px "Poppins", sans-serif;
+  }
+  .choose_list .media {
+    display: block;
+  }
+  .choose_list .media .d-flex {
+    padding-right: 0px;
+    margin-bottom: 20px;
+  }
+  .featured_area .featured_inner {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .featured_item {
+    max-width: 290px;
+  }
+  .featured_item img {
+    width: 100%;
+  }
+  .our_projects_inner .g_fillter .nav {
+    columns: 2;
+  }
+  .certified_construction .right h4 {
+    font: 300 26px/36px "Poppins", sans-serif;
+  }
+  .certified_construction .right h4 span {
+    font: bold 26px/36px "Playfair Display", serif;
+  }
+  .certified_construction .right {
+    padding: 70px 15px 70px 15px;
+  }
+  .certified_construction .left {
+    padding: 70px 15px 70px 15px;
+  }
+  .certified_construction .media {
+    display: block;
+  }
+  .certified_construction .left .media .d-flex {
+    padding-right: 0px;
+    margin-bottom: 20px;
+  }
+  .trusted_area .trusted_inner .trusted_text h4 {
+    font: 700 22px/32px "Poppins", sans-serif;
+  }
+  .trusted_area .trusted_inner .trusted_text h3 {
+    font: 700 22px/32px "Poppins", sans-serif;
+  }
+  .about_why_choose_area .left .why_choose_text_inner .media .d-flex {
+    padding-right: 15px;
+  }
+  .benefit_service .benefit_text_inner .nav li a {
+    font: 400 12px "Open Sans", sans-serif;
+  }
+}
+@media (max-width: 360px) {
+  .footer_copyright .left p {
+    font: 400 12px "Poppins", sans-serif;
+  }
+  .footer_copyright .right p {
+    font: 400 12px "Poppins", sans-serif;
+  }
+}
