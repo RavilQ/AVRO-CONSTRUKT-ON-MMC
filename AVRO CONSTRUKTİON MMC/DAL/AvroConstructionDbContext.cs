@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AVRO_CONSTRUKTİON_MMC.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AVRO_CONSTRUKTİON_MMC.DAL
 {
@@ -8,5 +9,7 @@ namespace AVRO_CONSTRUKTİON_MMC.DAL
         {
 
         }
+
+        public DbSet<Slider> Sliders { get; set; }
     }
 }
