@@ -11,5 +11,9 @@ namespace AVRO_CONSTRUKTİON_MMC.DAL
         }
 
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Job> Jobs { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Testimonials> Testimonials { get; set; }
+        public DbSet<Service> Services { get; set; }
     }
 }

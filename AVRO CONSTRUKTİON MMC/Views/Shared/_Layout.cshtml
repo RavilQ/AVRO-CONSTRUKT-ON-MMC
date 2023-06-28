@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -78,7 +81,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav ml-auto">
                 <li class="dropdown submenu active">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" role="button" aria-haspopup="true"
+                  <a class="dropdown-toggle" data-toggle="dropdown" asp-action="Index" role="button" aria-haspopup="true"
                     aria-expanded="false">Home
                   </a>
                   <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
@@ -91,17 +94,17 @@
                   </ul>
                 </li>
                 <li class="dropdown submenu">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="about-us.html" role="button"
+                  <a class="dropdown-toggle" data-toggle="dropdown" asp-action="AboutUs" role="button"
                     aria-haspopup="true" aria-expanded="false">About Us</a>
                   <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
                   <ul class="dropdown-menu">
-                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a>About Us</a></li>
                     <li><a href="company-history.html">Company History</a></li>
                     <li><a href="team.html">Our Team</a></li>
                   </ul>
                 </li>
                 <li class="dropdown submenu">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="services.html" role="button"
+                  <a class="dropdown-toggle" data-toggle="dropdown" asp-action="Services" role="button"
                     aria-haspopup="true" aria-expanded="false">Services
                   </a>
                   <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
@@ -128,8 +131,8 @@
                   </a>
                   <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
                   <ul class="dropdown-menu">
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="services.html">Service</a></li>
+                    <li><a asp-action="AboutUs">About Us</a></li>
+                    <li><a asp-action="Services">Service</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="team.html">Team</a></li>
                     <li><a href="faq.html">Faq</a></li>
@@ -149,7 +152,7 @@
                     <li><a href="single-blog.html">Blog Details</a></li>
                   </ul>
                 </li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a asp-action="ContactUs">Contact Us</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="reserve_btn">
