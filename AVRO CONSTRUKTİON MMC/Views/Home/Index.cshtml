@@ -178,108 +178,26 @@
           </p>
         </div>
         <div class="row service_inner">
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Building Construction</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
+         
+          @foreach (var item in Model.Services)
+          {
+                <div class="col-lg-4 col-md-6">
+                    <div class="serive_item">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4>@item.Title</h4>
+                                <p>
+                                    @item.Text
+                                </p>
+                                <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
+                            </div>
+                            <div class="media-right">
+                                <img src="~/assets/images/icon/@item.Icon" alt="" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="media-right">
-                  <img src="~/assets/images/icon/s-icon-1.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Architecture Design</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
-                </div>
-                <div class="media-right">
-                  <img src="~/assets/images/icon/s-icon-2.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Building Renovation</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
-                </div>
-                <div class="media-right">
-                  <img src="~/assets/images/icon/s-icon-3.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Flooring & Roofing</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
-                </div>
-                <div class="media-right">
-                  <img src="~/assets/images/icon/s-icon-4.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Building Maintenance</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
-                </div>
-                <div class="media-right">
-                  <img src="~/assets/images/icon/s-icon-5.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Interior Design</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
-                </div>
-                <div class="media-right">
-                  <img src="~/assets/images/icon/s-icon-6.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
+          }
         </div>
       </div>
     </section>
@@ -463,106 +381,34 @@
           </div>
         </div>
         <div class="row team_inner">
-          <div class="col-lg-3 col-sm-6">
-            <div class="team_item">
-              <div class="team_img">
-                <img class="img-fluid" src="~/assets/images/team/team-1.jpg" alt="" />
-                <ul class="nav">
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="team_text">
-                <h4>Michale Joe</h4>
-                <p>Main Supervisor</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="team_item">
-              <div class="team_img">
-                <img class="img-fluid" src="~/assets/images/team/team-2.jpg" alt="" />
-                <ul class="nav">
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="team_text">
-                <h4>Michale Joe</h4>
-                <p>Junior Engineer</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="team_item">
-              <div class="team_img">
-                <img class="img-fluid" src="~/assets/images/team/team-3.jpg" alt="" />
-                <ul class="nav">
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="team_text">
-                <h4>Michale Joe</h4>
-                <p>Maintainance Head</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="team_item">
-              <div class="team_img">
-                <img class="img-fluid" src="~/assets/images/team/team-4.jpg" alt="" />
-                <ul class="nav">
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="team_text">
-                <h4>Michale Joe</h4>
-                <p>Main Supervisor</p>
-              </div>
-            </div>
-          </div>
+           @foreach (var item in Model.Employees)
+           {
+                <div class="col-lg-3 col-sm-6">
+                    <div class="team_item">
+                        <div class="team_img">
+                            <img class="img-fluid" src="~/assets/images/team/@item.Image" alt="" />
+                            <ul class="nav">
+                                <li>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="team_text">
+                            <h4>@item.Fullname</h4>
+                            <p>@item.Job.Name</p>
+                        </div>
+                    </div>
+                </div>
+           }
         </div>
       </div>
     </section>
@@ -572,63 +418,25 @@
     <section class="testimonials_area">
       <div class="container">
         <div class="testi_slider owl-carousel">
-          <div class="item">
+          @foreach (var item in Model.Testimonials)
+          {
+             <div class="item">
             <div class="media">
               <div class="d-flex">
-                <img src="~/assets/images/testimonials/testi-1.jpg" alt="" />
+                <img src="~/assets/images/testimonials/@item.Image" alt="" />
                 <i>“</i>
               </div>
               <div class="media-body">
                 <p>
-                  Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum
-                  nec odios Suspe ndisse cursus mal suada faci lisis. Lorem
-                  ipsum dolor sit ametion consectetur elit. Vesti bulum nec
-                  odio ipsum. Lorem ipsum dolor sit amet, cons ectetur elit.
-                  Vestibulum nec odios Suspe ndisse cursus suada faci lisis.
+                  @item.Text
                 </p>
-                <h4>- Michale John</h4>
-                <h6>Ceo of Minda</h6>
+                <h4>- @item.Fullname</h4>
+                <h6>@item.Job</h6>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="media">
-              <div class="d-flex">
-                <img src="~/assets/images/testimonials/testi-1.jpg" alt="" />
-                <i>“</i>
-              </div>
-              <div class="media-body">
-                <p>
-                  Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum
-                  nec odios Suspe ndisse cursus mal suada faci lisis. Lorem
-                  ipsum dolor sit ametion consectetur elit. Vesti bulum nec
-                  odio ipsum. Lorem ipsum dolor sit amet, cons ectetur elit.
-                  Vestibulum nec odios Suspe ndisse cursus suada faci lisis.
-                </p>
-                <h4>- Michale John</h4>
-                <h6>Ceo of Minda</h6>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="media">
-              <div class="d-flex">
-                <img src="~/assets/images/testimonials/testi-1.jpg" alt="" />
-                <i>“</i>
-              </div>
-              <div class="media-body">
-                <p>
-                  Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum
-                  nec odios Suspe ndisse cursus mal suada faci lisis. Lorem
-                  ipsum dolor sit ametion consectetur elit. Vesti bulum nec
-                  odio ipsum. Lorem ipsum dolor sit amet, cons ectetur elit.
-                  Vestibulum nec odios Suspe ndisse cursus suada faci lisis.
-                </p>
-                <h4>- Michale John</h4>
-                <h6>Ceo of Minda</h6>
-              </div>
-            </div>
-          </div>
+             </div>
+          }
+         
         </div>
       </div>
     </section>
