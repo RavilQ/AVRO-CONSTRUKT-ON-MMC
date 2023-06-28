@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+@model SliderPostVM
+
+<div class="p-3">
+
+    <form asp-action="Create" asp-controller="slider" method="post" enctype="multipart/form-data">
+
+
+
+     
+    <div class="my-3">
+        <label asp-for="Title" class="form-label">Başlıq</label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="small text-danger"></span>
+    </div>
+
+        <div class="my-3">
+            <label asp-for="Title2" class="form-label"> Alt Başlıq</label>
+            <input asp-for="Title2" class="form-control" />
+            <span asp-validation-for="Title2" class="small text-danger"></span>
+        </div>
+
+
+        <div class="my-3">
+            <label asp-for="Text" class="form-label">Açıqlama</label>
+            <input asp-for="Text" class="form-control" />
+            <span asp-validation-for="Text" class="small text-danger"></span>
+        </div>
+
+
+        <div class="my-3">
+            <label asp-for="Queue" class="form-label">Sıra nömrəsi</label>
+            <input type="number" asp-for="Queue" class="form-control" />
+            <span asp-validation-for="Queue" class="small text-danger"></span>
+        </div>
+
+
+        <div class="my-3">
+            <label asp-for="ButtonText" class="form-label">Düymə yazısı</label>
+            <input asp-for="ButtonText" class="form-control" />
+            <span asp-validation-for="ButtonText" class="small text-danger"></span>
+        </div>
+        <div class="my-3">
+            <label asp-for="ButtonLink" class="form-label">Düymə Linki</label>
+            <input asp-for="ButtonLink" class="form-control" />
+            <span asp-validation-for="ButtonLink" class="small text-danger"></span>
+        </div>
+
+        <div class="my-3">
+            <label asp-for="Image" class="form-label">Şəkil</label>
+            <input asp-for="Image"  class="form-control" />
+            <span asp-validation-for="Image" class="small text-danger"></span>
+        </div>
+
+        <button type="submit"> Yarat </button>
+
+    </form>
+</div>
+

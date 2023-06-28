@@ -1,4 +1,6 @@
 ﻿using AVRO_CONSTRUKTİON_MMC.DAL;
+using AVRO_CONSTRUKTİON_MMC.Helpers;
+using AVRO_CONSTRUKTİON_MMC.Helpers.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,7 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<AvroConstructionDbContext>(opt => { opt.UseSqlServer(builder.Configuration.GetConnectionString("Default")); });
+builder.Services.AddSingleton<IFileManager, FileManager>();
+
+
+//builder.Services.AddDbContext<AvroConstructionDbContext>(opt => { opt.UseSqlServer(builder.Configuration.GetConnectionString("Default")); });
+builder.Services.AddDbContext<AvroConstructionDbContext>(opt => { opt.UseSqlServer(builder.Configuration.GetConnectionString("Tahir")); });
+
 
 var app = builder.Build();
 
