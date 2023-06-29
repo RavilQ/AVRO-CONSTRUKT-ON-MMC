@@ -9,7 +9,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
-                name: "Image",
+                name: "ImageFile",
                 table: "Employees",
                 type: "nvarchar(max)",
                 nullable: false,
@@ -19,7 +19,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "Image",
+                name: "ImageFile",
                 table: "Employees");
         }
     }

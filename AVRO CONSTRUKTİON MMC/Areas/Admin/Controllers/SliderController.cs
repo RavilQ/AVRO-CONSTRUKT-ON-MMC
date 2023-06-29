@@ -1,4 +1,5 @@
-﻿using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels;
+﻿using AutoMapper;
+using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels;
 using AVRO_CONSTRUKTİON_MMC.DAL;
 using AVRO_CONSTRUKTİON_MMC.Helpers;
 using AVRO_CONSTRUKTİON_MMC.Helpers.Interfaces;
@@ -15,12 +16,14 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
         private readonly AvroConstructionDbContext _context;
         private readonly IWebHostEnvironment _env;
         private readonly IFileManager _fileManager;
+        private readonly IMapper _mapper;
 
-        public SliderController(AvroConstructionDbContext context, IWebHostEnvironment env, IFileManager fileManager)
+        public SliderController(AvroConstructionDbContext context, IWebHostEnvironment env, IFileManager fileManager, IMapper mapper)
         {
             _context = context;
             _env = env;
             _fileManager = fileManager;
+            _mapper = mapper;
         }
 
         //==============================
@@ -69,13 +72,16 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
         }
 
         //==============================
-        // Create Delete
+        // Edit
         //==============================
 
         public IActionResult Edit(int id)
         {
+
             var slider = _context.Sliders.FirstOrDefault(x => x.Id == id);
             if (slider == null) return NotFound();
+
+          
 
             SliderPutVM sliderPut = new SliderPutVM()
             {
@@ -88,6 +94,10 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
                 Text = slider.Text,
                 Id = slider.Id
             };
+
+            var mapped = _mapper.Map<SliderPutVM>(slider);
+
+            return Ok(mapped);
 
             return View(sliderPut);
         }
@@ -112,10 +122,10 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
                  UpdateSliderOrderAsync(existSlider.Id, SliderVm.Queue);
             }
 
-            if (SliderVm.Image is not null)
+            if (SliderVm.ImageFile is not null)
             {
                 _fileManager.Delete(_env.WebRootPath, "Uploads/Sliders", existSlider.Image);
-                existSlider.Image = _fileManager.Save(SliderVm.Image, _env.WebRootPath, "Uploads/Sliders", 200);
+                existSlider.Image = _fileManager.Save(SliderVm.ImageFile, _env.WebRootPath, "Uploads/Sliders", 200);
 
             }
 

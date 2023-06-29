@@ -35,7 +35,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("ImageFile")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

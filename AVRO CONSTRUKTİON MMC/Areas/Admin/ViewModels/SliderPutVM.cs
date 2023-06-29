@@ -22,7 +22,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels
         public int Queue { get; set; }
         [AllowedFileTypes("image/jpeg", "image/png")]
         [MaxFileSize(2)]
-        public IFormFile? Image { get; set; }
+        public IFormFile? ImageFile { get; set; }
         public string? CurrentImage { get; set; }
         
     }
