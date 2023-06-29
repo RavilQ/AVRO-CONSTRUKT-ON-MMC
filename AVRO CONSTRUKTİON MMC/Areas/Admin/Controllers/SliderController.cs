@@ -95,9 +95,6 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
                 Id = slider.Id
             };
 
-            var mapped = _mapper.Map<SliderPutVM>(slider);
-
-            return Ok(mapped);
 
             return View(sliderPut);
         }
