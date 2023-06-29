@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewData["Title"] = "Vəzifələr";
+    int order = 1;
+}
+@model List<Job>
+
+<div class="p-3 w-100">
+
+    <div class="d-flex col-12  my-2 justify-content-between align-items-center">
+        <div>Yeni Vəzifə Yarat:</div>
+        <a asp-action="create" asp-controller="job" class="btn btn-success">Yarat</a>
+    </div>
+
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Vəzifə</th>
+                <th scope="col">Əməliyyatlar</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (Job job in Model)
+            {
+                <tr>
+                    <th scope="row">@order</th>
+                    <td>@job.Name</td>
+
+
+                    <td>
+                        <a asp-action="edit" asp-controller="job" asp-route-id="@job.Id" class="btn btn-info">Edit</a>
+                        <a asp-action="Delete" asp-controller="job" asp-route-id="@job.Id" class="btn btn-danger btn-delete">Delete</a>
+
+                    </td>
+
+                </tr>
+
+                order++;
+            }
+
+
+        </tbody>
+    </table>
+
+
+</div>
+
+
+@section Scripts{
+    <script>
+
+        $(".btn-delete").on("click", (e) => {
+            e.preventDefault();
+
+
+            Swal.fire({
+                title: 'Əminsiniz?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Bəli, Sil!'
+            }).then((result) => {
+
+                let link = e.target.getAttribute("href");
+
+                fetch(link).then(res => {
+
+                    if (res.ok) {
+                        if (result.isConfirmed) {
+                            Swal.fire(
+                                'Silindi!',
+                                'Əməliyyat uğurla yerinə yetirildi',
+                                'success'
+                            ).then(() => {
+                                window.location.reload();
+                            })
+                        }
+                    }
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Xəta baş verdi!',
+                        })
+                    }
+                })
+
+
+            })
+
+
+
+        })
+
+    </script>
+}
+
