@@ -3,6 +3,7 @@ using AVRO_CONSTRUKTİON_MMC.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AVRO_CONSTRUKTİON_MMC.Migrations
 {
     [DbContext(typeof(AvroConstructionDbContext))]
-    partial class AvroConstructionDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230703082657_settingsTableCreated")]
+    partial class settingsTableCreated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -105,12 +107,10 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
 
                     b.Property<string>("Key")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Value")
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
