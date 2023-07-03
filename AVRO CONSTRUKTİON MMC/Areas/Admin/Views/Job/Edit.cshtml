@@ -1,0 +1,21 @@
+﻿@using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.JobVMs
+@{
+    ViewData["Title"] = "Edit";
+}
+@model JobPostVM
+
+<div class="p-3 col-12">
+
+    <form  method="post" class="col-6 m-auto">
+
+        <div class="my-3">
+            <label asp-for="Name" class="form-label">Vəzifə Adı</label>
+            <input asp-for="Name" class="form-control col-12" />
+            <span asp-validation-for="Name" class="small text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success"> Dəyişiklik Et </button>
+
+    </form>
+</div>
+
