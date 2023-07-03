@@ -34,7 +34,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("ImageFile")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -113,7 +113,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("ImageFile")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -154,7 +154,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
 
-                    b.Property<string>("Image")
+                    b.Property<string>("ImageFile")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");

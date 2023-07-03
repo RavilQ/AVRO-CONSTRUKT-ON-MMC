@@ -1,18 +1,46 @@
-﻿using AVRO_CONSTRUKTİON_MMC.DAL;
+﻿using AutoMapper;
+using AVRO_CONSTRUKTİON_MMC.DAL;
 using AVRO_CONSTRUKTİON_MMC.Helpers;
 using AVRO_CONSTRUKTİON_MMC.Helpers.Interfaces;
+using AVRO_CONSTRUKTİON_MMC.Profiles;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+//       CONTENT
+// ---------------------
+// 1 Database
+// 2 Mapper
+// 3 Custom Services
+
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddSingleton<IFileManager, FileManager>();
 
+
+
+//=========================
+// 1 Database
+//=========================
 
 //builder.Services.AddDbContext<AvroConstructionDbContext>(opt => { opt.UseSqlServer(builder.Configuration.GetConnectionString("Default")); });
 builder.Services.AddDbContext<AvroConstructionDbContext>(opt => { opt.UseSqlServer(builder.Configuration.GetConnectionString("Tahir")); });
+
+
+//=========================
+// 2 Mapper
+//=========================
+builder.Services.AddSingleton(provider => new MapperConfiguration(cfg =>
+{
+    cfg.AddProfile(new AdminMapper());
+}).CreateMapper());
+
+
+//=========================
+// 3 Custom Services
+//=========================
+
+builder.Services.AddSingleton<IFileManager, FileManager>();
+
 
 
 var app = builder.Build();
@@ -21,7 +49,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
