@@ -60,6 +60,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
                 Title2 = SliderVM.Title2,
                 Text = SliderVM.Text??"",
                 ButtonText = SliderVM.ButtonText,
+                BtnLink = SliderVM.ButtonLink?? "#",
                 queue = SliderVM.Queue,
                 Image = _fileManager.Save(SliderVM.Image, _env.WebRootPath, "Uploads/Sliders",200)
 
@@ -88,7 +89,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
                 CurrentImage = slider.Image,
                 Title = slider.Title,
                 Title2 = slider.Title2,
-                ButtonLink = "",
+                ButtonLink = slider.BtnLink,
                 ButtonText = slider.ButtonText,
                 Queue = slider.queue,
                 Text = slider.Text,
@@ -130,6 +131,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
             existSlider.Title2 = SliderVm.Title2;
             existSlider.Text = SliderVm.Text;
             existSlider.ButtonText = SliderVm.ButtonText;
+            existSlider.BtnLink = SliderVm.ButtonLink;
 
             _context.SaveChanges();
 
