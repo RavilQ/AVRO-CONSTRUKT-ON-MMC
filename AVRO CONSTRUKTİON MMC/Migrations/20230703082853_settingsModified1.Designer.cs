@@ -3,6 +3,7 @@ using AVRO_CONSTRUKTİON_MMC.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AVRO_CONSTRUKTİON_MMC.Migrations
 {
     [DbContext(typeof(AvroConstructionDbContext))]
-    partial class AvroConstructionDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230703082853_settingsModified1")]
+    partial class settingsModified1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
