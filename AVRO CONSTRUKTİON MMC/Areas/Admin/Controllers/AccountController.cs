@@ -29,7 +29,6 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginVM model)
         {
 
