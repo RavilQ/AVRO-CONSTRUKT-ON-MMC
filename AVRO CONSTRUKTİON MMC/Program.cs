@@ -15,6 +15,7 @@ var builder = WebApplication.CreateBuilder(args);
 // 2 Mapper
 // 3 Custom Services
 // 4 Identity
+// 5 Redirect Admin login
 
 builder.Services.AddControllersWithViews();
 
@@ -53,6 +54,31 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
     opt.Password.RequireNonAlphanumeric = false;
 }).AddEntityFrameworkStores<AvroConstructionDbContext>();
 
+//=========================
+// 5 Redirect Admin login
+//=========================
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Events.OnRedirectToLogin = options.Events.OnRedirectToAccessDenied = context =>
+    {
+        if (context.HttpContext.Request.Path.Value.StartsWith("/admin") || context.HttpContext.Request.Path.Value.StartsWith("/Admin"))
+        {
+            var redirectPath = new Uri(context.RedirectUri);
+            context.Response.Redirect("/admin/account/login" + redirectPath.Query);
+        }
+        else
+        {
+            var redirectPath = new Uri(context.RedirectUri);
+            context.Response.Redirect("/account/login" + redirectPath.Query);
+        }
+        return Task.CompletedTask;
+    };
+
+
+});
+
+
 
 var app = builder.Build();
 
@@ -68,6 +94,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 
