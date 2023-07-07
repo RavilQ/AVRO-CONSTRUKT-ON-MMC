@@ -2,7 +2,9 @@
 using AVRO_CONSTRUKTİON_MMC.DAL;
 using AVRO_CONSTRUKTİON_MMC.Helpers;
 using AVRO_CONSTRUKTİON_MMC.Helpers.Interfaces;
+using AVRO_CONSTRUKTİON_MMC.Models;
 using AVRO_CONSTRUKTİON_MMC.Profiles;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 // 1 Database
 // 2 Mapper
 // 3 Custom Services
+// 4 Identity
 
 builder.Services.AddControllersWithViews();
 
@@ -35,12 +38,20 @@ builder.Services.AddSingleton(provider => new MapperConfiguration(cfg =>
 }).CreateMapper());
 
 
-//=========================
+//========================= 
 // 3 Custom Services
 //=========================
 
 builder.Services.AddSingleton<IFileManager, FileManager>();
 
+//=========================
+// 4 Identity
+//=========================
+builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
+{
+    opt.Password.RequiredLength = 8;
+    opt.Password.RequireNonAlphanumeric = false;
+}).AddEntityFrameworkStores<AvroConstructionDbContext>();
 
 
 var app = builder.Build();

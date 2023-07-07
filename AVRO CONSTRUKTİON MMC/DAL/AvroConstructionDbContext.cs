@@ -1,9 +1,10 @@
 ﻿using AVRO_CONSTRUKTİON_MMC.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace AVRO_CONSTRUKTİON_MMC.DAL
 {
-    public class AvroConstructionDbContext:DbContext
+    public class AvroConstructionDbContext:IdentityDbContext<AppUser>
     {
         public AvroConstructionDbContext(DbContextOptions<AvroConstructionDbContext> opt): base(opt)
         {
