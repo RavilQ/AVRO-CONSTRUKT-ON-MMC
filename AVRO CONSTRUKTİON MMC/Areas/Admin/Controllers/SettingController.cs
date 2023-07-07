@@ -1,5 +1,6 @@
 ﻿using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.SettingVMs;
 using AVRO_CONSTRUKTİON_MMC.DAL;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
