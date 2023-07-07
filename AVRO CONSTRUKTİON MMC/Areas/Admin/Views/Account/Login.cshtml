@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+@using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.AccountVMs
+@model LoginVM
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css" />
+    <title>Login</title>
+</head>
+
+<body>
+
+    <form class="d-flex justify-content-center align-items-center flex-column col-6 m-auto bg-success" asp-action="login" method="post" asp-controller="account">
+        <div class="my-3">
+            <label asp-for="Username" class="form-label">Istifadəçi adı </label>
+            <input asp-for="Username" class="form-control" />
+            <span class="text-danger small" asp-validation-for="Username"></span>
+        </div>
+        <div class="my-3">
+            <label asp-for="Password" class="form-label">Şifrə </label>
+            <input asp-for="Password" class="form-control" />
+            <span class="text-danger small" asp-validation-for="Password"></span>
+        </div>
+
+        <div class="text-center text-danger" asp-validation-summary="ModelOnly"></div>
+
+        <button type="submit" class="btn btn-success">Daxil Ol</button>
+    </form>
+</body>
+</html>

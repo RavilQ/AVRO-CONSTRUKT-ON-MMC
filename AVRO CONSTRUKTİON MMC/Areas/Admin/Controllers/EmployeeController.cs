@@ -2,6 +2,7 @@
 
 namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
 {
+    [Authorize(Roles ="SuperAdmin, Admin")]
     [Area("Admin")]
     public class EmployeeController : Controller
     {
