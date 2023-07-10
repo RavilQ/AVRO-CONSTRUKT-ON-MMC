@@ -8,7 +8,7 @@
 
 
 
-<div class="p-3 w-100">
+<div class="p-3 w-100 overflow-scroll">
 
     <div class="d-flex col-12  my-2 justify-content-between align-items-center">
         <div>Yeni Slider Yarat:</div>
@@ -47,9 +47,12 @@
                         <img src="~/Uploads/Sliders/@slider.Image" alt="@slider.Title" loading="lazy" width="150" height="100" style="object-fit:cover" />
                     </td>
 
-                    <td>
-                        <a asp-action="edit" asp-controller="slider" asp-route-id="@slider.Id" class="btn btn-info">Edit</a>
-                        <a asp-action="Delete" asp-controller="slider" asp-route-id="@slider.Id" class="btn btn-danger btn-delete">Delete</a>
+                    <td >
+                        <div class=" d-flex h-100 nowrap">
+                        <a asp-action="edit" asp-controller="slider" asp-route-id="@slider.Id" class="btn btn-info mx-1">Edit</a>
+
+                        <a asp-action="Delete" asp-controller="slider" asp-route-id="@slider.Id" class="btn btn-danger btn-delete mx-1">Delete</a>
+                        </div>
 
                     </td>
 
