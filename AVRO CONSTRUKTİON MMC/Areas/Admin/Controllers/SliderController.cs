@@ -142,7 +142,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
         }
 
         //==============================
-        // Create Delete
+        //  Delete
         //==============================
 
         public IActionResult Delete(int id)

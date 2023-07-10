@@ -4,6 +4,7 @@ using AVRO_CONSTRUKTİON_MMC.Helpers;
 using AVRO_CONSTRUKTİON_MMC.Helpers.Interfaces;
 using AVRO_CONSTRUKTİON_MMC.Models;
 using AVRO_CONSTRUKTİON_MMC.Profiles;
+using AVRO_CONSTRUKTİON_MMC.Utilities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 // 3 Custom Services
 // 4 Identity
 // 5 Redirect Admin login
+// 6 Email Configuration
 
 builder.Services.AddControllersWithViews();
 
@@ -44,6 +46,7 @@ builder.Services.AddSingleton(provider => new MapperConfiguration(cfg =>
 //=========================
 
 builder.Services.AddSingleton<IFileManager, FileManager>();
+builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
 //=========================
 // 4 Identity
@@ -77,6 +80,15 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 
 });
+
+//=========================
+// 6 Email Configuration
+//=========================
+
+var configuration = builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
+builder.Services.AddSingleton<EmailConfiguration>(configuration);
+
+
 
 
 

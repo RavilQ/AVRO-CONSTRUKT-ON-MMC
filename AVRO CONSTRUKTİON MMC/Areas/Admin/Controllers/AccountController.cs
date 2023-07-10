@@ -1,5 +1,7 @@
 ﻿using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.AccountVMs;
+using AVRO_CONSTRUKTİON_MMC.Helpers.Interfaces;
 using AVRO_CONSTRUKTİON_MMC.Models;
+using AVRO_CONSTRUKTİON_MMC.Utilities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,12 +13,14 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly IEmailSender _emailSender;
 
-        public AccountController(RoleManager<IdentityRole> roleManager, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AccountController(RoleManager<IdentityRole> roleManager, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IEmailSender emailSender)
         {
             _roleManager = roleManager;
             _userManager = userManager;
             _signInManager = signInManager;
+            _emailSender = emailSender;
         }
 
         //===========================
@@ -50,7 +54,17 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
             }
 
 
-            await _signInManager.PasswordSignInAsync(user, model.Password, false, true);
+           var result=  await _signInManager.PasswordSignInAsync(user, model.Password, false, true);
+
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError("", "Istifadəçi adı və ya şifrə yanlışdır.");
+                return View();
+
+            }
+
+            //Message message = new Message(new string[] { "tahiret@code.edu.az" }, "TestMail", "this is my message");
+            //_emailSender.SendEmail(message);
 
 
             return RedirectToAction("index", "Dashboard");
