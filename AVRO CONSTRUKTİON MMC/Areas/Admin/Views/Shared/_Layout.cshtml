@@ -31,24 +31,14 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" asp-action="index" asp-controller="Dashboard"><img src="~/Admin/assets/images/logo.svg" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" asp-action="index" asp-controller="Dashboard"><img src="~/Admin/assets/images/logo-mini.svg" alt="logo" /></a>
+                <a class="navbar-brand brand-logo d-none" asp-action="index" asp-controller="Dashboard"><img src="~/Admin/assets/images/logo.svg" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini d-none" asp-action="index" asp-controller="Dashboard"><img src="~/Admin/assets/images/logo-mini.svg" alt="logo" /></a>
                 <button class="navbar-toggler navbar-toggler align-self-center d-none d-lg-flex" type="button" data-toggle="minimize">
                     <span class="typcn typcn-th-menu"></span>
                 </button>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                 <ul class="navbar-nav mr-lg-2">
-                    <li class="nav-item  d-none d-lg-flex">
-                        <a class="nav-link" href="#">
-                            Calendar
-                        </a>
-                    </li>
-                    <li class="nav-item  d-none d-lg-flex">
-                        <a class="nav-link active" href="#">
-                            Statistic
-                        </a>
-                    </li>
                     <li class="nav-item  d-none d-lg-flex">
                         <a class="nav-link" asp-action="index" asp-controller="Employee">
                             Employee
@@ -64,14 +54,17 @@
                             Positions
                         </a>
                     </li>
+                    <li class="nav-item  d-none d-lg-flex">
+                        <a class="nav-link" asp-action="index" asp-controller="setting">
+                            Settings
+                        </a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item d-none d-lg-flex  mr-2">
-                        <a class="nav-link" href="#">
-                            Help
-                        </a>
+                      
                     </li>
-                    <li class="nav-item dropdown d-flex">
+                    <li class="nav-item dropdown  d-flex">
                         <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
                             <i class="typcn typcn-message-typing"></i>
                             <span class="count bg-success">2</span>
@@ -119,7 +112,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown  d-flex">
+                    <li class="nav-item dropdown   d-none">
                         <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown">
                             <i class="typcn typcn-bell mr-0"></i>
                             <span class="count bg-danger">2</span>
@@ -170,14 +163,11 @@
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle  pl-0 pr-0" href="#" data-toggle="dropdown" id="profileDropdown">
                             <i class="typcn typcn-user-outline mr-0"></i>
-                            <span class="nav-profile-name">Evan Morales</span>
+                            <span class="nav-profile-name">@User.Identity.Name</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                            <a class="dropdown-item">
-                                <i class="typcn typcn-cog text-primary"></i>
-                                Settings
-                            </a>
-                            <a class="dropdown-item">
+                           
+                            <a class="dropdown-item" asp-action="logout" asp-controller="account">
                                 <i class="typcn typcn-power text-primary"></i>
                                 Logout
                             </a>
@@ -223,29 +213,17 @@
                 <ul class="nav">
                     <li class="nav-item">
                         <div class="d-flex sidebar-profile">
-                            <div class="sidebar-profile-image">
-                                <img src="~/Admin/assets/images/faces/face29.png" alt="image">
-                                <span class="sidebar-status-indicator"></span>
-                            </div>
-                            <div class="sidebar-profile-name">
-                                <p class="sidebar-name">
-                                    Kenneth Osborne
+                            
+                            <div class="sidebar-profile-name w-100">
+                                <p class="sidebar-name text-center">
+                                   @User.Identity.Name
                                 </p>
-                                <p class="sidebar-designation">
+                                <p class="sidebar-designation text-center">
                                     Welcome
                                 </p>
                             </div>
                         </div>
-                        <div class="nav-search">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Type to search..." aria-label="search" aria-describedby="search">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="search">
-                                        <i class="typcn typcn-zoom"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                     
                         <p class="sidebar-menu-title">Dash menu</p>
                     </li>
                     <li class="nav-item">
@@ -254,7 +232,7 @@
                             <span class="menu-title">Dashboard <span class="badge badge-primary ml-3">New</span></span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                   @* <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                             <i class="typcn typcn-briefcase menu-icon"></i>
                             <span class="menu-title">UI Elements</span>
@@ -267,8 +245,8 @@
                                 <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
                             </ul>
                         </div>
-                    </li>
-                    <li class="nav-item">
+                    </li>*@
+                   @* <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
                             <i class="typcn typcn-film menu-icon"></i>
                             <span class="menu-title">Form elements</span>
@@ -341,8 +319,9 @@
                                 <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
                             </ul>
                         </div>
-                    </li>
+                    </li>"*@
                     <li class="nav-item">
+
                         <a class="nav-link" asp-action="index" asp-controller="Employee">
                             <i class="typcn typcn-document-text menu-icon"></i>
                             <span class="menu-title">Employees</span>
@@ -360,8 +339,14 @@
                             <span class="menu-title">Positions</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="index" asp-controller="setting">
+                            <i class="typcn typcn-document-text menu-icon"></i>
+                            <span class="menu-title">Settings</span>
+                        </a>
+                    </li>
                 </ul>
-                <ul class="sidebar-legend">
+                <ul class="sidebar-legend d-none">
                     <li>
                         <p class="sidebar-menu-title">Category</p>
                     </li>

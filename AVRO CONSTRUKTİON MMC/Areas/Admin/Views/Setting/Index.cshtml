@@ -5,7 +5,7 @@
 }
 
 @model List<Setting>
-<div class="p-3 w-100">
+<div class="p-3 w-100 overlow-scroll">
 
 
     <table class="table table-dark table-hover">
@@ -28,7 +28,7 @@
                     <td>@setting.Value</td>
 
 
-                    <td>
+                    <td class="d-flex nowrap">
                         <a asp-action="edit" asp-controller="setting" asp-route-id="@setting.Id" class="btn btn-info">Edit</a>
                     </td>
 
