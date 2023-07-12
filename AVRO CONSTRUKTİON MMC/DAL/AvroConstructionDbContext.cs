@@ -18,5 +18,6 @@ namespace AVRO_CONSTRUKTİON_MMC.DAL
         public DbSet<Service> Services { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public  DbSet<ContactMessage> ContactMessages { get; set; }
     }
 }

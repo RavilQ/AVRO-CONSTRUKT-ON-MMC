@@ -11,6 +11,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Models
         [MaxLength(200)] 
         
         public string Image { get; set; }
-        
+        public bool IsFeatured { get; set; }
+
     }
 }
