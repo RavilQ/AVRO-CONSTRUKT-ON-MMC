@@ -17,5 +17,6 @@ namespace AVRO_CONSTRUKTİON_MMC.DAL
         public DbSet<Testimonials> Testimonials { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Setting> Settings { get; set; }
+        public DbSet<Project> Projects { get; set; }
     }
 }
