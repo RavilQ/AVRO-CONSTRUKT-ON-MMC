@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model Project
+<!--================Breadcrumb Area =================-->
+<section class="breadcrumb_area">
+    <h1>Construction</h1>
+    <div class="container">
+        <h2>Layihə Haqqında</h2>
+        <ul class="nav">
+            <li><a asp-action="index" asp-controller="home">Home</a></li>
+            <li>
+                <a class="active" href="#">Layihə Haqqında</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--================End Breadcrumb Area =================-->
+<!--================Project Details Area =================-->
+<section class="project_details_area pad_top py-4">
+    <div class="container">
+        <div class="main_title">
+            <h2>@Model.Name</h2>
+        </div>
+        <div class="project_details_inner py-3">
+            <div class="row project_details_text_inner">
+                <div class="col-lg-6">
+                   @Html.Raw(Model.Description)
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="~/Uploads/Projects/@Model.Image" alt="@Model.Name" />
+                </div>
+            </div>
+       
+        </div>
+    </div>
+</section>
+<!--================End Project Details Area =================-->
