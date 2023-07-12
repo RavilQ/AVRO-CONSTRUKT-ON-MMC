@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "ShowReply";
+}
+
+@model ContactMessageReply;
+
+<div class="p-3 w-100 bg-light fs-3">
+    <div class="row ">
+        <div class="col-sm-6 m-auto d-flex flex-column justify-content-start">
+        <p class="my-1"><span class="badge bg-primary fs-6">@Model.ContactMessage.Name</span></p>
+        <p class="my-1"><span class="badge bg-primary fs-6">@Model.ContactMessage.Email</span></p>
+        <p class="my-1"><span class="badge bg-primary fs-6">@Model.ContactMessage.Phone</span></p>
+            <p class="my-1 badge bg-primary text-wrap fs-6">@Model.ContactMessage.Message</p>
+        <p class="my-1"><span class="badge bg-primary fs-6">@Model.ContactMessage.CreatedAt.ToString("dd/mm/yyyy")</span></p>
+        <p class="my-1 text-end"><span class="badge bg-secondary fs-6">@Model.Subject</span></p>
+        <p class="my-1 text-end"><span class="badge bg-secondary fs-6">@Model.Message</span></p>
+
+    </div>
+</div>
+</div>

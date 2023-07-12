@@ -81,73 +81,14 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="nav navbar-nav ml-auto">
-                                <li class="dropdown submenu active">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" asp-action="Index" role="button" aria-haspopup="true"
-                                       aria-expanded="false">
-                                        Home
-                                    </a>
-                                    <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="index.html">Home Page 1</a></li>
-                                        <li><a href="index-2.html">Home Page 2</a></li>
-                                        <li><a href="index-3.html">Home Page 3</a></li>
-                                        <li><a href="index-4.html">Home Page 4</a></li>
-                                        <li><a href="index-5.html">Home Page 5</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown submenu">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" asp-action="AboutUs" role="button"
-                                       aria-haspopup="true" aria-expanded="false">About Us</a>
-                                    <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
-                                    <ul class="dropdown-menu">
-                                        <li><a>About Us</a></li>
-                                        <li><a href="company-history.html">Company History</a></li>
-                                        <li><a href="team.html">Our Team</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown submenu">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" asp-action="Services" role="button"
-                                       aria-haspopup="true" aria-expanded="false">
-                                        Services
-                                    </a>
-                                    <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="services.html">Services 1</a></li>
-                                        <li><a href="service-2.html">Services 2</a></li>
-                                        <li><a href="maintenance.html">Single Service</a></li>
-                                    </ul>
-                                </li>
-                                <li><a asp-action="index" asp-controller="Project">Projects</a></li>
+                                <li><a asp-action="index" asp-controller="Home">Ana Səhifə</a></li>
+                                <li><a asp-action="index" asp-controller="Employee">Komandamız</a></li>
+                                <li><a asp-action="AboutUs" asp-controller="Home">Haqqımızda</a></li>
+                                <li><a asp-action="Services" asp-controller="Home">Xidmətlərimiz</a></li>
 
-                                <li class="dropdown submenu">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                                       aria-expanded="false">
-                                        Pages
-                                    </a>
-                                    <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
-                                    <ul class="dropdown-menu">
-                                        <li><a asp-action="AboutUs">About Us</a></li>
-                                        <li><a asp-action="Services">Service</a></li>
-                                        <li><a href="testimonials.html">Testimonials</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="faq.html">Faq</a></li>
-                                        <li><a href="404.html">404 Error</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown submenu">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="blog.html" role="button" aria-haspopup="true"
-                                       aria-expanded="false">Blog</a>
-                                    <i class="fa fa-angle-down mobile_dropdown" aria-hidden="true" data-toggle="dropdown"></i>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="blog.html">Blog with sidebar</a></li>
-                                        <li>
-                                            <a href="blog-2-columns.html">Blog 2 Column</a>
-                                        </li>
-                                        <li><a href="single-blog.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a asp-action="ContactUs">Contact Us</a></li>
+                                <li><a asp-action="index" asp-controller="Project">Layihələrimiz</a></li>
+                               
+                                <li><a asp-action="ContactUs">Bizimlə Əlaqə</a></li>
                             </ul>
                            @* <ul class="nav navbar-nav navbar-right">
                                 <li class="reserve_btn">
@@ -226,11 +167,11 @@
                                 <h3>Useful Links</h3>
                             </div>
                             <ul class="nav flex-column">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
+                                <li><a asp-action="index" asp-controller="home">Home</a></li>
+                                <li><a asp-action="aboutUs" asp-controller="home">About Us</a></li>
                                 <li><a href="#">Request Call Back</a></li>
                                 <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a asp-action="contactUs" asp-controller="home">Contact Us</a></li>
                             </ul>
                         </aside>
                     </div>

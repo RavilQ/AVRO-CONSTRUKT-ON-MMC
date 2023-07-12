@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AVRO_CONSTRUKTİON_MMC.DAL
 {
-    public class AvroConstructionDbContext:IdentityDbContext<AppUser>
+    public class AvroConstructionDbContext : IdentityDbContext<AppUser>
     {
-        public AvroConstructionDbContext(DbContextOptions<AvroConstructionDbContext> opt): base(opt)
+        public AvroConstructionDbContext(DbContextOptions<AvroConstructionDbContext> opt) : base(opt)
         {
 
         }
@@ -18,6 +18,7 @@ namespace AVRO_CONSTRUKTİON_MMC.DAL
         public DbSet<Service> Services { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Project> Projects { get; set; }
-        public  DbSet<ContactMessage> ContactMessages { get; set; }
+        public DbSet<ContactMessage> ContactMessages { get; set; }
+        public DbSet<ContactMessageReply> contactMessageReplies { get; set; }
     }
 }

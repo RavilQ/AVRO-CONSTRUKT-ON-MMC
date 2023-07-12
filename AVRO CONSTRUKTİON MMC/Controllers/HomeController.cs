@@ -58,7 +58,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
         public IActionResult ContactUs(ContactPostViewModel model)
         {
             if (!ModelState.IsValid)
-                return View();
+                return View(model);
 
             var contactMessage = _mapper.Map<ContactMessage>(model);
 
