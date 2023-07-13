@@ -1,19 +1,28 @@
-﻿using AVRO_CONSTRUKTİON_MMC.DAL;
+﻿using AutoMapper;
+using AVRO_CONSTRUKTİON_MMC.DAL;
+using AVRO_CONSTRUKTİON_MMC.Helpers.Interfaces;
 using AVRO_CONSTRUKTİON_MMC.Models;
+using AVRO_CONSTRUKTİON_MMC.Profiles;
 using AVRO_CONSTRUKTİON_MMC.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Crypto.Engines;
 using System.Diagnostics;
 
 namespace AVRO_CONSTRUKTİON_MMC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly AvroConstructionDbContext _context;
 
-        public HomeController(AvroConstructionDbContext context)
+        private readonly AvroConstructionDbContext _context;
+        private readonly IEmailSender _emailSender;
+        private readonly IMapper _mapper;
+
+        public HomeController(AvroConstructionDbContext context, IEmailSender emailSender, IMapper mapper)
         {
             _context = context;
+            _emailSender = emailSender;
+            _mapper = mapper;
         }
 
         public IActionResult Index()
@@ -44,6 +53,18 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
         public IActionResult ContactUs()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult ContactUs(ContactPostViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var contactMessage = _mapper.Map<ContactMessage>(model);
+
+            _context.ContactMessages.Add(contactMessage);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

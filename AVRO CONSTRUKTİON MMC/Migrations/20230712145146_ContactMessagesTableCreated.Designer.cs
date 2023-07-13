@@ -4,6 +4,7 @@ using AVRO_CONSTRUKTİON_MMC.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AVRO_CONSTRUKTİON_MMC.Migrations
 {
     [DbContext(typeof(AvroConstructionDbContext))]
-    partial class AvroConstructionDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230712145146_ContactMessagesTableCreated")]
+    partial class ContactMessagesTableCreated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -98,9 +100,6 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -127,35 +126,6 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ContactMessages");
-                });
-
-            modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.ContactMessageReply", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("ContactMessageId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Message")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Subject")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ContactMessageId")
-                        .IsUnique();
-
-                    b.ToTable("contactMessageReplies");
                 });
 
             modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.Employee", b =>
@@ -497,17 +467,6 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.ContactMessageReply", b =>
-                {
-                    b.HasOne("AVRO_CONSTRUKTİON_MMC.Models.ContactMessage", "ContactMessage")
-                        .WithOne("ContactMessageRepy")
-                        .HasForeignKey("AVRO_CONSTRUKTİON_MMC.Models.ContactMessageReply", "ContactMessageId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ContactMessage");
-                });
-
             modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.Employee", b =>
                 {
                     b.HasOne("AVRO_CONSTRUKTİON_MMC.Models.Job", "Job")
@@ -568,11 +527,6 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.ContactMessage", b =>
-                {
-                    b.Navigation("ContactMessageRepy");
                 });
 #pragma warning restore 612, 618
         }

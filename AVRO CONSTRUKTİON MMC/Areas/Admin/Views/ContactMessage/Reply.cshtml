@@ -1,0 +1,31 @@
+﻿@using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.ContactMessageVMs;
+
+@{
+    ViewData["Title"] = "Reply";
+}
+
+@model ContactReplyVM
+
+
+<div class="p-3 w-100 bg-light">
+
+    <form  method="post" class="col-sm-6 w-100 ">
+
+        <div class="my-3">
+            <label asp-for="Subject" class="form-label">Başlıq</label>
+            <input asp-for="Subject" class="form-control col-12" />
+            <span asp-validation-for="Subject" class="small text-danger"></span>
+        </div>
+        <div class="my-3">
+            <label asp-for="Message" class="form-label">Mesaj</label>
+            <textarea asp-for="Message" class="form-control" cols="10" rows="5"></textarea>
+            <span asp-validation-for="Message" class="small text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success"> Cavab Ver </button>
+
+    </form>
+</div>
+
+
+
