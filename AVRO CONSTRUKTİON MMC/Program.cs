@@ -47,6 +47,7 @@ builder.Services.AddSingleton(provider => new MapperConfiguration(cfg =>
 
 builder.Services.AddSingleton<IFileManager, FileManager>();
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
+builder.Services.AddSingleton<IPaginator, Paginator>();
 
 //=========================
 // 4 Identity

@@ -1,9 +1,15 @@
 ﻿
+@model JobIndexVM
 @{
     ViewData["Title"] = "Vəzifələr";
-    int order = 1;
+    int order =(Model.Jobs.PageNumber -1 )* Model.Jobs.PageSize;
 }
-@model List<Job>
+
+@using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.JobVMs
+@using X.PagedList.Mvc.Core; @*import this so we get our HTML Helper*@
+@using X.PagedList; @*import this so we can cast our list to IPagedList (only necessary because ViewBag is dynamic)*@
+@using X.PagedList.Mvc.Core.Fluent
+@using X.PagedList.Web.Common
 
 <div class="p-3 w-100 overflow-scroll">
 
@@ -23,8 +29,9 @@
         </thead>
         <tbody>
 
-            @foreach (Job job in Model)
+            @foreach (Job job in Model.Jobs)
             {
+                order++;
                 <tr>
                     <th scope="row">@order</th>
                     <td>@job.Name</td>
@@ -38,12 +45,19 @@
 
                 </tr>
 
-                order++;
             }
-
+            
 
         </tbody>
     </table>
+
+    <div>
+        @Html.PagedListPager(Model.Jobs, CurrentPage => Url.Action("Index", new { CurrentPage , PageSize = Model.Jobs.PageSize} ),
+        new PagedListRenderOptions{
+            MaximumPageNumbersToDisplay = 5,
+            ClassToApplyToLastListItemInPager = "d-none",
+        })
+    </div>
 
 
 </div>
