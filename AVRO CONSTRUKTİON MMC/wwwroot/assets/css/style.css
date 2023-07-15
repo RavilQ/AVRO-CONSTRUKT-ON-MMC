@@ -2981,6 +2981,7 @@ button:focus {
   margin-bottom: 22px;
   overflow: hidden;
   z-index: 2;
+
 }
 
 .team_item .team_img:before {
@@ -2997,12 +2998,15 @@ button:focus {
   transition: all 300ms ease;
 }
 
-.team_item .team_img img {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
+    .team_item .team_img img {
+        height: 240px;
+        width:100%;
+        object-fit: cover;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
 
 .team_item .team_img ul {
   list-style: none;
@@ -3023,6 +3027,7 @@ button:focus {
 
 .team_item .team_img ul li {
   margin-right: 10px;
+  cursor:pointer;
 }
 
 .team_item .team_img ul li:last-child {
