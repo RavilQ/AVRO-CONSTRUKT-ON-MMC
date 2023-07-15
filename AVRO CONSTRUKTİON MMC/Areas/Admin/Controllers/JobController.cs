@@ -1,5 +1,7 @@
-﻿using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.JobVMs;
+﻿using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels;
+using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.JobVMs;
 using AVRO_CONSTRUKTİON_MMC.DAL;
+using AVRO_CONSTRUKTİON_MMC.Helpers.Interfaces;
 using AVRO_CONSTRUKTİON_MMC.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,19 +13,36 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
     public class JobController : Controller
     {
         private readonly AvroConstructionDbContext _context;
+        private readonly IPaginator _paginator;
 
-        public JobController(AvroConstructionDbContext context)
+        public JobController(AvroConstructionDbContext context, IPaginator paginator)
         {
             _context = context;
+            _paginator = paginator;
         }
 
         //========================
         // Index view
         //========================
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Index(PaginationVM model)
         {
-            var model = _context.Jobs.ToList();
-            return View(model);
+            var jobs = _context.Jobs.ToList();
+
+            
+            var pagedJobs =  _paginator.GetPagedList(jobs, model.CurrentPage, model.PageSize);
+
+            if (pagedJobs == null)
+                return NotFound();
+
+            var viewModel = new JobIndexVM()
+            {
+                Jobs = pagedJobs
+            };
+
+            return View(viewModel);
+
+
         }
 
 
