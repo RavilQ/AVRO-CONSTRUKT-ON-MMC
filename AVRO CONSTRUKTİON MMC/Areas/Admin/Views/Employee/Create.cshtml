@@ -1,0 +1,51 @@
+﻿@using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.EmployeeVMs
+@{
+    ViewData["Title"] = "Create";
+}
+@model EmployeePostVM
+
+<div class="p-3">
+
+    <form asp-action="Create" asp-controller="Employee" method="post" enctype="multipart/form-data">
+
+
+
+
+        <div class="my-3">
+            <label asp-for="Fullname" class="form-label">Ad, Soyad</label>
+            <input asp-for="Fullname" class="form-control" />
+            <span asp-validation-for="Fullname" class="small text-danger"></span>
+        </div>
+
+        <div class="my-3">
+            <label asp-for="JobId" class="form-label"> Vəzifəsi</label>
+           <select class="form-select" asp-for="JobId" asp-items="@(new SelectList(Model.Jobs, nameof(Job.Id),nameof(Job.Name)))">
+               <option selected value="null" > Seçin...</option>
+           </select>
+            <span asp-validation-for="JobId" class="small text-danger"></span>
+        </div>
+
+
+        <div class="my-3">
+            <label asp-for="LinkedIn" class="form-label">LinkedIn</label>
+            <input asp-for="LinkedIn" class="form-control" />
+            <span asp-validation-for="LinkedIn" class="small text-danger"></span>
+        </div>
+        <div class="my-3">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="small text-danger"></span>
+        </div>
+
+
+        <div class="my-3">
+            <label asp-for="ImageFile" class="form-label">Şəkil</label>
+            <input asp-for="ImageFile" class="form-control" />
+            <span asp-validation-for="ImageFile" class="small text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success my-2"> Yarat </button>
+
+    </form>
+</div>
+
