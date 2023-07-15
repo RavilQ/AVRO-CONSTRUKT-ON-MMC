@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "Komandamız";
+}
+@model EmployeeIndexViewModel
+
+<!--================Breadcrumb Area =================-->
+<section class="breadcrumb_area">
+    <h1>Construction</h1>
+    <div class="container">
+        <h2>Heyətimiz</h2>
+        <ul class="nav">
+            <li><a asp-action="index" asp-controller="home">Ana Səhifə</a></li>
+            <li>
+                <a class="active" href="#">Komandamız</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--================End Breadcrumb Area =================-->
+<!--================Our Team Area =================-->
+<section class="our_team_area p_100" style="background: #fff;">
+    <div class="container">
+        <div class="main_title">
+            <h2>@Model.Setting["OurTeam_Header"]</h2>
+            <p>
+                @Model.Setting["OurTeam_Body"]
+            </p>
+        </div>
+        <div class="row team_inner">
+            <!--START-->
+
+            @foreach (var employee in Model.Employees)
+            {
+                <!--Employee-->
+
+                <div class="col-lg-3 col-sm-6">
+                <div class="team_item">
+                    <div class="team_img">
+                        <img class="img-fluid" src="~/Uploads/Employees/@employee.Image" alt="@employee.Fullname" />
+                        <ul class="nav">
+                           
+                            <li>
+                                <a href="@employee.LinkedIn"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                         
+                            <li>
+                                    <a href="@employee.Email"><i class="fa fa-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="team_text">
+                        <h4>@employee.Fullname</h4>
+                        <p>@employee.Job.Name</p>
+                    </div>
+                </div>
+            </div>
+            }
+            
+      
+
+            <!--END-->
+
+        </div>
+    </div>
+</section>
+<!--================End Our Team Area =================-->

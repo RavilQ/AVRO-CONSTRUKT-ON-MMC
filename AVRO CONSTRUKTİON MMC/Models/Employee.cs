@@ -11,5 +11,10 @@ namespace AVRO_CONSTRUKTİON_MMC.Models
         public string Image { get; set; }
 
         public Job Job { get; set; }
+
+        [MaxLength(200)]
+        public string? LinkedIn { get; set; }
+        [MaxLength(200)]
+        public string? Email { get; set; }
     }
 }
