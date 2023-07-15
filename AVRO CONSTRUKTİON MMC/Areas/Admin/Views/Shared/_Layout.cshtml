@@ -14,6 +14,7 @@
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="~/Admin/assets/css/vertical-layout-light/style.css">
+    <link rel="stylesheet" href="~/Admin/assets/css/vertical-layout-light/custom.css" />
     <!-- endinject -->
     <link rel="shortcut icon" href="~/Admin/assets/images/favicon.png" />
 </head>
@@ -57,6 +58,11 @@
                     <li class="nav-item  d-none d-lg-flex">
                         <a class="nav-link" asp-action="index" asp-controller="contactMessage">
                             Messages
+                        </a>
+                    </li>
+                    <li class="nav-item  d-none d-lg-flex">
+                        <a class="nav-link" asp-action="index" asp-controller="Project">
+                            Projects
                         </a>
                     </li>
                     <li class="nav-item  d-none d-lg-flex">
@@ -348,6 +354,12 @@
                         <a class="nav-link" asp-action="index" asp-controller="ContactMessage">
                             <i class="typcn typcn-document-text menu-icon"></i>
                             <span class="menu-title">Messages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="index" asp-controller="Project">
+                            <i class="typcn typcn-document-text menu-icon"></i>
+                            <span class="menu-title">Projects</span>
                         </a>
                     </li>
                     <li class="nav-item">
