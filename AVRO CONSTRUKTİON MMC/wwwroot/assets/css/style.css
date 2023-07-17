@@ -1419,6 +1419,8 @@ button:focus {
           transform: scale(1);
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+  width:100%;
+  height:300px;
 }
 
 .featured_item h4 {

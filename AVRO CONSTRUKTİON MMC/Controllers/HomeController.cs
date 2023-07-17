@@ -35,7 +35,8 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
                 Employees = _context.Employees.Include(x => x.Job).ToList(),
                 Testimonials = _context.Testimonials.ToList(),
                 Services = _context.Services.ToList(),
-                Settings = _context.Settings.ToDictionary(x => x.Key, y => y.Value)
+                Settings = _context.Settings.ToDictionary(x => x.Key, y => y.Value),
+                Projects = _context.Projects.Where(x=> x.IsFeatured).ToList()
             };
 
             return View(model);

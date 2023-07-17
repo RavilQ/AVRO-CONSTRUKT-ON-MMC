@@ -8,10 +8,10 @@
     var right = 0;
 }
 
- <!--================Slider Area =================-->
-    <section class="main_slider_area">
-      <h2 class="stroke_text">Construction</h2>
-      <div id="main_slider1" class="rev_slider" data-version="5.3.1.6">
+<!--================Slider Area =================-->
+<section class="main_slider_area">
+    <h2 class="stroke_text">Construction</h2>
+    <div id="main_slider1" class="rev_slider" data-version="5.3.1.6">
         <ul>
             @foreach (var slider in Model.Sliders)
             {
@@ -28,8 +28,7 @@
                      data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina />
 
                     <!-- LAYER NR. 1 -->
-
-                    @if (right%2==0)
+                    @if (right % 2 == 0)
                     {
                         <div class="slider_text_box">
                             <div class="tp-caption tp-resizeme first_text" data-x="['right','right','right','15','15']"
@@ -61,7 +60,8 @@
                             </div>
                         </div>
                     }
-                    else{
+                    else
+                    {
                         <div class="slider_text_box">
                             <div class="tp-caption tp-resizeme first_text" data-x="['left','left','left','15','15']"
                          data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']"
@@ -93,71 +93,68 @@
                         </div>
                     }
 
-                    
+
                 </li>
                 detail++;
             }
         </ul>
-      </div>
-    </section>
-    <!--================End Slider Area =================-->
-
-    <!--================Tag Line Area =================-->
-    <section class="tagline_area">
-      <div class="container">
+    </div>
+</section>
+<!--================End Slider Area =================-->
+<!--================Tag Line Area =================-->
+<section class="tagline_area">
+    <div class="container">
         <div class="d-flex justify-content-between">
-          <div class="left">
-            <p>Mükəmməl tikinti heyəti axtarırsınız?</p>
-          </div>
-          <div class="right">
-            <a class="dark_btn" asp-action="ContactUs" asp-controller="Home">Bizimlə Əlaqə</a>
-          </div>
+            <div class="left">
+                <p>Mükəmməl tikinti heyəti axtarırsınız?</p>
+            </div>
+            <div class="right">
+                <a class="dark_btn" asp-action="ContactUs" asp-controller="Home">Bizimlə Əlaqə</a>
+            </div>
         </div>
-      </div>
-    </section>
-    <!--================End Tag Line Area =================-->
-
-    <!--================Experience Area =================-->
-    <section class="experience_area p_100">
-      <div class="container">
+    </div>
+</section>
+<!--================End Tag Line Area =================-->
+<!--================Experience Area =================-->
+<section class="experience_area p_100">
+    <div class="container">
         <div class="row experience_inner">
-          <div class="col-lg-5">
-            <div class="experience_image">
+            <div class="col-lg-5">
+                <div class="experience_image">
                     <div class="col-6"><img class="object-fit-cover w-100 h-100 " src="~/assets/images/experience/@Model.Settings["HomeInfo_LeftImage"]" alt="Image about our company" /></div>
                     <div class="col-6 ps-1"><img class="object-fit-cover w-100 h-100 " src="~/assets/images/experience/@Model.Settings["HomeInfo_RightImage"]" alt="Image about our company" /></div>
-                    
-                   
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="experience_text">
-              <h5>Welcome to Buildtruck</h5>
-                    <h3>@Model.Settings["HomeInfo_Title"]</h3>
-               @Html.Raw(Model.Settings["HomeInfo_Description"])
-                    <a class="main_btn" href="@Model.Settings["HomeInfo_BtnLink"]">@Model.Settings["HomeInfo_BtnText"]</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================End Experience Area =================-->
 
-    <!--================Service Area =================-->
-    <section class="our_service_area p_100">
-      <div class="container">
+
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="experience_text">
+                    <h5>Welcome to Buildtruck</h5>
+                    <h3>@Model.Settings["HomeInfo_Title"]</h3>
+                    @Html.Raw(Model.Settings["HomeInfo_Description"])
+                    <a class="main_btn" href="@Model.Settings["HomeInfo_BtnLink"]">@Model.Settings["HomeInfo_BtnText"]</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Experience Area =================-->
+<!--================Service Area =================-->
+<section class="our_service_area p_100">
+    <div class="container">
         <div class="main_title">
-          <h2>Our Services</h2>
-          <p>
-            Bring to the table win-win survival strategies to ensure proactive
-            domination. At the end of the day, going forward, a new normal
-            that has evolved from gen-eration X is on the runway heading
-            towards a streamlined cloud solution.
-          </p>
+            <h2>Our Services</h2>
+            <p>
+                Bring to the table win-win survival strategies to ensure proactive
+                domination. At the end of the day, going forward, a new normal
+                that has evolved from gen-eration X is on the runway heading
+                towards a streamlined cloud solution.
+            </p>
         </div>
         <div class="row service_inner">
-         
-          @foreach (var item in Model.Services)
-          {
+
+            @foreach (var item in Model.Services)
+            {
                 <div class="col-lg-4 col-md-6">
                     <div class="serive_item">
                         <div class="media">
@@ -174,86 +171,63 @@
                         </div>
                     </div>
                 </div>
-          }
+            }
         </div>
-      </div>
-    </section>
-    <!--================End Service Area =================-->
-
-    <!--================Featured Area =================-->
-    <section class="featured_area p_100">
-      <div class="container">
+    </div>
+</section>
+<!--================End Service Area =================-->
+<!--================Featured Area =================-->
+<section class="featured_area p_100">
+    <div class="container">
         <div class="main_title white">
-          <h2>Featured Cases</h2>
-          <p>
-            Leverage agile frameworks to provide a robust synopsis for high
-            level overviews. Iterative approaches to corporate strategy foster
-            collaborative thinking to further.
-          </p>
-        </div>
-      </div>
-      <div class="featured_inner row">
-        <div class="col-lg-2 col-md-4 col-sm-6">
-          <div class="featured_item">
-            <img class="img-fluid" src="~/assets/images/featured/featured-1.jpg" alt="" />
-            <h4>Renovation</h4>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-6">
-          <div class="featured_item">
-            <img class="img-fluid" src="~/assets/images/featured/featured-2.jpg" alt="" />
-            <h4>NH 02 Bridge</h4>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-6">
-          <div class="featured_item">
-            <img class="img-fluid" src="~/assets/images/featured/featured-3.jpg" alt="" />
-            <h4>Lee House</h4>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-6">
-          <div class="featured_item">
-            <img class="img-fluid" src="~/assets/images/featured/featured-4.jpg" alt="" />
-            <h4>Gyan Apartment</h4>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-6">
-          <div class="featured_item">
-            <img class="img-fluid" src="~/assets/images/featured/featured-5.jpg" alt="" />
-            <h4>Renovation</h4>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-6">
-          <div class="featured_item">
-            <img class="img-fluid" src="~/assets/images/featured/featured-6.jpg" alt="" />
-            <h4>Gyan Apartment</h4>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================End Featured Area =================-->
-
-    <!--================Our Team Area =================-->
-    <section class="our_team_area p_100">
-      <div class="container">
-        <div class="row two_column_title">
-          <div class="col-lg-3">
-            <h2>Our Team</h2>
-          </div>
-          <div class="col-lg-9">
+            <h2>Lahiyələrimiz</h2>
             <p>
-              Bring to the table win-win survival strategies to ensure
-              proactive domination. At the end of the day, going forward, a
-              new normal that has evolved from generation X is on the runway
-              heading towards a streamlined cloud solution. User generated
-              content in real-time will have multiple touchpoints for
-              offshoring.
+                Leverage agile frameworks to provide a robust synopsis for high
+                level overviews. Iterative approaches to corporate strategy foster
+                collaborative thinking to further.
             </p>
-          </div>
+        </div>
+    </div>
+    <div class="featured_inner row">
+
+        @foreach (var proj in Model.Projects)
+        {
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="featured_item">
+
+                <a asp-action="details" asp-controller="project" asp-route-id="@proj.Id" >
+                    <img class=" object-fit-cover" src="~/Uploads/Projects/@proj.Image" alt="@proj.Name" />
+                    <h4 class="text-decoration-none">  <h4>@proj.Name</h4></h4>
+                </a>
+                </div>
+            </div>
+        }
+
+       
+    </div>
+</section>
+<!--================End Featured Area =================-->
+<!--================Our Team Area =================-->
+<section class="our_team_area p_100">
+    <div class="container">
+        <div class="row two_column_title">
+            <div class="col-lg-3">
+                <h2>Our Team</h2>
+            </div>
+            <div class="col-lg-9">
+                <p>
+                    Bring to the table win-win survival strategies to ensure
+                    proactive domination. At the end of the day, going forward, a
+                    new normal that has evolved from generation X is on the runway
+                    heading towards a streamlined cloud solution. User generated
+                    content in real-time will have multiple touchpoints for
+                    offshoring.
+                </p>
+            </div>
         </div>
         <div class="row team_inner">
-           @foreach (var item in Model.Employees)
-           {
+            @foreach (var item in Model.Employees)
+            {
                 <div class="col-lg-3 col-sm-6">
                     <div class="team_item">
                         <div class="team_img">
@@ -279,64 +253,61 @@
                         </div>
                     </div>
                 </div>
-           }
+            }
         </div>
-      </div>
-    </section>
-    <!--================End Our Team Area =================-->
-
-    <!--================Testimonials Area =================-->
-    <section class="testimonials_area">
-      <div class="container">
+    </div>
+</section>
+<!--================End Our Team Area =================-->
+<!--================Testimonials Area =================-->
+<section class="testimonials_area">
+    <div class="container">
         <div class="testi_slider owl-carousel">
-          @foreach (var item in Model.Testimonials)
-          {
-             <div class="item">
-            <div class="media">
-              <div class="d-flex">
-                <img src="~/assets/images/testimonials/@item.Image" alt="" />
-                <i>“</i>
-              </div>
-              <div class="media-body">
-                <p>
-                  @item.Text
-                </p>
-                <h4>- @item.Fullname</h4>
-                <h6>@item.Job</h6>
-              </div>
-            </div>
-             </div>
-          }
-         
-        </div>
-      </div>
-    </section>
-    <!--================End Testimonials Area =================-->
+            @foreach (var item in Model.Testimonials)
+            {
+                <div class="item">
+                    <div class="media">
+                        <div class="d-flex">
+                            <img src="~/assets/images/testimonials/@item.Image" alt="" />
+                            <i>“</i>
+                        </div>
+                        <div class="media-body">
+                            <p>
+                                @item.Text
+                            </p>
+                            <h4>- @item.Fullname</h4>
+                            <h6>@item.Job</h6>
+                        </div>
+                    </div>
+                </div>
+            }
 
-   
-    <!--================Client Logo Area =================-->
-    <section class="client_logo_area">
-      <div class="container">
-        <div class="client_logo_slider owl-carousel">
-          <div class="item">
-            <img src="~/assets/images/client-logo/client-1.png" alt="" />
-          </div>
-          <div class="item">
-            <img src="~/assets/images/client-logo/client-2.png" alt="" />
-          </div>
-          <div class="item">
-            <img src="~/assets/images/client-logo/client-3.png" alt="" />
-          </div>
-          <div class="item">
-            <img src="~/assets/images/client-logo/client-4.png" alt="" />
-          </div>
-          <div class="item">
-            <img src="~/assets/images/client-logo/client-5.png" alt="" />
-          </div>
-          <div class="item">
-            <img src="~/assets/images/client-logo/client-6.png" alt="" />
-          </div>
         </div>
-      </div>
-    </section>
-    <!--================End Client Logo Area =================-->
+    </div>
+</section>
+<!--================End Testimonials Area =================-->
+<!--================Client Logo Area =================-->
+<section class="client_logo_area">
+    <div class="container">
+        <div class="client_logo_slider owl-carousel">
+            <div class="item">
+                <img src="~/assets/images/client-logo/client-1.png" alt="" />
+            </div>
+            <div class="item">
+                <img src="~/assets/images/client-logo/client-2.png" alt="" />
+            </div>
+            <div class="item">
+                <img src="~/assets/images/client-logo/client-3.png" alt="" />
+            </div>
+            <div class="item">
+                <img src="~/assets/images/client-logo/client-4.png" alt="" />
+            </div>
+            <div class="item">
+                <img src="~/assets/images/client-logo/client-5.png" alt="" />
+            </div>
+            <div class="item">
+                <img src="~/assets/images/client-logo/client-6.png" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Client Logo Area =================-->
