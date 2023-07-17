@@ -23,7 +23,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
         public IActionResult Index()
         {
 
-            var settings = _context.Settings.ToList();
+            var settings = _context.Settings.Skip(6).ToList();
 
             return View(settings);
         }

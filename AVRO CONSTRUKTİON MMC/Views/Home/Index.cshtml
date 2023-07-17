@@ -17,12 +17,8 @@
             {
                 right++;
 
-                if (detail==1590)
-                {
-                    detail = 1587;
-                }
 
-                <li data-index="rs-@detail" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
+                <li data-index="rs-@slider.Id" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
                 data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300"
                 data-thumb="~/assets/images/home-slider/@slider.Image" data-rotate="0" data-saveperformance="off"
                 data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5=""
@@ -127,37 +123,16 @@
         <div class="row experience_inner">
           <div class="col-lg-5">
             <div class="experience_image">
-              <img src="~/assets/images/experience/experience-1.jpg" alt="" />
-              <img src="~/assets/images/experience/experience-2.jpg" alt="" />
-              <div class="year_text">
-                <h4>24</h4>
-                <p>
-                  years <br />
-                  Experience
-                </p>
-              </div>
+                    <img src="~/assets/images/experience/@Model.Settings["HomeInfo_LeftImage"]" alt="Image about our company" />
+                    <img src="~/assets/images/experience/@Model.Settings["HomeInfo_RightImage"]" alt="Image about our company" />
             </div>
           </div>
           <div class="col-lg-7">
             <div class="experience_text">
               <h5>Welcome to Buildtruck</h5>
-              <h3>We have 18 years experience</h3>
-              <p>
-                Bring to the table win-win survival strategies to ensure
-                proactive domination. At the end of the day, going forward, a
-                new normal that has evolved from generation X is on the runway
-                heading towards a streamlined cloud solution. User generated
-                content in real-time will have multiple touchpoints for
-                offshoring.
-              </p>
-              <p>
-                Capitalize on low hanging fruit to identify a ballpark value
-                added activity to beta test. Override the digital divide with
-                additional clickthroughs from DevOps. Nanotechnolo-gy
-                immersion along the information highway will close the loop on
-                focusing.
-              </p>
-              <a class="main_btn" href="#">Know more about us</a>
+                    <h3>@Model.Settings["HomeInfo_Title"]</h3>
+               @Html.Raw(Model.Settings["HomeInfo_Description"])
+                    <a class="main_btn" href="@Model.Settings["HomeInfo_BtnLink"]">@Model.Settings["HomeInfo_BtnText"]</a>
             </div>
           </div>
         </div>
