@@ -97,6 +97,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
 
             job.Name = model.Name;
 
+            _context.Jobs.Update(job);
             _context.SaveChanges();
 
             return RedirectToAction("Index");

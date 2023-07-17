@@ -1,12 +1,12 @@
 ﻿@using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.ProjectVMs
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
-@model ProjectPostVM
+@model ProjectPutVM
 
 <div class="p-3">
 
-    <form asp-action="Create" asp-controller="project" method="post" enctype="multipart/form-data">
+    <form  method="post" enctype="multipart/form-data">
 
 
 
@@ -25,7 +25,7 @@
 
 
         <div class="my-3">
-            <label  asp-for="IsFeatured" class="form-label">Xüsusi Lahiyədirmi ?</label>
+            <label asp-for="IsFeatured" class="form-label">Xüsusi Lahiyədirmi ?</label>
             <select asp-for="IsFeatured" class="form-select">
                 <option value="false" selected>Xeyr</option>
                 <option value="true">Bəli</option>
@@ -36,6 +36,8 @@
 
 
         <div class="my-3">
+            <img src="~/Uploads/Projects/@Model.Image" width="200" /> <br />
+
             <label asp-for="ImageFile" class="form-label">Şəkil</label>
             <input asp-for="ImageFile" class="form-control" />
             <span asp-validation-for="ImageFile" class="small text-danger"></span>

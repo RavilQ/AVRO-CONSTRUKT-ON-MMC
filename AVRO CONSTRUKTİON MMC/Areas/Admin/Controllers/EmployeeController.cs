@@ -104,7 +104,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
                 _fileManager.Delete(_env.WebRootPath, "Uploads/Employees", employee.Image);
                 employee.Image = _fileManager.Save(model.ImageFile, _env.WebRootPath, "Uploads/Employees", 200);
             }
-
+            _context.Employees.Update(employee);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -57,6 +57,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
 
             setting.Value = model.Value;
 
+            _context.Settings.Update(setting);
             _context.SaveChanges();
 
             return RedirectToAction("Index");

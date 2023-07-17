@@ -3,21 +3,21 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.ProjectVMs
 {
-    public class ProjectPostVM
+    public class ProjectPutVM
     {
         [Required(ErrorMessage = "Boş buraxıla bilməz")]
 
         [MaxLength(100, ErrorMessage = "100 hərfdən ibarət olmalıdır")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Boş buraxıla bilməz")]
-        [MaxLength(5000, ErrorMessage ="Çox böyük mətin daxil edildi.")]
+        [MaxLength(5000, ErrorMessage = "Çox böyük mətin daxil edildi.")]
         public string Description { get; set; }
 
-        [Required(ErrorMessage = "Boş buraxıla bilməz")]
         [MaxFileSize(2)]
         [AllowedFileTypes("image/jpeg", "image/png")]
-        public IFormFile ImageFile { get; set; }
+        public IFormFile? ImageFile { get; set; }
         [Required(ErrorMessage = "Boş buraxıla bilməz")]
         public bool IsFeatured { get; set; }
+        public string? Image { get; set; }
     }
 }
