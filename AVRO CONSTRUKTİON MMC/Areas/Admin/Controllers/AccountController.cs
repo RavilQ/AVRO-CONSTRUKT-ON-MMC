@@ -2,6 +2,7 @@
 using AVRO_CONSTRUKTİON_MMC.Helpers.Interfaces;
 using AVRO_CONSTRUKTİON_MMC.Models;
 using AVRO_CONSTRUKTİON_MMC.Utilities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -73,10 +74,18 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
 
 
 
+        //===========================
+        // logout
+        //===========================
 
 
+        [Authorize(Roles ="SuperAdmin, Admin")]
+        public async Task<IActionResult>  Logout()
+        {
 
-
+           await  _signInManager.SignOutAsync();
+            return RedirectToAction("login");
+        }
 
 
 
