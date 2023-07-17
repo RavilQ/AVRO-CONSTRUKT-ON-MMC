@@ -65,13 +65,13 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
             if (model.LeftImage != null && leftImage != null && leftImage.Value !=null )
             {
                 _fileManager.Delete(_env.WebRootPath, "assets/images/experience", leftImage.Value);
-                _fileManager.Save(model.LeftImage, _env.WebRootPath, "assets/images/experience", 200);
+                leftImage.Value= _fileManager.Save(model.LeftImage, _env.WebRootPath, "assets/images/experience", 200);
             }
 
             if (model.RightImage != null && rightImage != null && rightImage.Value != null)
             {
                 _fileManager.Delete(_env.WebRootPath, "assets/images/experience", rightImage.Value);
-                _fileManager.Save(model.RightImage, _env.WebRootPath, "assets/images/experience", 200);
+                rightImage.Value= _fileManager.Save(model.RightImage, _env.WebRootPath, "assets/images/experience", 200);
             }
 
 

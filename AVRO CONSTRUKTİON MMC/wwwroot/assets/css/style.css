@@ -1308,11 +1308,14 @@ button:focus {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+
 }
 
 .experience_area .experience_inner .experience_image img + img {
   margin-left: 6px;
+  
 }
+
 
 .experience_area .experience_inner .experience_image .year_text {
   position: absolute;
