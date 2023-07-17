@@ -3,3 +3,11 @@
     width:100%;
     object-fit:cover;
 }
+.fit-content{
+    width:fit-content;
+}
+
+.edit-btn {
+    top: -12px;
+    right: 3px;
+}
