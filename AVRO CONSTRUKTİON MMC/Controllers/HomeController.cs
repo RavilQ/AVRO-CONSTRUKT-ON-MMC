@@ -32,7 +32,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
             {
 
                 Sliders = _context.Sliders.ToList(),
-                Employees = _context.Employees.Include(x => x.Job).ToList(),
+                Employees = _context.Employees.Include(x => x.Job).Take(4).ToList(),
                 Testimonials = _context.Testimonials.ToList(),
                 Services = _context.Services.ToList(),
                 Settings = _context.Settings.ToDictionary(x => x.Key, y => y.Value),
