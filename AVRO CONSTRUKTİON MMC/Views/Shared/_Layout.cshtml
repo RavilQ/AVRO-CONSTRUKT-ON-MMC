@@ -1,4 +1,10 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+﻿@using AVRO_CONSTRUKTİON_MMC.Helpers.Interfaces
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject ILayoutService layoutService
+
+@{
+    var settings = layoutService.GetSettingsDictionary();
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,13 +48,12 @@
                     <div class="d-flex justify-content-between">
                         <div class="left">
                             <h5>
-                                <a href="tel:01676790690">Construction Company</a> Losangle
-                                City
+                                <a href="tel:@settings["Telefon"]">Construction Company</a>
                             </h5>
                         </div>
                         <div class="right">
                             <ul class="nav">
-                                <li>Talk with Expert :<a href="#">1800 456 7890</a></li>
+                                <li>Mütəxəssis ilə danış :<a href="tel:@settings["Telefon"]">@settings["Telefon"]</a></li>
                               @*  <li class="flag_drop">
                                     <div class="selector">
                                         <select class="language_drop" name="countries" id="countries" style="width: 300px;">
@@ -71,7 +76,7 @@
             <div class="main_menu">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" asp-action="index" asp-controller="home">
                             <img src="~/assets/images/logo.png"
                                  srcset="~/assets/images/logo2x.png 2x" alt="" />
                         </a>
@@ -112,7 +117,7 @@
                                 <img src="~/assets/images/icon/marker.png" alt="" />
                             </div>
                             <div class="media-body">
-                                <p>54B, Tailstoi Town 5238 MT,<br /> La city, IA 522364</p>
+                                <p>@settings["Address"]</p>
                             </div>
                         </div>
                     </div>
@@ -123,8 +128,8 @@
                             </div>
                             <div class="media-body">
                                 <p>
-                                    Email us :
-                                    <a href="mailto:contact@buildtruck.com">contact@buildtruck.com</a>
+                                    Email :
+                                    <a href="mailto:@settings["Email"]">@settings["Email"]</a>
                                 </p>
                             </div>
                         </div>
@@ -136,8 +141,8 @@
                             </div>
                             <div class="media-body">
                                 <p>
-                                    Call us on :
-                                    <a class="number" href="tel:+1800457890">+ 1800 456 7890</a>
+                                    Telefon :
+                                    <a class="number" href="tel:@settings["Telefon"]">@settings["Telefon"]</a>
                                 </p>
                             </div>
                         </div>
@@ -158,20 +163,19 @@
                                 added activity to beta test. Override the digital divide
                                 additional clickthroughs.
                             </p>
-                            <a href="#">Read more ...</a>
+                            <a asp-action="aboutUs" asp-controller="home">Read more ...</a>
                         </aside>
                     </div>
                     <div class="col-lg-2 col-sm-6">
                         <aside class="f_widget link_widget">
                             <div class="f_title">
-                                <h3>Useful Links</h3>
+                                <h3>Faydalı keçidlər</h3>
                             </div>
                             <ul class="nav flex-column">
-                                <li><a asp-action="index" asp-controller="home">Home</a></li>
-                                <li><a asp-action="aboutUs" asp-controller="home">About Us</a></li>
-                                <li><a href="#">Request Call Back</a></li>
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a asp-action="contactUs" asp-controller="home">Contact Us</a></li>
+                                <li><a asp-action="index" asp-controller="home">Ana səhifə</a></li>
+                                <li><a asp-action="aboutUs" asp-controller="home">Haqqımızda</a></li>
+                                <li><a asp-action="index" asp-controller="Employee">Komandamız</a></li>
+                                <li><a asp-action="contactUs" asp-controller="home">Bizimlə Əlaqə</a></li>
                             </ul>
                         </aside>
                     </div>
@@ -192,32 +196,24 @@
                     <div class="col-lg-4 col-sm-6">
                         <aside class="f_widget news_widget">
                             <div class="f_title">
-                                <h3>Newsletter</h3>
+                                <h3>Sosial Media səhifələrimiz</h3>
                             </div>
                             <div class="news_wd_inner">
-                                <p>Get latest updates and offers.</p>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Enter your email address"
-                                           aria-label="Enter your email address" aria-describedby="button-addon2" />
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </div>
+                                <p>Ən son məlumatları əldə edin</p>
+                               
                             </div>
                             <ul class="nav social_icon">
                                 <li>
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="@settings["Facebook"]"><i class="fa fa-facebook"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="@settings["LinkedIn"]"><i class="fa fa-linkedin"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="@settings["Twitter"]"><i class="fa fa-twitter"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="@settings["Email"]"><i class="fa fa-envelope"></i></a>
                                 </li>
                             </ul>
                         </aside>
@@ -230,11 +226,11 @@
                             <script>
                                 document.write(new Date().getFullYear());
                             </script>
-                            . All right reserved.
+                            . Müəllif hüquqları qorunur.
                         </p>
                     </div>
                     <div class="right">
-                        <p>Created by <a href="#">DesignArc</a></p>
+                        <p>Müəllif  <a href="https://github.com/TAHiRLI">Tahir Tahirli</a> və <a href="https://github.com/RavilQ"> Ravil Quliyev</a></p>
                     </div>
                 </div>
             </div>
