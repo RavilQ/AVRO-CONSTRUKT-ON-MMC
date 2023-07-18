@@ -10,6 +10,7 @@ namespace AVRO_CONSTRUKTİON_MMC.ViewModel
         public ICollection<Service> Services { get; set; }
         public ICollection<Project> Projects { get; set; }
         public IDictionary<string, string?> Settings { get; set; }
+        public ICollection<ClientLogo> ClientLogos { get; set; }
 
     }
 }
