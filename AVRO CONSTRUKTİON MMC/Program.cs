@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using AVRO_CONSTRUKTİON_MMC.DAL;
 using AVRO_CONSTRUKTİON_MMC.Helpers;
+using AVRO_CONSTRUKTİON_MMC.Helpers.Implementations;
 using AVRO_CONSTRUKTİON_MMC.Helpers.Interfaces;
 using AVRO_CONSTRUKTİON_MMC.Models;
 using AVRO_CONSTRUKTİON_MMC.Profiles;
@@ -48,7 +49,7 @@ builder.Services.AddSingleton(provider => new MapperConfiguration(cfg =>
 builder.Services.AddSingleton<IFileManager, FileManager>();
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 builder.Services.AddSingleton<IPaginator, Paginator>();
-
+builder.Services.AddScoped<ILayoutService, LayoutService>();
 //=========================
 // 4 Identity
 //=========================
