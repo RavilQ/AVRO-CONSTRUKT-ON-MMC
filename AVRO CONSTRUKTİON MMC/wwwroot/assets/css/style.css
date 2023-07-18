@@ -4364,7 +4364,9 @@ button:focus {
 
 .client_logo_slider .item img {
   display: inline-block;
-  width: auto;
+  width: 100%;
+  object-fit:contain;
+  height:140px;
   line-height: 85px;
 }
 
