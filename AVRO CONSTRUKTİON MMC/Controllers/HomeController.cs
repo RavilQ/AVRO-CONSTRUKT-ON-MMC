@@ -31,7 +31,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
             HomeViewModel model = new HomeViewModel
             {
 
-                Sliders = _context.Sliders.ToList(),
+                Sliders = _context.Sliders.OrderBy(x=> x.queue).ToList(),
                 Employees = _context.Employees.Include(x => x.Job).Take(4).ToList(),
                 Testimonials = _context.Testimonials.ToList(),
                 Services = _context.Services.ToList(),
