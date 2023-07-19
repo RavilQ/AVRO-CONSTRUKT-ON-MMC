@@ -1,4 +1,6 @@
 ﻿
+@model ServiceViewModel
+
     <!--================Breadcrumb Area =================-->
     <section class="breadcrumb_area">
       <h1>Construction</h1>
@@ -18,151 +20,31 @@
     <section class="our_service_area p_100">
       <div class="container">
         <div class="main_title">
-          <h2>Our Services</h2>
-          <p>
-            Bring to the table win-win survival strategies to ensure proactive
-            domination. At the end of the day, going forward, a new normal
-            that has evolved from gen-eration X is on the runway heading
-            towards a streamlined cloud solution.
-          </p>
+            <h2>@Model.Setting["OurServices_Title"]</h2>
+            <p>
+                @Model.Setting["OurServices_Text"]
+            </p>
         </div>
         <div class="row service_inner">
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Building Construction</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
+          @foreach (var item in Model.Service)
+          {
+                <div class="col-lg-4 col-md-6">
+                    <div class="serive_item">
+                        <div class="media">
+                            <div class="media-body">
+                                <h4>@item.Title</h4>
+                                <p>
+                                    @item.Text
+                                </p>
+                                <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
+                            </div>
+                            <div class="media-right">
+                                <img src="~/assets/images/icon/@item.Icon" alt="" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="media-right">
-                  <img src="assets/images/icon/s-icon-1.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Building Construction</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
-                </div>
-                <div class="media-right">
-                  <img src="assets/images/icon/s-icon-2.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Building Construction</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
-                </div>
-                <div class="media-right">
-                  <img src="assets/images/icon/s-icon-3.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Building Construction</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
-                </div>
-                <div class="media-right">
-                  <img src="assets/images/icon/s-icon-4.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Building Construction</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
-                </div>
-                <div class="media-right">
-                  <img src="assets/images/icon/s-icon-5.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Building Construction</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
-                </div>
-                <div class="media-right">
-                  <img src="assets/images/icon/s-icon-6.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>Repair & Expand</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
-                </div>
-                <div class="media-right">
-                  <img src="assets/images/icon/s-icon-7.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="serive_item">
-              <div class="media">
-                <div class="media-body">
-                  <h4>General Builder</h4>
-                  <p>
-                    Bring to the table win-win survial strategies to ensure
-                    proactive on a practice domination.
-                  </p>
-                  <a class="read_btn" href="#">Read more <i class="lnr lnr-arrow-right"></i></a>
-                </div>
-                <div class="media-right">
-                  <img src="assets/images/icon/s-icon-8.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
+          }
         </div>
       </div>
     </section>
@@ -172,15 +54,15 @@
     <section class="video_area">
       <div class="container">
         <div class="video_text">
-          <h4>Working since 1992</h4>
-          <h3>We are leader <br />in Construction Industry</h3>
+            <h4>@Model.Setting["OurServicesVideo_Title"]</h4>
+            <h3> @Model.Setting["OurServicesVideo_Text1"] <br />@Model.Setting["OurServicesVideo_Text2"]</h3>
           <div class="media">
             <div class="d-flex">
-              <a class="popup-youtube" href="https://www.youtube.com/watch?v=SsK0wTVWQx0"><i
-                  class="flaticon-play-button"></i></a>
+                    <a class="popup-youtube" href="@Model.Setting["OurServiceVideo_Video"]">
+                        <i class="flaticon-play-button"></i></a>
             </div>
             <div class="media-body">
-              <h5>Watch intro video <br />about us</h5>
+               <h5>@Model.Setting["OurServicesVideo_Desc1"]<br />@Model.Setting["OurServicesVideo_Desc2"]</h5>
             </div>
           </div>
         </div>

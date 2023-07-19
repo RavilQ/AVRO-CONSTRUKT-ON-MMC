@@ -47,7 +47,14 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
 
         public IActionResult Services()
         {
-            return View();
+            ServiceViewModel model = new ServiceViewModel { 
+            
+                Service = _context.Services.ToList(),
+                Setting = _context.Settings.ToDictionary(x => x.Key, y => y.Value)
+
+            };
+
+            return View(model);
         }
 
         public IActionResult ContactUs()
