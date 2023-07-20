@@ -34,7 +34,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
                 Sliders = _context.Sliders.OrderBy(x=> x.queue).ToList(),
                 Employees = _context.Employees.Include(x => x.Job).Take(4).ToList(),
                 Testimonials = _context.Testimonials.ToList(),
-                Services = _context.Services.ToList(),
+                Services = _context.Services.Take(3).ToList(),
                 Settings = _context.Settings.ToDictionary(x => x.Key, y => y.Value),
                 Projects = _context.Projects.Where(x => x.IsFeatured).ToList(),
                 ClientLogos = _context.ClientLogos.ToList()

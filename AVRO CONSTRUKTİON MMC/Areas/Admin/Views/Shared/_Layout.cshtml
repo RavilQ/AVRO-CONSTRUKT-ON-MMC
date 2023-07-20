@@ -43,34 +43,21 @@
                 <ul class="navbar-nav mr-lg-2">
                     <li class="nav-item  d-none d-lg-flex">
                         <a class="nav-link" asp-action="index" asp-controller="Employee">
-                            Employee
+                            İşçilər
                         </a>
                     </li>
-                    <li class="nav-item  d-none d-lg-flex">
-                        <a class="nav-link" asp-action="index" asp-controller="slider">
-                            Sliders
-                        </a>
-                    </li>
-                    <li class="nav-item  d-none d-lg-flex">
-                        <a class="nav-link" asp-action="index" asp-controller="job">
-                            Positions
-                        </a>
-                    </li>
-                    <li class="nav-item  d-none d-lg-flex">
-                        <a class="nav-link" asp-action="index" asp-controller="contactMessage">
-                            Messages
-                        </a>
-                    </li>
+                  
                     <li class="nav-item  d-none d-lg-flex">
                         <a class="nav-link" asp-action="index" asp-controller="Project">
-                            Projects
+                            Layihələr
                         </a>
                     </li>
                     <li class="nav-item  d-none d-lg-flex">
-                        <a class="nav-link" asp-action="index" asp-controller="setting">
-                            Settings
+                        <a class="nav-link" asp-action="index" asp-controller="Service">
+                            Xidmətlər
                         </a>
                     </li>
+                   
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item d-none d-lg-flex  mr-2">
@@ -231,12 +218,12 @@
                                    @User.Identity.Name
                                 </p>
                                 <p class="sidebar-designation text-center">
-                                    Welcome
+                                    Xoş gəlmişsiniz
                                 </p>
                             </div>
                         </div>
                      
-                        <p class="sidebar-menu-title">Dash menu</p>
+                        <p class="sidebar-menu-title">Menyu</p>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"  asp-action="index" asp-controller="Dashboard">
@@ -252,8 +239,8 @@
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" asp-action="Index" asp-controller="Slider">Sliders</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-action="Index" asp-controller="HomeInfo">HomeInfo</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-action="Index" asp-controller="Slider">Slaydlar</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-action="Index" asp-controller="HomeInfo">Haqqımızda qismi</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-action="Index" asp-controller="ClientLogo">Sponsor Loqoları</a></li>
                             </ul>
                         </div>
@@ -336,32 +323,38 @@
 
                         <a class="nav-link" asp-action="index" asp-controller="Employee">
                             <i class="typcn typcn-document-text menu-icon"></i>
-                            <span class="menu-title">Employees</span>
+                            <span class="menu-title">İşçilər</span>
                         </a>
                     </li>
-                 
+                  
                     <li class="nav-item">
                         <a class="nav-link" asp-action="index" asp-controller="job">
                             <i class="typcn typcn-document-text menu-icon"></i>
-                            <span class="menu-title">Positions</span>
+                            <span class="menu-title">Vəzifələr</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-action="index" asp-controller="ContactMessage">
                             <i class="typcn typcn-document-text menu-icon"></i>
-                            <span class="menu-title">Messages</span>
+                            <span class="menu-title">Mesajlar</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-action="index" asp-controller="Project">
                             <i class="typcn typcn-document-text menu-icon"></i>
-                            <span class="menu-title">Projects</span>
+                            <span class="menu-title">Layihələr</span>
+                        </a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="index" asp-controller="Service">
+                            <i class="typcn typcn-document-text menu-icon"></i>
+                            <span class="menu-title">Xidmətlər</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-action="index" asp-controller="setting">
                             <i class="typcn typcn-document-text menu-icon"></i>
-                            <span class="menu-title">Settings</span>
+                            <span class="menu-title">Tənzimləmələr</span>
                         </a>
                     </li>
                 </ul>

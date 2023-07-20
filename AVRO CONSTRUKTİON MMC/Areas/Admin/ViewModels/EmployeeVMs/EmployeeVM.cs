@@ -2,7 +2,7 @@
 
 namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.EmployeeVMs
 {
-    public class EmployeeIndexVM
+    public class EmployeeVM
     {
         public ICollection<Employee> Employees { get; set; }    
     }
