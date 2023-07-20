@@ -7,6 +7,7 @@ using AVRO_CONSTRUKTİON_MMC.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Crypto.Engines;
+using Org.BouncyCastle.Math.EC;
 using System.Diagnostics;
 
 namespace AVRO_CONSTRUKTİON_MMC.Controllers
@@ -30,11 +31,13 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
             HomeViewModel model = new HomeViewModel
             {
 
-                Sliders = _context.Sliders.ToList(),
-                Employees = _context.Employees.Include(x => x.Job).ToList(),
+                Sliders = _context.Sliders.OrderBy(x=> x.queue).ToList(),
+                Employees = _context.Employees.Include(x => x.Job).Take(4).ToList(),
                 Testimonials = _context.Testimonials.ToList(),
-                Services = _context.Services.ToList()
-
+                Services = _context.Services.ToList(),
+                Settings = _context.Settings.ToDictionary(x => x.Key, y => y.Value),
+                Projects = _context.Projects.Where(x => x.IsFeatured).ToList(),
+                ClientLogos = _context.ClientLogos.ToList()
             };
 
             return View(model);

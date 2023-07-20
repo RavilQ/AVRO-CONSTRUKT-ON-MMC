@@ -90,6 +90,24 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.ClientLogo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ClientLogos");
+                });
+
             modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.ContactMessage", b =>
                 {
                     b.Property<int>("Id")

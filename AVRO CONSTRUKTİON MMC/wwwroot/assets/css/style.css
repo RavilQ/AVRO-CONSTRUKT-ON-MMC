@@ -1308,11 +1308,14 @@ button:focus {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+
 }
 
 .experience_area .experience_inner .experience_image img + img {
   margin-left: 6px;
+  
 }
+
 
 .experience_area .experience_inner .experience_image .year_text {
   position: absolute;
@@ -1416,6 +1419,8 @@ button:focus {
           transform: scale(1);
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+  width:100%;
+  height:300px;
 }
 
 .featured_item h4 {
@@ -4359,7 +4364,9 @@ button:focus {
 
 .client_logo_slider .item img {
   display: inline-block;
-  width: auto;
+  width: 100%;
+  object-fit:contain;
+  height:140px;
   line-height: 85px;
 }
 

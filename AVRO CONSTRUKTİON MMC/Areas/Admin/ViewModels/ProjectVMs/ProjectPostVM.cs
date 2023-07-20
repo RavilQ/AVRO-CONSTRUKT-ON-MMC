@@ -12,8 +12,8 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.ProjectVMs
         [Required(ErrorMessage = "Boş buraxıla bilməz")]
         [MaxLength(5000, ErrorMessage ="Çox böyük mətin daxil edildi.")]
         public string Description { get; set; }
+
         [Required(ErrorMessage = "Boş buraxıla bilməz")]
-        [MaxLength(200, ErrorMessage ="200 hərfdən ibarət olmalıdır")]
         [MaxFileSize(2)]
         [AllowedFileTypes("image/jpeg", "image/png")]
         public IFormFile ImageFile { get; set; }

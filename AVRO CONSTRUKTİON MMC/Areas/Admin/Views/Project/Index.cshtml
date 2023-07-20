@@ -18,9 +18,7 @@
     <div class="row  mt-3 rounded">
 
 
-        @for (int i = 0; i < 6; i++)
-        {
-            foreach (var proj in Model.Projects)
+            @foreach (var proj in Model.Projects)
             {
                 <div class="  mb-3 d-flex align-items-strech  col-sm-6 col-md-4 col-12">
                     <div class="card p-3 col-12">
@@ -29,7 +27,8 @@
                         </div>
                         <div class="">
                             <div class="card-body">
-                                <h5 class="card-title">@proj.Name</h5>
+                               
+                                <h5 class="card-title">@proj.Name <small class=" text-success bold">@(proj.IsFeatured ? "- Xüssusi Layihə":"")</small></h5>
                                 @Html.Raw(proj.Description)
                             </div>
                         </div>
@@ -44,7 +43,6 @@
                     </div>
                 </div>
             }
-        }
 
 
     </div>

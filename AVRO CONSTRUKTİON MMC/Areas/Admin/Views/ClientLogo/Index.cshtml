@@ -1,0 +1,106 @@
+﻿@using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.ClientLogoVMs
+@{
+    ViewData["Title"] = "Index";
+    int order = 1;
+}
+
+@model ClientLogoVM
+
+
+
+<div class="p-3 w-100 overflow-scroll">
+
+    <div class="d-flex col-12  my-2 justify-content-between align-items-center">
+        <div>Yeni Loqo Əlavə Et:</div>
+        <a asp-action="create" asp-controller="ClientLogo" class="btn btn-success">Yarat</a>
+    </div>
+
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Loqo</th>
+                <th scope="col">Əməliyyatlar</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var logo in Model.ClientLogos)
+            {
+                <tr>
+                    <th scope="row">@order</th>
+                    <td>
+                        <img src="~/Uploads/ClientLogos/@logo.Image" alt="sponsor" loading="lazy" width="150" height="100" style="object-fit:cover" />
+                    </td>
+
+                    <td>
+                        <div class=" d-flex h-100 nowrap">
+
+                            <a asp-action="Delete" asp-controller="ClientLogo" asp-route-id="@logo.Id" class="btn btn-danger btn-delete mx-1">Delete</a>
+                        </div>
+
+                    </td>
+
+                </tr>
+
+                order++;
+            }
+
+
+        </tbody>
+    </table>
+
+
+</div>
+
+
+@section Scripts{
+    <script>
+
+        $(".btn-delete").on("click", (e) => {
+            e.preventDefault();
+
+
+            Swal.fire({
+                title: 'Əminsiniz?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Bəli, Sil!'
+            }).then((result) => {
+
+                let link = e.target.getAttribute("href");
+
+                fetch(link).then(res => {
+
+                    if (res.ok) {
+                        if (result.isConfirmed) {
+                            Swal.fire(
+                                'Silindi!',
+                                'Əməliyyat uğurla yerinə yetirildi',
+                                'success'
+                            ).then(() => {
+                                window.location.reload();
+                            })
+                        }
+                    }
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Xəta baş verdi!',
+                        })
+                    }
+                })
+
+
+            })
+
+
+
+        })
+
+    </script>
+}

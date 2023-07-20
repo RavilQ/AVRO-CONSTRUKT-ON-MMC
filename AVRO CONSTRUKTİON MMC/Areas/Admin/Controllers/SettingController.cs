@@ -23,7 +23,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
         public IActionResult Index()
         {
 
-            var settings = _context.Settings.ToList();
+            var settings = _context.Settings.Skip(6).ToList();
 
             return View(settings);
         }
@@ -57,6 +57,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
 
             setting.Value = model.Value;
 
+            _context.Settings.Update(setting);
             _context.SaveChanges();
 
             return RedirectToAction("Index");

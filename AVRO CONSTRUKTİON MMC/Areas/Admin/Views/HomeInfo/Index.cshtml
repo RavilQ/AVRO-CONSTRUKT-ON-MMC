@@ -1,0 +1,126 @@
+﻿@using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.HomeInfoVMs
+
+@{
+    ViewData["Title"] = "Index";
+}
+@model HomeInfoVM
+
+<!--================Experience Area =================-->
+<section class="w-100 mt-5">
+    <div class="container m-auto">
+        <div class="row experience_inner">
+            <div class="col-lg-5">
+                <div class="experience_image row">
+                    <div class="col-6 position-relative">
+                        <span role="button"  class="badge p-2 rounded-circle position-absolute edit-btn bg-info">
+
+                            <svg onclick="handleClick('LeftImage')"  xmlns="http://www.w3.org/2000/svg"  height="1em" viewBox="0 0 512 512"><path d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" /></svg>
+                        </span>
+                        <img class="project-image" src="~/assets/images/experience/@Model.Settings["HomeInfo_LeftImage"]" alt="Image about our company" />
+                        <span asp-validation-for="LeftImage" class="small text-danger d-block"></span>
+                    </div>
+                    <div class="col-6 position-relative">
+                        <span role="button"  class="badge p-2 rounded-circle position-absolute edit-btn bg-info">
+                        <svg onclick="handleClick('RightImage')"  xmlns="http://www.w3.org/2000/svg"  height="1em" viewBox="0 0 512 512"><path d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" /></svg>
+                        </span>
+                        <img class="project-image" src="~/assets/images/experience/@Model.Settings["HomeInfo_RightImage"]" alt="Image about our company" />
+                        <span asp-validation-for="RightImage" class="small text-danger d-block"></span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="experience_text mt-5">
+                    <h1 class="position-relative">
+                        <span input-source="Title">@Model.Settings["HomeInfo_Title"]</span>
+                        <input hidden class="form-control" value="@Model.Settings["HomeInfo_Title"]" form="post-form" asp-for="Title" />
+
+                        <span role="button"  class="badge p-2 rounded-circle position-absolute edit-btn bg-info">
+
+                            <svg onclick="handleClick('Title')"  xmlns="http://www.w3.org/2000/svg" class="small" height="1em" viewBox="0 0 512 512"><path d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" /></svg>
+                        </span>
+                    </h1>
+                    <span asp-validation-for="Title" class="small text-danger"></span>
+                    <div class="mt-3 fs-4 lh-2">
+                        @Html.Raw(Model.Settings["HomeInfo_Description"])
+                    </div>
+                    <span asp-validation-for="Description" class="small text-danger"></span>
+
+                    <div class="position-relative fit-content">
+
+                        <a class="btn btn-warning rounded-circle-pill my-2" input-source="BtnText" href="@Model.Settings["HomeInfo_BtnLink"]">@Model.Settings["HomeInfo_BtnText"]</a>
+                        <span role="button"  class="badge p-2 rounded-circle position-absolute top-0 end-0  bg-info">
+                            <svg onclick="handleClick('BtnText')"  xmlns="http://www.w3.org/2000/svg"  height="1em" viewBox="0 0 512 512"><path d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z" /></svg>
+
+                        </span>
+                        <div class="row">
+                            <div class="col"><input form="post-form" class="form-control" placeholder="Yazı" title="Yazı" hidden value="@Model.Settings["HomeInfo_BtnText"]" asp-for="BtnText" /></div>
+                            <div class="col"><input form="post-form" class="form-control" placeholder="Link" title="Link" hidden value="@Model.Settings["HomeInfo_BtnLink"]" asp-for="BtnLink" /></div>
+                        </div>
+                    </div>
+
+                    <span asp-validation-for="BtnLink" class="small text-danger"></span>
+                    <span asp-validation-for="BtnText" class="small text-danger"></span>
+                </div>
+
+
+            </div>
+        </div>
+
+        <form method="post" asp-action="edit" asp-controller="HomeInfo" class="hidden-inputs " enctype="multipart/form-data" id="post-form">
+            <input form="post-form" class="form-control" hidden value="@Model.Settings["HomeInfo_Description"]" asp-for="Description" />
+            <input form="post-form" hidden asp-for="LeftImage" />
+            <input form="post-form" hidden asp-for="RightImage" />
+
+            <div class="d-flex justify-content-center mt-4">
+                <button type="submit" class="btn btn-success">Dəyişiklikləri yadda saxla !</button>
+            </div>
+        </form>
+
+    </div>
+</section>
+<!--================End Experience Area =================-->
+@section Scripts{
+    <script>
+        function handleClick(type) {
+
+            var input = document.getElementById(type);
+
+
+            if (!input) return;
+
+            var attr = input.getAttribute("type");
+            switch (attr) {
+                case "file":
+                    console.log("This input is file");
+                    input.click();
+
+                    break;
+
+                case "text":
+
+                    let source = document.querySelector(`[input-source=${type}]`);
+                    source.style.display = "none";
+                    input.removeAttribute("hidden");
+                    input.value = source.textContent;
+
+                    if (type != "BtnText") break;
+
+
+                    let linkInput = document.getElementById("BtnLink");
+                    if (!linkInput) break;
+
+                    linkInput.removeAttribute("hidden")
+                    linkInput.value = source.getAttribute("href");
+
+                    break;
+
+                default:
+                    console.log("error");
+
+
+                    break;
+            }
+        }
+    </script>
+                    }

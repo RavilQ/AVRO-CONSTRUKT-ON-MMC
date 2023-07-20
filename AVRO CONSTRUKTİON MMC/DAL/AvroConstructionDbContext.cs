@@ -20,5 +20,6 @@ namespace AVRO_CONSTRUKTİON_MMC.DAL
         public DbSet<Project> Projects { get; set; }
         public DbSet<ContactMessage> ContactMessages { get; set; }
         public DbSet<ContactMessageReply> contactMessageReplies { get; set; }
+        public DbSet<ClientLogo> ClientLogos { get; set; }
     }
 }

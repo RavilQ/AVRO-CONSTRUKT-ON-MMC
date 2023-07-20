@@ -1,0 +1,50 @@
+﻿@using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.ProjectVMs
+@{
+    ViewData["Title"] = "Edit";
+}
+@model ProjectPutVM
+
+<div class="p-3">
+
+    <form  method="post" enctype="multipart/form-data">
+
+
+
+
+        <div class="my-3">
+            <label asp-for="Name" class="form-label">Adı</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="small text-danger"></span>
+        </div>
+
+        <div class="my-3">
+            <label asp-for="Description" class="form-label"> Haqqında</label>
+            <input asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="small text-danger"></span>
+        </div>
+
+
+        <div class="my-3">
+            <label asp-for="IsFeatured" class="form-label">Xüsusi Lahiyədirmi ?</label>
+            <select asp-for="IsFeatured" class="form-select">
+                <option value="false" selected>Xeyr</option>
+                <option value="true">Bəli</option>
+            </select>
+
+            <span asp-validation-for="IsFeatured" class="small text-danger"></span>
+        </div>
+
+
+        <div class="my-3">
+            <img src="~/Uploads/Projects/@Model.Image" width="200" /> <br />
+
+            <label asp-for="ImageFile" class="form-label">Şəkil</label>
+            <input asp-for="ImageFile" class="form-control" />
+            <span asp-validation-for="ImageFile" class="small text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success my-2"> Yarat </button>
+
+    </form>
+</div>
+

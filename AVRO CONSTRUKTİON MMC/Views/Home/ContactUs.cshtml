@@ -1,15 +1,20 @@
-﻿
+﻿@using AVRO_CONSTRUKTİON_MMC.Helpers.Interfaces
+@inject ILayoutService layoutService
+
+@{
+    var settings = layoutService.GetSettingsDictionary();
+}
 
 @model ContactPostViewModel
     <!--================Breadcrumb Area =================-->
     <section class="breadcrumb_area">
       <h1>Construction</h1>
       <div class="container">
-        <h2>Contact Us</h2>
+        <h2>Bizimlə Əlaqə</h2>
         <ul class="nav">
-          <li><a href="index.html">Home</a></li>
+          <li><a asp-action="Index" asp-controller="Home">Ana Səhifə</a></li>
           <li>
-            <a class="active" href="contact.html">Contact Us</a>
+            <a class="active" href="#">Bizimlə Əlaqə</a>
           </li>
         </ul>
       </div>
@@ -20,7 +25,7 @@
     <section class="contact_area p_100">
       <div class="container">
         <div class="main_title">
-          <h2>Drop us a message</h2>
+          <h2>Təklif və ya iradınız</h2>
           <p>
             Bring to the table win-win survival strategies to ensure proactive
             domination. At the end of the day, going forward, a new normal
@@ -57,7 +62,7 @@
           <div class="col-lg-5">
             <div class="our_address">
               <div class="address_title">
-                <h3>Our Address</h3>
+                <h3>Əlaqə vasitələri</h3>
                 <p>
                   Completely synergize resource taxing relationships via
                   premier niche markets. Professionally cultivate
@@ -69,8 +74,8 @@
                   <img src="~/assets/images/icon/marker.png" alt="" />
                 </div>
                 <div class="media-body">
-                  <h5>Address :</h5>
-                  <p>54B, Tailstoi Town 5238 MT, La city, IA 5224</p>
+                  <h5>Ünvan :</h5>
+                            <p>@settings["Address"]</p>
                 </div>
               </div>
               <div class="media">
@@ -78,10 +83,8 @@
                   <img src="~/assets/images/icon/phone.png" alt="" />
                 </div>
                 <div class="media-body">
-                  <h5>Phone :</h5>
-                  <a href="tel:+8801676790690">1800 456 7890</a>
-                  <span>/</span>
-                  <a href="tel:+8801676790690">1254 897 3654</a>
+                  <h5>Telefon :</h5>
+                     <a href="tel:@settings["Telefon"]">@settings["Telefon"]</a>
                 </div>
               </div>
               <div class="media">
@@ -90,7 +93,7 @@
                 </div>
                 <div class="media-body">
                   <h5>Email :</h5>
-                  <p>contact@buildtruck.com</p>
+                  <p>@settings["Email"]</p>
                 </div>
               </div>
             </div>
@@ -99,11 +102,11 @@
       </div>
     </section>
     <!--================End Contact Area =================-->
-
+@*
     <!--================End Banner Area =================-->
     <section class="map_area">
       <div id="mapBox3" class="mapBox2 row m0" data-lat="40.377910" data-lon="49.853430" data-zoom="12"
         data-marker="~/assets/images/map-marker3.png" data-info="54B, Tailstoi Town 5238 La city, IA 522364"
         data-mlat="40.377910" data-mlon="49.853430"></div>
     </section>
-    <!--================End Banner Area =================-->
+    <!--================End Banner Area =================-->*@

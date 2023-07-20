@@ -135,6 +135,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
             existSlider.ButtonText = SliderVm.ButtonText;
             existSlider.BtnLink = SliderVm.ButtonLink;
 
+            _context.Sliders.Update(existSlider);
             _context.SaveChanges();
 
 
