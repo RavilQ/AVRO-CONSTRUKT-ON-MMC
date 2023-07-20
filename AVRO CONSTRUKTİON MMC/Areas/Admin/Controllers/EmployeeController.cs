@@ -33,7 +33,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
         //=======================
         public IActionResult Index()
         {
-            var model = new EmployeeIndexVM()
+            var model = new EmployeeVM()
             {
                 Employees = _context.Employees.Include(x=> x.Job).ToList()
             };

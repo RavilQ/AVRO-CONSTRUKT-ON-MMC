@@ -1,64 +1,58 @@
-﻿@{
-    ViewData["Title"] = "Index";
-    int order = 1;
+﻿@using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.ServiceVMs
+
+@model ServiceVM
+@{
+    ViewData["Title"] = "Vəzifələr";
+    int order = 0;
 }
-@using AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.EmployeeVMs
-@model EmployeeVM
-
-
 
 <div class="p-3 w-100 overflow-scroll">
 
     <div class="d-flex col-12  my-2 justify-content-between align-items-center">
-        <div>Yeni Slider Yarat:</div>
-        <a asp-action="create" asp-controller="Employee" class="btn btn-success">Yarat</a>
+        <div>Yeni Xidmət Əlavə Et:</div>
+        <a asp-action="create" asp-controller="Service" class="btn btn-success">Əlavə et</a>
     </div>
 
     <table class="table table-dark table-hover">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Ad, Soyad</th>
-                <th scope="col">Vəzifəsi</th>
-                <th scope="col">LinkedIn</th>
-                <th scope="col">Email</th>
-                <th scope="col">Şəkil</th>
+                <th scope="col">Başlıq</th>
+                <th scope="col">Haqqında</th>
+                <th scope="col">Ikon</th>
                 <th scope="col">Əməliyyatlar</th>
 
             </tr>
         </thead>
         <tbody>
 
-            @foreach (var emp in Model.Employees)
+            @foreach (Service Service in Model.Services)
             {
+                order++;
                 <tr>
                     <th scope="row">@order</th>
-                    <td>@emp.Fullname</td>
-                    <td>@emp.Job.Name</td>
-                    <td>@emp.LinkedIn</td>
-                    <td>@emp.Email </td>
+                    <td>@Service.Title</td>
+                    <td>@Service.Text</td>
+                    <td>@Service.Icon</td>
 
-                    <td>
-                        <img src="~/Uploads/Employees/@emp.Image" alt="@emp.Fullname" loading="lazy" width="150" height="100" style="object-fit:cover" />
-                    </td>
 
-                    <td>
-                        <div class=" d-flex h-100 nowrap">
-                            <a asp-action="edit" asp-controller="Employee" asp-route-id="@emp.Id" class="btn btn-info mx-1">Edit</a>
-
-                            <a asp-action="Delete" asp-controller="Employee" asp-route-id="@emp.Id" class="btn btn-danger btn-delete mx-1">Delete</a>
-                        </div>
+                    <td class="d-flex nowrap">
+                        <a asp-action="edit" asp-controller="Service" asp-route-id="@Service.Id" class="btn mx-2 btn-info">Edit</a>
+                        <a asp-action="Delete" asp-controller="Service" asp-route-id="@Service.Id" class="btn mx-2 btn-danger btn-delete">Delete</a>
 
                     </td>
 
                 </tr>
 
-                order++;
             }
 
 
         </tbody>
     </table>
+
+    <div>
+      
+    </div>
 
 
 </div>
@@ -113,3 +107,4 @@
 
     </script>
 }
+

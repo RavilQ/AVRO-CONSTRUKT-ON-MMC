@@ -6,7 +6,6 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.ProjectVMs
     public class ProjectPostVM
     {
         [Required(ErrorMessage = "Boş buraxıla bilməz")]
-
         [MaxLength(100, ErrorMessage = "100 hərfdən ibarət olmalıdır")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Boş buraxıla bilməz")]
