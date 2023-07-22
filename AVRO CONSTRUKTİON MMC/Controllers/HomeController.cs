@@ -45,7 +45,12 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
 
         public IActionResult AboutUs()
         {
-            return View();
+            var model = new AboutUsViewModel()
+            {
+                Employees = _context.Employees.Include(x=> x.Job).Take(4).ToList(),
+                Settings = _context.Settings.ToDictionary(x => x.Key, y => y.Value)
+            };
+            return View(model);
         }
 
         public IActionResult Services()

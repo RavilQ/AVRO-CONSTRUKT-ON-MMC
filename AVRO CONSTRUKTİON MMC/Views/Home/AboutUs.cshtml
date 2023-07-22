@@ -1,312 +1,131 @@
-﻿
-    <!--================Breadcrumb Area =================-->
-    <section class="breadcrumb_area">
-      <h1>Construction</h1>
-      <div class="container">
+﻿@model AboutUsViewModel
+<!--================Breadcrumb Area =================-->
+<section class="breadcrumb_area">
+    <h1>Construction</h1>
+    <div class="container">
         <h2>About Us</h2>
         <ul class="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="about-us.html">About Us</a></li>
+            <li><a asp-action="index" asp-controller="Home">Ana Səhifə</a></li>
+            <li><a class="active" href="$">Haqqımızda</a></li>
         </ul>
-      </div>
-    </section>
-    <!--================End Breadcrumb Area =================-->
-
-    <!--================About Company Skill Area =================-->
-    <section class="about_company_skill_area p_100">
-      <div class="container">
+    </div>
+</section>
+<!--================End Breadcrumb Area =================-->
+<!--================About Company Skill Area =================-->
+<section class="about_company_skill_area p_100">
+    <div class="container">
         <div class="row company_skill_inner">
-          <div class="col-lg-7">
-            <div class="company_skill_text">
-              <h4>We are highly skilled construction company</h4>
-              <p>
-                Bring to the table win-win survival strategies to ensure
-                proactive domination. At the end of the day, going forward, a
-                new normal that has evolved from generation X is on the runway
-                heading towards a streamlined cloud solution. User generated
-                content in real-time will have multiple touchpoints for
-                offshoring.
-              </p>
-              <p>
-                Capitalize on low hanging fruit to identify a ballpark value
-                added activity to beta test. Override the digital divide with
-                additional clickthroughs from DevOps. Nanotechnology immersion
-                along the information heading towards a streamlined cloud
-                solution. User generated content in real-time will have
-                multiple.
-              </p>
+            <div class="col-lg-7">
+                <div class="company_skill_text">
+                    <h4>@Model.Settings["AboutUs_Title"]</h4>
+                    <p>
+                        @Model.Settings["AboutUs_Text1"]
+                    </p>
+                    <p>
+                        @Model.Settings["AboutUs_Text2"]
+                    </p>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="about_company_img">
-              <img class="img-fluid" src="assets/images/about-us.jpg" alt="" />
+            <div class="col-lg-5">
+                <div class="about_company_img">
+                    @*<img class="img-fluid" src="~/assets/images/about-us.jpg" alt="asdf" /*@
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!--================End About Company Skill Area =================-->
-
-    <!--================About Why Choose Area =================-->
-    <section class="about_why_choose_area row m-0">
-      <div class="left">
+    </div>
+</section>
+<!--================End About Company Skill Area =================-->
+<!--================About Why Choose Area =================-->
+<section class="about_why_choose_area row m-0 d-none">
+    <div class="left">
         <div class="why_choose_text_inner">
-          <div class="main_title white">
-            <h2>Why Choose Us</h2>
-          </div>
-          <div class="media">
-            <div class="d-flex">
-              <img src="assets/images/icon/about-choose-1.png" alt="" />
+            <div class="main_title white">
+                <h2>Niyə biz ?</h2>
             </div>
-            <div class="media-body">
-              <h4>Smart Technology</h4>
-              <p>
-                Leverage agile frameworks to provide a robust synopsis for
-                high level overviews. Iterative approaches to corporate
-                strate-gy foster collaborative thinking to further.
-              </p>
+            <div class="media">
+                <div class="d-flex">
+                    <img src="~/assets/images/icon/about-choose-1.png" alt="" />
+                </div>
+                <div class="media-body">
+                    <h4>Smart Technology</h4>
+                    <p>
+                        Leverage agile frameworks to provide a robust synopsis for
+                        high level overviews. Iterative approaches to corporate
+                        strate-gy foster collaborative thinking to further.
+                    </p>
+                </div>
             </div>
-          </div>
-          <div class="media">
-            <div class="d-flex">
-              <img src="assets/images/icon/about-choose-2.png" alt="" />
+            <div class="media">
+                <div class="d-flex">
+                    <img src="~/assets/images/icon/about-choose-2.png" alt="" />
+                </div>
+                <div class="media-body">
+                    <h4>Best & Reasonable Prices</h4>
+                    <p>
+                        Leverage agile frameworks to provide a robust synopsis for
+                        high level overviews. Iterative approaches to corporate
+                        strate-gy foster collaborative thinking to further.
+                    </p>
+                </div>
             </div>
-            <div class="media-body">
-              <h4>Best & Reasonable Prices</h4>
-              <p>
-                Leverage agile frameworks to provide a robust synopsis for
-                high level overviews. Iterative approaches to corporate
-                strate-gy foster collaborative thinking to further.
-              </p>
+            <div class="media">
+                <div class="d-flex">
+                    <img src="~/assets/images/icon/about-choose-3.png" alt="" />
+                </div>
+                <div class="media-body">
+                    <h4>Timely Delivery</h4>
+                    <p>
+                        Leverage agile frameworks to provide a robust synopsis for
+                        high level overviews. Iterative approaches to corporate
+                        strate-gy foster collaborative thinking to further.
+                    </p>
+                </div>
             </div>
-          </div>
-          <div class="media">
-            <div class="d-flex">
-              <img src="assets/images/icon/about-choose-3.png" alt="" />
-            </div>
-            <div class="media-body">
-              <h4>Timely Delivery</h4>
-              <p>
-                Leverage agile frameworks to provide a robust synopsis for
-                high level overviews. Iterative approaches to corporate
-                strate-gy foster collaborative thinking to further.
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="right">
-        <img src="assets/images/about-why-choose.jpg" alt="" />
-      </div>
-    </section>
-    <!--================End About Why Choose Area =================-->
-
-    <!--================Our Team Area =================-->
-    <section class="our_team_area p_100">
-      <div class="container">
+    </div>
+    <div class="right">
+        <img src="~/assets/images/about-why-choose.jpg" alt="" />
+    </div>
+</section>
+<!--================End About Why Choose Area =================-->
+<!--================Our Team Area =================-->
+<section class="our_team_area p_100">
+    <div class="container">
         <div class="row two_column_title">
-          <div class="col-lg-3">
-            <h2>Our Team</h2>
-          </div>
-          <div class="col-lg-9">
-            <p>
-              Bring to the table win-win survival strategies to ensure
-              proactive domination. At the end of the day, going forward, a
-              new normal that has evolved from generation X is on the runway
-              heading towards a streamlined cloud solution. User generated
-              content in real-time will have multiple touchpoints for
-              offshoring.
-            </p>
-          </div>
+            <div class="col-lg-3">
+                <h2>@Model.Settings["OurTeam_Header"]</h2>
+            </div>
+            <div class="col-lg-9">
+                <p>
+                    @Model.Settings["OurTeam_Body"]
+                </p>
+            </div>
         </div>
         <div class="row team_inner">
-          <div class="col-lg-3 col-sm-6">
-            <div class="team_item">
-              <div class="team_img">
-                <img class="img-fluid" src="assets/images/team/team-1.jpg" alt="" />
-                <ul class="nav">
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="team_text">
-                <h4>Michale Joe</h4>
-                <p>Main Supervisor</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="team_item">
-              <div class="team_img">
-                <img class="img-fluid" src="assets/images/team/team-2.jpg" alt="" />
-                <ul class="nav">
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="team_text">
-                <h4>Michale Joe</h4>
-                <p>Junior Engineer</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="team_item">
-              <div class="team_img">
-                <img class="img-fluid" src="assets/images/team/team-3.jpg" alt="" />
-                <ul class="nav">
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="team_text">
-                <h4>Michale Joe</h4>
-                <p>Maintainance Head</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="team_item">
-              <div class="team_img">
-                <img class="img-fluid" src="assets/images/team/team-4.jpg" alt="" />
-                <ul class="nav">
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="team_text">
-                <h4>Michale Joe</h4>
-                <p>Main Supervisor</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================End Our Team Area =================-->
+            @foreach (var emp in Model.Employees)
+            {
+                <div class="col-lg-3 col-sm-6">
+                    <div class="team_item">
+                        <div class="team_img">
+                            <img class="img-fluid" src="~/Uploads/Employees/@emp.Image" alt="@emp.Fullname" />
+                            <ul class="nav">
+                                <li>
+                                    <a href="@emp.LinkedIn"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href="@emp.Email"><i class="fa fa-envelope"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="team_text">
+                            <h4>@emp.Fullname</h4>
+                            <p>@emp.Job.Name</p>
+                        </div>
+                    </div>
+                </div>
 
-    <!--================Video Area =================-->
-    <section class="video_area parallaxie" style="background: url(assets/images/video-bg.jpg) no-repeat;">
-      <div class="container">
-        <div class="video_text">
-          <h4>Working since 1992</h4>
-          <h3>We are leader <br />in Construction Industry</h3>
-          <div class="media">
-            <div class="d-flex">
-              <a class="popup-youtube" href="https://www.youtube.com/watch?v=SsK0wTVWQx0"><i
-                  class="flaticon-play-button"></i></a>
-            </div>
-            <div class="media-body">
-              <h5>Watch intro video <br />about us</h5>
-            </div>
-          </div>
+            }
         </div>
-      </div>
-    </section>
-    <!--================End Video Area =================-->
-
-    <!--================Testimonials Area =================-->
-    <section class="testimonials_area">
-      <div class="container">
-        <div class="testi_slider owl-carousel">
-          <div class="item">
-            <div class="media">
-              <div class="d-flex">
-                <img src="assets/images/testimonials/testi-1.jpg" alt="" />
-                <i>“</i>
-              </div>
-              <div class="media-body">
-                <p>
-                  Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum
-                  nec odios Suspe ndisse cursus mal suada faci lisis. Lorem
-                  ipsum dolor sit ametion consectetur elit. Vesti bulum nec
-                  odio ipsum. Lorem ipsum dolor sit amet, cons ectetur elit.
-                  Vestibulum nec odios Suspe ndisse cursus suada faci lisis.
-                </p>
-                <h4>- Michale John</h4>
-                <h6>Ceo of Minda</h6>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="media">
-              <div class="d-flex">
-                <img src="assets/images/testimonials/testi-1.jpg" alt="" />
-                <i>“</i>
-              </div>
-              <div class="media-body">
-                <p>
-                  Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum
-                  nec odios Suspe ndisse cursus mal suada faci lisis. Lorem
-                  ipsum dolor sit ametion consectetur elit. Vesti bulum nec
-                  odio ipsum. Lorem ipsum dolor sit amet, cons ectetur elit.
-                  Vestibulum nec odios Suspe ndisse cursus suada faci lisis.
-                </p>
-                <h4>- Michale John</h4>
-                <h6>Ceo of Minda</h6>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="media">
-              <div class="d-flex">
-                <img src="assets/images/testimonials/testi-1.jpg" alt="" />
-                <i>“</i>
-              </div>
-              <div class="media-body">
-                <p>
-                  Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum
-                  nec odios Suspe ndisse cursus mal suada faci lisis. Lorem
-                  ipsum dolor sit ametion consectetur elit. Vesti bulum nec
-                  odio ipsum. Lorem ipsum dolor sit amet, cons ectetur elit.
-                  Vestibulum nec odios Suspe ndisse cursus suada faci lisis.
-                </p>
-                <h4>- Michale John</h4>
-                <h6>Ceo of Minda</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================End Testimonials Area =================-->
+    </div>
+</section>
+<!--================End Our Team Area =================-->
