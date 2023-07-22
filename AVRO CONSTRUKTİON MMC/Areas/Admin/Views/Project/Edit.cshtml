@@ -19,7 +19,10 @@
 
         <div class="my-3">
             <label asp-for="Description" class="form-label"> Haqqında</label>
-            <input asp-for="Description" class="form-control" />
+            <div class="editor" target-input-id="Description">
+                @Html.Raw(Model?.Description) 
+            </div>
+            <input asp-for="Description" hidden class="form-control" />
             <span asp-validation-for="Description" class="small text-danger"></span>
         </div>
 
@@ -43,8 +46,11 @@
             <span asp-validation-for="ImageFile" class="small text-danger"></span>
         </div>
 
-        <button type="submit" class="btn btn-success my-2"> Yarat </button>
+        <button type="submit" class="btn btn-success my-2"> Dəyişiklik et </button>
 
     </form>
 </div>
 
+@section Scripts{
+    @await Html.PartialAsync("_ckEditorScript")
+}

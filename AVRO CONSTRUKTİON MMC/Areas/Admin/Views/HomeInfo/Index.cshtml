@@ -42,7 +42,9 @@
                     </h1>
                     <span asp-validation-for="Title" class="small text-danger"></span>
                     <div class="mt-3 fs-4 lh-2">
+                        <div class="editor" target-input-id="Description">
                         @Html.Raw(Model.Settings["HomeInfo_Description"])
+                        </div>
                     </div>
                     <span asp-validation-for="Description" class="small text-danger"></span>
 
@@ -123,4 +125,6 @@
             }
         }
     </script>
+
                     }
+    @await Html.PartialAsync("_ckEditorScript");
