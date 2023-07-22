@@ -105,7 +105,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ClientLogos");
+                    b.ToTable("ClientLogos", (string)null);
                 });
 
             modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.ContactMessage", b =>
@@ -144,7 +144,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ContactMessages");
+                    b.ToTable("ContactMessages", (string)null);
                 });
 
             modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.ContactMessageReply", b =>
@@ -173,7 +173,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
                     b.HasIndex("ContactMessageId")
                         .IsUnique();
 
-                    b.ToTable("contactMessageReplies");
+                    b.ToTable("contactMessageReplies", (string)null);
                 });
 
             modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.Employee", b =>
@@ -209,25 +209,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
 
                     b.HasIndex("JobId");
 
-                    b.ToTable("Employees");
-                });
-
-            modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.Feature", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Features");
+                    b.ToTable("Employees", (string)null);
                 });
 
             modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.Job", b =>
@@ -245,7 +227,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Jobs");
+                    b.ToTable("Jobs", (string)null);
                 });
 
             modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.Project", b =>
@@ -276,7 +258,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Projects");
+                    b.ToTable("Projects", (string)null);
                 });
 
             modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.Service", b =>
@@ -304,7 +286,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Services");
+                    b.ToTable("Services", (string)null);
                 });
 
             modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.Setting", b =>
@@ -326,7 +308,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
                 });
 
             modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.Slider", b =>
@@ -372,7 +354,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders");
+                    b.ToTable("Sliders", (string)null);
                 });
 
             modelBuilder.Entity("AVRO_CONSTRUKTİON_MMC.Models.Testimonials", b =>
@@ -405,7 +387,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Testimonials");
+                    b.ToTable("Testimonials", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
