@@ -1,0 +1,32 @@
+﻿
+
+
+<script>
+   
+
+
+      var editors =  document.querySelectorAll(".editor");
+    let button = document.querySelector("[type=submit]");
+        for(var item of editors){
+
+            let editor;
+        ClassicEditor
+            .create(item)
+            .then(newEditor => {
+                editor = newEditor;
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+            var targetInputId = item.getAttribute("target-input-id")
+            let input = document.querySelector(`#${targetInputId}`)
+
+            console.log(input)
+
+
+          button.addEventListener("click", ()=>{
+                input.value = editor.getData();
+            })
+        }
+</script>
