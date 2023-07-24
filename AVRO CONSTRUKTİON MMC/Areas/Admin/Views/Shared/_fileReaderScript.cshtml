@@ -1,0 +1,27 @@
+﻿
+
+<script>
+    function readFile(input) {
+        let file = input.files[0];
+
+        let targetImageId = input.getAttribute("target-image-id");
+        let targetImage = document.getElementById(targetImageId);
+
+        let reader = new FileReader();
+
+        reader.readAsDataURL(file);
+
+        reader.onload = function () {
+            if (!targetImage) return;
+
+            targetImage.setAttribute("src", reader.result)
+        };
+
+
+
+        reader.onerror = function () {
+            console.log(reader.error);
+        };
+
+    }
+</script>

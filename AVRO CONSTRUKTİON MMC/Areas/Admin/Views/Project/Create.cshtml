@@ -39,8 +39,10 @@
 
 
         <div class="my-3">
+            <img id="previewImage" src="" width="200" /> <br />
+
             <label asp-for="ImageFile" class="form-label">Şəkil</label>
-            <input asp-for="ImageFile" class="form-control" />
+            <input asp-for="ImageFile" onchange="readFile(this)" class="form-control" target-image-id="previewImage" />
             <span asp-validation-for="ImageFile" class="small text-danger"></span>
         </div>
 
@@ -51,4 +53,6 @@
 
 @section Scripts{
     @await Html.PartialAsync("_ckEditorScript")
+    @await Html.PartialAsync("_fileReaderScript")
+
 }
