@@ -67,6 +67,8 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
 
         public IActionResult ContactUs()
         {
+            ViewBag.Lattitude = _context.Settings.FirstOrDefault(x => x.Key == "Kordinat_ŞimalEnliyi")?.Value;
+            ViewBag.Longitude = _context.Settings.FirstOrDefault(x => x.Key == "Kordinat_ŞərqUzunluğu")?.Value;
             return View();
         }
         [HttpPost]
