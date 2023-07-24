@@ -1,15 +1,20 @@
-﻿
+﻿@{
+    ViewData["Title"] = "- Xidmətlərimiz";
+    ViewData["Page"] = "Services";
+
+
+}
 @model ServiceViewModel
 
     <!--================Breadcrumb Area =================-->
     <section class="breadcrumb_area">
       <h1>Construction</h1>
       <div class="container">
-        <h2>Services</h2>
+        <h2>Xidməthərimiz</h2>
         <ul class="nav">
-          <li><a href="index.html">Home</a></li>
+          <li><a asp-action="index" asp-controller="home">Ana səhifə</a></li>
           <li>
-            <a class="active" href="services.html">Services</a>
+                <a class="active" href="#">Xidməthərimiz</a>
           </li>
         </ul>
       </div>
@@ -38,7 +43,7 @@
                                 </p>
                             </div>
                             <div class="media-right">
-                                <img src="~/assets/images/icon/@item.Icon" alt="" />
+                                <i class="@item.Icon"></i>
                             </div>
                         </div>
                     </div>

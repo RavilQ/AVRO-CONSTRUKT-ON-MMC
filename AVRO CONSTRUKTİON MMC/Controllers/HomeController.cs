@@ -25,7 +25,9 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
             _emailSender = emailSender;
             _mapper = mapper;
         }
-
+        //===========================
+        // Index
+        //===========================
         public IActionResult Index()
         {
             HomeViewModel model = new HomeViewModel
@@ -42,7 +44,9 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
 
             return View(model);
         }
-
+        //===========================
+        // About Us
+        //===========================
         public IActionResult AboutUs()
         {
             var model = new AboutUsViewModel()
@@ -52,7 +56,9 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
             };
             return View(model);
         }
-
+        //===========================
+        // Services
+        //===========================
         public IActionResult Services()
         {
             ServiceViewModel model = new ServiceViewModel { 
@@ -64,7 +70,9 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
 
             return View(model);
         }
-
+        //===========================
+        // Contact Us
+        //===========================
         public IActionResult ContactUs()
         {
             ViewBag.Lattitude = _context.Settings.FirstOrDefault(x => x.Key == "Kordinat_ŞimalEnliyi")?.Value;

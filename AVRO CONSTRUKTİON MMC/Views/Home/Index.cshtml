@@ -3,8 +3,7 @@
 @model HomeViewModel
 
 @{
-    ViewData["Title"] = "Home Page";
-    var detail = 1587;
+    ViewData["Page"] = "Home";
     var right = 0;
 }
 
@@ -95,7 +94,7 @@
 
 
                 </li>
-                detail++;
+            
             }
         </ul>
     </div>
@@ -129,7 +128,7 @@
             </div>
             <div class="col-lg-7">
                 <div class="experience_text">
-                    <h5>Welcome to Buildtruck</h5>
+                    <h5>Avro Construction MMC</h5>
                     <h3>@Model.Settings["HomeInfo_Title"]</h3>
                     @Html.Raw(Model.Settings["HomeInfo_Description"])
                     <a class="main_btn" href="@Model.Settings["HomeInfo_BtnLink"]">@Model.Settings["HomeInfo_BtnText"]</a>
@@ -143,12 +142,9 @@
 <section class="our_service_area p_100">
     <div class="container">
         <div class="main_title">
-            <h2>Our Services</h2>
+             <h2>@Model.Settings["OurServices_Title"]</h2>
             <p>
-                Bring to the table win-win survival strategies to ensure proactive
-                domination. At the end of the day, going forward, a new normal
-                that has evolved from gen-eration X is on the runway heading
-                towards a streamlined cloud solution.
+                @Model.Settings["OurServices_Text"]
             </p>
         </div>
         <div class="row service_inner">
@@ -165,7 +161,7 @@
                                 </p>
                             </div>
                             <div class="media-right">
-                                <img src="~/assets/images/icon/@item.Icon" alt="" />
+                                <i class="@item.Icon"></i>
                             </div>
                         </div>
                     </div>

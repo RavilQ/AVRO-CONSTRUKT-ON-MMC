@@ -1,6 +1,8 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "- Layihələrimiz";
+    ViewData["Page"] = "Projects";
+
 }
 @model ProjectsViewModel;
 
@@ -21,7 +23,7 @@
     <!--================End Breadcrumb Area =================-->
 
     <!--================Our Projects Area =================-->
-    <section class="our_projects_area projects_one">
+    <section class="our_projects_area projects_one my-5">
       <div class="container">
         <div class="our_projects_inner">
             <h4 class="text-center my-4">Layihələrimiz</h4>
@@ -36,7 +38,7 @@
                             <div class="projects_item">
 
 
-                                <img class="img-fluid" src="~/Uploads/Projects/@project.Image" alt="@project.Name" />
+                                <img class="" src="~/Uploads/Projects/@project.Image" alt="@project.Name" />
 
                                 <h5>@project.Name</h5>
                             </div>

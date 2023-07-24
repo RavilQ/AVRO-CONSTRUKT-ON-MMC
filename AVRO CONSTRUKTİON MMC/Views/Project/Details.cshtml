@@ -1,9 +1,11 @@
 ﻿
-@{
-    ViewData["Title"] = "Index";
-}
 
 @model Project
+@{
+    ViewData["Title"] = $"- {Model.Name}";
+    ViewData["Page"] = "Projects";
+
+}
 <!--================Breadcrumb Area =================-->
 <section class="breadcrumb_area">
     <h1>Construction</h1>
