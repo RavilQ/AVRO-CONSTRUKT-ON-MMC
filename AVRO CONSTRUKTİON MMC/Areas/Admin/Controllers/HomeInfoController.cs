@@ -47,12 +47,12 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.Controllers
         //==============================
         // Edit
         //==============================
+        [HttpPost]
         public IActionResult Edit(HomeInfoVM model)
         {
             var settings = _context.Settings.ToDictionary(x => x.Key, y => y.Value);
             model.Settings = settings;
             if (!ModelState.IsValid) return View("Index", model);
-
 
             _context.Settings.FirstOrDefault(x => x.Key == "HomeInfo_Title").Value = model.Title;
             _context.Settings.FirstOrDefault(x => x.Key == "HomeInfo_Description").Value = model.Description;

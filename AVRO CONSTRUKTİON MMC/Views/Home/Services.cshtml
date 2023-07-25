@@ -6,24 +6,23 @@
 }
 @model ServiceViewModel
 
-    <!--================Breadcrumb Area =================-->
-    <section class="breadcrumb_area">
-      <h1>Construction</h1>
-      <div class="container">
+<!--================Breadcrumb Area =================-->
+<section class="breadcrumb_area">
+    <h1>Construction</h1>
+    <div class="container">
         <h2>Xidməthərimiz</h2>
         <ul class="nav">
-          <li><a asp-action="index" asp-controller="home">Ana səhifə</a></li>
-          <li>
+            <li><a asp-action="index" asp-controller="home">Ana səhifə</a></li>
+            <li>
                 <a class="active" href="#">Xidməthərimiz</a>
-          </li>
+            </li>
         </ul>
-      </div>
-    </section>
-    <!--================End Breadcrumb Area =================-->
-
-    <!--================Service Area =================-->
-    <section class="our_service_area p_100">
-      <div class="container">
+    </div>
+</section>
+<!--================End Breadcrumb Area =================-->
+<!--================Service Area =================-->
+<section class="our_service_area p_100">
+    <div class="container">
         <div class="main_title">
             <h2>@Model.Setting["OurServices_Title"]</h2>
             <p>
@@ -31,31 +30,27 @@
             </p>
         </div>
         <div class="row service_inner">
-          @foreach (var item in Model.Service)
-          {
-                <div class="col-lg-4 col-md-6">
+            @foreach (var item in Model.Service)
+            {
+                <div class="col-lg-4 col-md-6 my-2">
                     <div class="serive_item">
-                        <div class="media">
-                            <div class="media-body">
+                        <div class="media h-100">
+                            <div class="media-body h-100">
                                 <h4>@item.Title</h4>
                                 <p>
                                     @item.Text
                                 </p>
                             </div>
-                            <div class="media-right">
-                                <i class="@item.Icon"></i>
-                            </div>
                         </div>
                     </div>
                 </div>
-          }
+            }
         </div>
-      </div>
-    </section>
-    <!--================End Service Area =================-->
-
-    <!--================Video Area =================-->
-    <section class="video_area">
+    </div>
+</section>
+<!--================End Service Area =================-->
+@* <!--================Video Area =================-->
+    <section class="video_area ">
       <div class="container">
         <div class="video_text">
             <h4>@Model.Setting["OurServicesVideo_Title"]</h4>
@@ -72,4 +67,10 @@
         </div>
       </div>
     </section>
-    <!--================End Video Area =================-->
+    <!--================End Video Area =================-->*@
+<section>
+    <div class="container">
+
+        <iframe class="w-100 m-auto" style="aspect-ratio:16/9" src="@Model.Setting["OurServiceVideo_Video"]" title="@Model.Setting["OurServicesVideo_Title"]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</section>

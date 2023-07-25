@@ -26,7 +26,8 @@
     <section class="our_projects_area projects_one my-5">
       <div class="container">
         <div class="our_projects_inner">
-            <h4 class="text-center my-4">Layihələrimiz</h4>
+            <h4 class="text-center my-4">@Model.Settings["Projects_Title"]</h4>
+            <p class="text-center">@Model.Settings["Projects_Description"]</p>
           <div class="row gallery_inner imageGallery1">
               <!--Start-->
                   @foreach (Project project in Model.Projects)
