@@ -3,8 +3,10 @@
 
 @{
     var settings = layoutService.GetSettingsDictionary();
-}
+    ViewData["Title"] = "- Əlaqə";
+    ViewData["Page"] = "ContactUs";
 
+}
 @model ContactPostViewModel
     <!--================Breadcrumb Area =================-->
     <section class="breadcrumb_area">
@@ -102,11 +104,10 @@
       </div>
     </section>
     <!--================End Contact Area =================-->
-@*
+
     <!--================End Banner Area =================-->
     <section class="map_area">
-      <div id="mapBox3" class="mapBox2 row m0" data-lat="40.377910" data-lon="49.853430" data-zoom="12"
-        data-marker="~/assets/images/map-marker3.png" data-info="54B, Tailstoi Town 5238 La city, IA 522364"
-        data-mlat="40.377910" data-mlon="49.853430"></div>
-    </section>
-    <!--================End Banner Area =================-->*@
+
+    <iframe src="https://maps.google.com/maps?q=@(ViewBag.Lattitude),@(ViewBag.Longitude)&hl=az&z=14&amp;output=embed" class="w-100" height="450" frameborder="0" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+</section>
+    <!--================End Banner Area =================-->

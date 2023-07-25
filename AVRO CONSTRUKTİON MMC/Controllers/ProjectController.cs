@@ -1,6 +1,7 @@
 ﻿using AVRO_CONSTRUKTİON_MMC.DAL;
 using AVRO_CONSTRUKTİON_MMC.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Math.EC;
 
 namespace AVRO_CONSTRUKTİON_MMC.Controllers
 {
@@ -16,7 +17,8 @@ namespace AVRO_CONSTRUKTİON_MMC.Controllers
         {
             var model = new ProjectsViewModel()
             {
-                Projects = _context.Projects.ToList()
+                Projects = _context.Projects.ToList(),
+                Settings = _context.Settings.ToDictionary(x => x.Key, y => y.Value)
         };
 
             return View(model);

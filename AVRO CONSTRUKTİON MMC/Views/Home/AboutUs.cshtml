@@ -1,9 +1,16 @@
-﻿@model AboutUsViewModel
+﻿
+@{
+    ViewData["Title"] = "- Haqqımızda";
+    ViewData["Page"] = "AboutUs";
+
+}
+
+@model AboutUsViewModel
 <!--================Breadcrumb Area =================-->
 <section class="breadcrumb_area">
     <h1>Construction</h1>
     <div class="container">
-        <h2>About Us</h2>
+        <h2>Haqqımızda</h2>
         <ul class="nav">
             <li><a asp-action="index" asp-controller="Home">Ana Səhifə</a></li>
             <li><a class="active" href="$">Haqqımızda</a></li>

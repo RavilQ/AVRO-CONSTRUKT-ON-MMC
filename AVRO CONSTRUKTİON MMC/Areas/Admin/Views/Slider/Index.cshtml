@@ -11,7 +11,7 @@
 <div class="p-3 w-100 overflow-scroll">
 
     <div class="d-flex col-12  my-2 justify-content-between align-items-center">
-        <div>Yeni Slider Yarat:</div>
+        <div>Yeni Slayder Yarat:</div>
         <a asp-action="create" asp-controller="slider" class="btn btn-success">Yarat</a>
     </div>
 
@@ -19,14 +19,14 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col">Subtitle</th>
-                <th scope="col">Desc</th>
-                <th scope="col">Button Text</th>
-                <th scope="col">Link</th>
-                <th scope="col">Order</th>
-                <th scope="col">Image</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Başlıq</th>
+                <th scope="col">Alt başlıq</th>
+                <th scope="col">Haqqında</th>
+                <th scope="col">Düymə yazısı</th>
+                <th scope="col">Düymə linki</th>
+                <th scope="col">Sıra nömrəsi</th>
+                <th scope="col">Şəkil</th>
+                <th scope="col">Əməliyyatlar</th>
 
             </tr>
         </thead>
@@ -70,51 +70,5 @@
 
 
 @section Scripts{
-    <script>
-
-        $(".btn-delete").on("click",(e)=>{
-            e.preventDefault();
-
-
-            Swal.fire({
-                title: 'Əminsiniz?',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Bəli, Sil!'
-            }).then((result) => {
-
-                let link = e.target.getAttribute("href");
-
-                fetch(link).then(res => {
-
-                    if (res.ok) {
-                        if (result.isConfirmed) {
-                            Swal.fire(
-                                'Silindi!',
-                                'Əməliyyat uğurla yerinə yetirildi',
-                                'success'
-                            ).then(() => {
-                                window.location.reload();
-                            })
-                        }
-                    }
-                    else{
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Oops...',
-                            text: 'Xəta baş verdi!',
-                        })
-                    }
-                })
-
-               
-            })
-
-            
-
-        })
-
-    </script>
+    @await Html.PartialAsync("_swalDeleteScript")
 }

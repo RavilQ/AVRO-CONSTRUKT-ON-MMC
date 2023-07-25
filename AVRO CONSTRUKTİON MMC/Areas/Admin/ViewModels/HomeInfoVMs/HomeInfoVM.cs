@@ -14,7 +14,7 @@ namespace AVRO_CONSTRUKTİON_MMC.Areas.Admin.ViewModels.HomeInfoVMs
         [AllowedFileTypes("image/jpeg", "image/png")]
         [MaxFileSize(2)]
         public IFormFile? LeftImage { get; set; }
-        [MaxLength(500)]
+        [MaxLength(300)]
         [Required(ErrorMessage ="Boş buraxıla bilməz")]
         public string Description { get; set; }
         [Required(ErrorMessage ="Boş buraxıla bilməz")]

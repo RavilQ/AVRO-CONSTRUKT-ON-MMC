@@ -13,8 +13,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="icon" href="~/assets/images/favicon.png" type="image/png" />
-    <title>BuildeTrack</title>
+    <link rel="icon" href="~/Uploads/logo/avroConstruction-favicon.png" type="image/png" />
+    <title>Avro Construction MMC @ViewData["Title"]</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/assets/css/font-awesome.min.css" />
@@ -48,7 +48,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="left">
                             <h5>
-                                <a href="tel:@settings["Telefon"]">Construction Company</a>
+                                <a href="tel:@settings["Telefon"]">Avro Construction MMC</a>
                             </h5>
                         </div>
                         <div class="right">
@@ -77,8 +77,8 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <a class="navbar-brand" asp-action="index" asp-controller="home">
-                            <img src="~/assets/images/logo.png"
-                                 srcset="~/assets/images/logo2x.png 2x" alt="" />
+                            <img src="~/Uploads/Logo/logo-avroConstruction.png"
+                                alt="Avro Construction mmc" />
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,14 +86,14 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="nav navbar-nav ml-auto">
-                                <li><a asp-action="index" asp-controller="Home">Ana Səhifə</a></li>
-                                <li><a asp-action="index" asp-controller="Employee">Komandamız</a></li>
-                                <li><a asp-action="AboutUs" asp-controller="Home">Haqqımızda</a></li>
-                                <li><a asp-action="Services" asp-controller="Home">Xidmətlərimiz</a></li>
+                                <li class="@(ViewData["Page"] == "Home" ? "active":"")"><a asp-action="index" asp-controller="Home">Ana Səhifə</a></li>
+                                <li class="@(ViewData["Page"] == "Employee" ? "active":"")"><a asp-action="index" asp-controller="Employee">Komandamız</a></li>
+                                <li class="@(ViewData["Page"] == "AboutUs" ? "active":"")"><a asp-action="AboutUs" asp-controller="Home">Haqqımızda</a></li>
+                                <li class="@(ViewData["Page"] == "Services" ? "active":"")"><a asp-action="Services" asp-controller="Home">Xidmətlərimiz</a></li>
 
-                                <li><a asp-action="index" asp-controller="Project">Layihələrimiz</a></li>
+                                <li class="@(ViewData["Page"] == "Projects" ? "active":"")"><a asp-action="index" asp-controller="Project">Layihələrimiz</a></li>
                                
-                                <li><a asp-action="ContactUs" asp-controller="Home">Bizimlə Əlaqə</a></li>
+                                <li class="@(ViewData["Page"] == "ContactUs" ? "active":"")"><a asp-action="ContactUs" asp-controller="Home">Bizimlə Əlaqə</a></li>
                             </ul>
                            @* <ul class="nav navbar-nav navbar-right">
                                 <li class="reserve_btn">
@@ -108,7 +108,7 @@
         <!--================End Header Area =================-->
         @RenderBody()
         <!--================Contact Details Area =================-->
-        <section class="contact_details_area p_100">
+        <section class="contact_details_area ">
             <div class="container">
                 <div class="row client_details_inner">
                     <div class="col-lg-4 col-md-6">
@@ -157,13 +157,11 @@
                 <div class="footer_widgets row">
                     <div class="col-lg-3 col-sm-6">
                         <aside class="f_widget ab_widget">
-                            <img src="~/assets/images/f-logo.png" srcset="~/assets/images/f-logo-2x.png 2x" alt="" />
+                            <img src="~/Uploads/Logo/logo-avroConstruction.png" width="100%" height="auto" class="object-fit-cover" alt="avro construction mmc" />
                             <p>
-                                Capitalize on low hanging fruit to identify a ballpark value
-                                added activity to beta test. Override the digital divide
-                                additional clickthroughs.
+                                Son texnologiyaları istifadə etməklə, yüksək səviyyəli binaların inşa edilməsi
                             </p>
-                            <a asp-action="aboutUs" asp-controller="home">Read more ...</a>
+                            <a asp-action="aboutUs" asp-controller="home">Ətraflı ...</a>
                         </aside>
                     </div>
                     <div class="col-lg-2 col-sm-6">
@@ -182,14 +180,14 @@
                     <div class="col-lg-3 col-sm-6">
                         <aside class="f_widget link_widget service_widget">
                             <div class="f_title">
-                                <h3>Services</h3>
+                                <h3>Layihələrimiz</h3>
                             </div>
                             <ul class="nav flex-column">
-                                <li><a href="#">Building Construction</a></li>
-                                <li><a href="#">Architecture Design</a></li>
-                                <li><a href="#">Building Renovation</a></li>
-                                <li><a href="#">Flooring & Roofing</a></li>
-                                <li><a href="#">Interior Design</a></li>
+                                @foreach (var proj in layoutService.GetProjects())
+                                {
+                                <li><a asp-action="details" asp-controller="project" asp-route-id="@proj.Id">@proj.Name</a></li>
+                                    
+                                }
                             </ul>
                         </aside>
                     </div>
@@ -222,7 +220,7 @@
                 <div class="footer_copyright d-flex justify-content-between">
                     <div class="left">
                         <p>
-                            © Copyright buildtrack
+                            © Avro Construction MMC
                             <script>
                                 document.write(new Date().getFullYear());
                             </script>
@@ -272,7 +270,7 @@
     <script src="~/assets/vendors/popup/jquery.magnific-popup.min.js"></script>
     <script src="~/assets/vendors/owl-carousel/owl.carousel.min.js"></script>
     <script src="~/assets/vendors/parallaxie/parallaxie.js"></script>
-
+    <script src="https://kit.fontawesome.com/f0bcda735f.js" crossorigin="anonymous"></script>
     <script src="~/assets/js/theme.js"></script>
 </body>
 
